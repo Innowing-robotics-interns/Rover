@@ -1,0 +1,12 @@
+[0.015s] Invoking command in '/mnt/nova_ssd/workspaces/navigation/src/build/dwa_main': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/src/build/dwa_main -- -j12 -l12
+[0.081s] [35m[1mConsolidate compiler generated dependencies of target dwa_main[0m
+[0.115s] [ 50%] [32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_local_planner.cpp.o[0m
+[4.189s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:[m[K In member function ‘[01m[Kstd::vector<std::pair<double, double> > DwaLocalPlanner::generate_trajectory(double, double)[m[K’:
+[4.189s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:213:24:[m[K [01;31m[Kerror: [m[K‘[01m[KgetYaw[m[K’ was not declared in this scope; did you mean ‘[01m[Kgetw[m[K’?
+[4.190s]   213 |         double theta = [01;31m[KgetYaw[m[K(current_pose_.orientation);
+[4.190s]       |                        [01;31m[K^~~~~~[m[K
+[4.190s]       |                        [32m[Kgetw[m[K
+[12.097s] gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_local_planner.cpp.o] Error 1
+[12.098s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dwa_main.dir/all] Error 2
+[12.098s] gmake: *** [Makefile:146: all] Error 2
+[12.102s] Invoked command in '/mnt/nova_ssd/workspaces/navigation/src/build/dwa_main' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/src/build/dwa_main -- -j12 -l12

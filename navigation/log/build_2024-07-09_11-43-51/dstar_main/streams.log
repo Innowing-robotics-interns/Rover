@@ -1,0 +1,171 @@
+[0.026s] Invoking command in '/mnt/nova_ssd/workspaces/navigation/build/dstar_main': CMAKE_PREFIX_PATH=/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_base:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dstar_main -- -j12 -l12
+[0.110s] [35m[1mConsolidate compiler generated dependencies of target dwa_main[0m
+[0.150s] [ 50%] Built target dstar_main
+[0.161s] [ 75%] [32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o[0m
+[10.163s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point dwaNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[10.163s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:113:110:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.163s]   113 | geometry_msgs::msg::Point dwaNode::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst std::string& target_frame[m[K, const std::string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+[10.163s]       |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[10.176s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kvoid dwaNode::dwa_callback()[m[K’:
+[10.177s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:146:18:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[KdwaNode::Position robot_position[m[K’ has initializer but incomplete type
+[10.177s]   146 |         Position [01;31m[Krobot_position[m[K = get_current_position();
+[10.177s]       |                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[10.177s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:146:55:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kstruct dwaNode::Position[m[K’
+[10.177s]   146 |         Position robot_position = [01;31m[Kget_current_position()[m[K;
+[10.177s]       |                                   [01;31m[K~~~~~~~~~~~~~~~~~~~~^~[m[K
+[10.177s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[10.177s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:64:16:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct dwaNode::Position[m[K’
+[10.178s]    64 |         struct [01;36m[KPosition[m[K;
+[10.178s]       |                [01;36m[K^~~~~~~~[m[K
+[10.181s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:147:9:[m[K [01;31m[Kerror: [m[K‘[01m[KPoint[m[K’ was not declared in this scope; did you mean ‘[01m[Kgeometry_msgs::msg::Point[m[K’?
+[10.182s]   147 |         [01;31m[KPoint[m[K goal = solve_path();
+[10.182s]       |         [01;31m[K^~~~~[m[K
+[10.182s]       |         [32m[Kgeometry_msgs::msg::Point[m[K
+[10.182s] In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:20[m[K,
+[10.182s]                  from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/map_meta_data__struct.hpp:22[m[K,
+[10.182s]                  from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/occupancy_grid__struct.hpp:22[m[K,
+[10.182s]                  from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/occupancy_grid.hpp:7[m[K,
+[10.182s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:5[m[K,
+[10.182s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[10.182s] [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:150:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Point[m[K’ declared here
+[10.183s]   150 | using [01;36m[KPoint[m[K =
+[10.183s]       |       [01;36m[K^~~~~[m[K
+[10.183s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:148:18:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[KdwaNode::Velocity best_velocity[m[K’ has initializer but incomplete type
+[10.183s]   148 |         Velocity [01;31m[Kbest_velocity[m[K = find_best_velocity(robot_position, goal);
+[10.183s]       |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[10.198s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:148:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal[m[K’ was not declared in this scope
+[10.198s]   148 |         Velocity best_velocity = find_best_velocity(robot_position, [01;31m[Kgoal[m[K);
+[10.199s]       |                                                                     [01;31m[K^~~~[m[K
+[10.208s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K At global scope:
+[10.209s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:159:56:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_position[m[K’ has incomplete type
+[10.209s]   159 | dwaNode::Velocity dwaNode::find_best_velocity([01;31m[KPosition robot_position[m[K, Position goal_position){
+[10.209s]       |                                               [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[10.209s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[10.209s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:64:16:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct dwaNode::Position[m[K’
+[10.209s]    64 |         struct [01;36m[KPosition[m[K;
+[10.209s]       |                [01;36m[K^~~~~~~~[m[K
+[10.209s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:159:81:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_position[m[K’ has incomplete type
+[10.209s]   159 | dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, [01;31m[KPosition goal_position[m[K){
+[10.210s]       |                                                                        [01;31m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
+[10.210s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[10.210s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:64:16:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct dwaNode::Position[m[K’
+[10.210s]    64 |         struct [01;36m[KPosition[m[K;
+[10.210s]       |                [01;36m[K^~~~~~~~[m[K
+[10.210s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:159:94:[m[K [01;31m[Kerror: [m[Kreturn type ‘[01m[Kstruct dwaNode::Velocity[m[K’ is incomplete
+[10.210s]   159 | dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, Position goal_position[01;31m[K)[m[K{
+[10.210s]       |                                                                                              [01;31m[K^[m[K
+[10.210s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kvoid dwaNode::find_best_velocity(dwaNode::Position, dwaNode::Position)[m[K’:
+[10.210s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:161:14:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[KdwaNode::Velocity best_velocity[m[K’ has incomplete type and cannot be defined
+[10.210s]   161 |     Velocity [01;31m[Kbest_velocity[m[K;
+[10.211s]       |              [01;31m[K^~~~~~~~~~~~~[m[K
+[10.211s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:164:22:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[KdwaNode::Velocity velocity[m[K’ has incomplete type and cannot be defined
+[10.211s]   164 |             Velocity [01;31m[Kvelocity[m[K;
+[10.211s]       |                      [01;31m[K^~~~~~~~[m[K
+[10.211s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:159:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_position[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.211s]   159 | dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, [01;35m[KPosition goal_position[m[K){
+[10.211s]       |                                                                        [01;35m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
+[10.212s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K At global scope:
+[10.212s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:177:1:[m[K [01;31m[Kerror: [m[K‘[01m[KPoint[m[K’ does not name a type
+[10.212s]   177 | [01;31m[KPoint[m[K dwaNode::solve_path(){
+[10.212s]       | [01;31m[K^~~~~[m[K
+[10.212s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kvoid dwaNode::solve_grid()[m[K’:
+[10.212s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:196:42:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K=[m[K’ token
+[10.213s]   196 |     geometry_msgs::msg::TransformStamped [01;31m[K=[m[K get_transform(static_frame, map_frame);
+[10.213s]       |                                          [01;31m[K^[m[K
+[10.213s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:206:73:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kgeometry_msgs::msg::TransformStamped[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::TransformStamped_<std::allocator<void> >[m[K’}
+[10.213s]   206 |             geometry_msgs::msg::Point transformed_point = [01;31m[KtransformPoint(point, static_frame, map_frame, transform)[m[K;
+[10.213s]       |                                                           [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.213s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:113:194:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kgeometry_msgs::msg::Point dwaNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’
+[10.213s]   113 | geometry_msgs::msg::Point dwaNode::transformPoint(const geometry_msgs::msg::Point& point, const std::string& target_frame, const std::string& source_frame, [01;36m[Kgeometry_msgs::msg::TransformStamped transformStamped[m[K) {
+[10.213s]       |                                                                                                                                                             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[10.213s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[KdwaNode::Position dwaNode::Position::operator+(const dwaNode::Position&)[m[K’:
+[10.213s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:226:16:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr dwaNode::Position::Position(const dwaNode::Position&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+[10.214s]   226 |         return [01;35m[Kres[m[K;
+[10.214s]       |                [01;35m[K^~~[m[K
+[10.214s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:228:14:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[KdwaNode::Position[m[K’ has user-provided ‘[01m[KdwaNode::Position dwaNode::Position::operator=(const dwaNode::Position&)[m[K’
+[10.214s]   228 |     Position [01;36m[Koperator[m[K =(const Position& p){
+[10.214s]       |              [01;36m[K^~~~~~~~[m[K
+[10.214s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[KdwaNode::Position dwaNode::Position::operator=(const dwaNode::Position&)[m[K’:
+[10.214s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:232:17:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr dwaNode::Position::Position(const dwaNode::Position&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+[10.214s]   232 |         return *[01;35m[Kthis[m[K;
+[10.214s]       |                 [01;35m[K^~~~[m[K
+[10.216s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:228:14:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[KdwaNode::Position[m[K’ has user-provided ‘[01m[KdwaNode::Position dwaNode::Position::operator=(const dwaNode::Position&)[m[K’
+[10.216s]   228 |     Position [01;36m[Koperator[m[K =(const Position& p){
+[10.216s]       |              [01;36m[K^~~~~~~~[m[K
+[10.216s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[KdwaNode::Position dwaNode::Velocity::operator*(double)[m[K’:
+[10.216s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:244:16:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr dwaNode::Position::Position(const dwaNode::Position&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+[10.216s]   244 |         return [01;35m[Kp[m[K;
+[10.217s]       |                [01;35m[K^[m[K
+[10.217s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:228:14:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[KdwaNode::Position[m[K’ has user-provided ‘[01m[KdwaNode::Position dwaNode::Position::operator=(const dwaNode::Position&)[m[K’
+[10.217s]   228 |     Position [01;36m[Koperator[m[K =(const Position& p){
+[10.217s]       |              [01;36m[K^~~~~~~~[m[K
+[10.217s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[KdwaNode::Velocity dwaNode::Velocity::operator=(const dwaNode::Velocity&)[m[K’:
+[10.217s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:249:17:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr dwaNode::Velocity::Velocity(const dwaNode::Velocity&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+[10.217s]   249 |         return *[01;35m[Kthis[m[K;
+[10.217s]       |                 [01;35m[K^~~~[m[K
+[10.217s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:246:14:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[KdwaNode::Velocity[m[K’ has user-provided ‘[01m[KdwaNode::Velocity dwaNode::Velocity::operator=(const dwaNode::Velocity&)[m[K’
+[10.217s]   246 |     Velocity [01;36m[Koperator[m[K =(const Velocity& v){
+[10.217s]       |              [01;36m[K^~~~~~~~[m[K
+[10.218s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K At global scope:
+[10.218s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:252:1:[m[K [01;31m[Kerror: [m[K‘[01m[KPosition[m[K’ does not name a type
+[10.218s]   252 | [01;31m[KPosition[m[K dwaNode::get_current_position(){
+[10.218s]       | [01;31m[K^~~~~~~~[m[K
+[10.244s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:261:8:[m[K [01;31m[Kerror: [m[K‘[01m[KPosition[m[K’ was not declared in this scope
+[10.245s]   261 | vector<[01;31m[KPosition[m[K> dwaNode::get_trajectory(Position robot_position, Velocity robot_velocity){
+[10.245s]       |        [01;31m[K^~~~~~~~[m[K
+[10.245s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:261:16:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[10.245s]   261 | vector<Position[01;31m[K>[m[K dwaNode::get_trajectory(Position robot_position, Velocity robot_velocity){
+[10.245s]       |                [01;31m[K^[m[K
+[10.245s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:261:16:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[10.245s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:261:18:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint dwaNode::get_trajectory(dwaNode::Position, dwaNode::Velocity)[m[K’
+[10.245s]   261 | vector<Position> [01;31m[KdwaNode[m[K::get_trajectory(Position robot_position, Velocity robot_velocity){
+[10.245s]       |                  [01;31m[K^~~~~~~[m[K
+[10.246s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[10.246s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:71:26:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kstd::vector<dwaNode::Position> dwaNode::get_trajectory(dwaNode::Position, dwaNode::Velocity)[m[K’
+[10.246s]    71 |         vector<Position> [01;36m[Kget_trajectory[m[K(Position robot_position, Velocity robot_velocity);
+[10.246s]       |                          [01;36m[K^~~~~~~~~~~~~~[m[K
+[10.246s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[10.246s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass dwaNode[m[K’ defined here
+[10.246s]    34 | class [01;36m[KdwaNode[m[K : public rclcpp::Node{
+[10.246s]       |       [01;36m[K^~~~~~~[m[K
+[10.246s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kdouble dwaNode::evaluate_trajectory(std::vector<dwaNode::Position>)[m[K’:
+[10.247s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:271:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<dwaNode::Position>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[10.247s]   271 |     for(int i = 0; [01;35m[Ki < trajectory.size()[m[K; i++){
+[10.247s]       |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[10.247s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:272:34:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr dwaNode::Position::Position(const dwaNode::Position&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+[10.247s]   272 |         Position p = trajectory[i[01;35m[K][m[K;
+[10.247s]       |                                  [01;35m[K^[m[K
+[10.247s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:228:14:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[KdwaNode::Position[m[K’ has user-provided ‘[01m[KdwaNode::Position dwaNode::Position::operator=(const dwaNode::Position&)[m[K’
+[10.247s]   228 |     Position [01;36m[Koperator[m[K =(const Position& p){
+[10.247s]       |              [01;36m[K^~~~~~~~[m[K
+[10.260s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:273:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_orin_x[m[K’ was not declared in this scope; did you mean ‘[01m[Kmap_origin_x[m[K’?
+[10.261s]   273 |         int x = (p.x-[01;31m[Kmap_orin_x[m[K) / map_resolution, y = (p.y-map_orin_y) / map_resolution;
+[10.261s]       |                      [01;31m[K^~~~~~~~~~[m[K
+[10.261s]       |                      [32m[Kmap_origin_x[m[K
+[10.264s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:274:28:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ was not declared in this scope; did you mean ‘[01m[Kpcl::fields::y[m[K’?
+[10.264s]   274 |         cost += costmap[x][[01;31m[Ky[m[K];
+[10.264s]       |                            [01;31m[K^[m[K
+[10.264s]       |                            [32m[Kpcl::fields::y[m[K
+[10.264s] In file included from [01m[K/usr/include/boost/preprocessor/tuple/elem.hpp:23[m[K,
+[10.265s]                  from [01m[K/usr/include/boost/preprocessor/arithmetic/add.hpp:21[m[K,
+[10.265s]                  from [01m[K/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:66[m[K,
+[10.265s]                  from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:28[m[K,
+[10.265s]                  from [01m[K/usr/include/boost/mpl/not.hpp:20[m[K,
+[10.265s]                  from [01m[K/usr/include/boost/mpl/assert.hpp:17[m[K,
+[10.265s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:40[m[K,
+[10.265s]                  from [01m[K/usr/include/pcl-1.12/pcl/type_traits.h:40[m[K,
+[10.265s]                  from [01m[K/usr/include/pcl-1.12/pcl/memory.h:46[m[K,
+[10.265s]                  from [01m[K/usr/include/pcl-1.12/pcl/PCLHeader.h:3[m[K,
+[10.265s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_cloud.h:47[m[K,
+[10.265s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:17[m[K,
+[10.266s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[10.266s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1941:1:[m[K [01;36m[Knote: [m[K‘[01m[Kpcl::fields::y[m[K’ declared here
+[10.266s]  1941 | [01;36m[KPOINT_CLOUD_REGISTER_POINT_STRUCT[m[K (pcl::_PointXYZ,
+[10.266s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.285s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:276:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal[m[K’ was not declared in this scope
+[10.286s]   276 |     cost += sqrt(pow(trajectory.back().x - [01;31m[Kgoal[m[K.x, 2) + pow(trajectory.back().y - goal.y, 2));
+[10.286s]       |                                            [01;31m[K^~~~[m[K
+[16.847s] gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o] Error 1
+[16.848s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/dwa_main.dir/all] Error 2
+[16.848s] gmake: *** [Makefile:146: all] Error 2
+[16.853s] Invoked command in '/mnt/nova_ssd/workspaces/navigation/build/dstar_main' returned '2': CMAKE_PREFIX_PATH=/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_base:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dstar_main -- -j12 -l12

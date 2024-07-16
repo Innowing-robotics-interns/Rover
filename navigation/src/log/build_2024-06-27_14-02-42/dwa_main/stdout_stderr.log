@@ -1,0 +1,67 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /mnt/nova_ssd/workspaces/navigation/src/dwa_main/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/nova_ssd/workspaces/navigation/src/build/dwa_main
+[ 50%] [32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_local_planner.cpp.o[0m
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:[m[K In constructor ‘[01m[KDwaLocalPlanner::DwaLocalPlanner()[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:54:52:[m[K [01;31m[Kerror: [m[K‘[01m[Klocal_costmap_topic_[m[K’ was not declared in this scope; did you mean ‘[01m[Klocal_costmap_frame_[m[K’?
+   54 |         this->get_parameter("local_costmap_topic", [01;31m[Klocal_costmap_topic_[m[K);
+      |                                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                    [32m[Klocal_costmap_frame_[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:[m[K In member function ‘[01m[Kstd::optional<geometry_msgs::msg::Pose_<std::allocator<void> > > DwaLocalPlanner::get_target_point()[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:145:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmin_distance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  145 |         double [01;35m[Kmin_distance[m[K = std::numeric_limits<double>::max();
+      |                [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:[m[K In member function ‘[01m[Kstd::vector<std::pair<double, double> > DwaLocalPlanner::generate_trajectory(double, double)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:214:29:[m[K [01;31m[Kerror: [m[K‘[01m[KgetYaw[m[K’ is not a member of ‘[01m[Ktf2[m[K’
+  214 |         double theta = tf2::[01;31m[KgetYaw[m[K(current_pose_.orientation);
+      |                             [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_local_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dwa_main.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

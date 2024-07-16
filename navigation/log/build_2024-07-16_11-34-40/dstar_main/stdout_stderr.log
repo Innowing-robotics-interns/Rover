@@ -1,0 +1,40 @@
+[35m[1mConsolidate compiler generated dependencies of target dwa_main[0m
+[ 50%] Built target dstar_main
+[ 75%] [32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o[0m
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point dwaNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:113:110:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  113 | geometry_msgs::msg::Point dwaNode::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst std::string& target_frame[m[K, const std::string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:4[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[KdwaNode::Velocity dwaNode::find_best_velocity(dwaNode::Position, dwaNode::Position)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:202:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 6 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  202 |         RCLCPP_INFO(this->get_logger(), [01;35m[K"       Velocity: %f, %f, Cost: %f"[m[K, -min_axis_speed, [32m[K0[m[K, cost);
+      |                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                   [32m[K~[m[K
+      |                                                                                               [32m[K|[m[K
+      |                                                                                               [32m[Kint[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:202:64:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  202 |         RCLCPP_INFO(this->get_logger(), "       Velocity: %f, [01;36m[K%f[m[K, Cost: %f", -min_axis_speed, 0, cost);
+      |                                                               [01;36m[K~^[m[K
+      |                                                                [01;36m[K|[m[K
+      |                                                                [01;36m[Kdouble[m[K
+      |                                                               [32m[K%d[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kdouble dwaNode::evaluate_trajectory(std::vector<dwaNode::Position>, dwaNode::Position)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:280:94:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+  280 |         final_cost = min[34m[K([m[Kfinal_cost, cost + sqrt(pow(p.x - goal.x, 2) + pow(p.y - goal.y, 2))[01;31m[Ks[m[K);
+      |                         [34m[K~[m[K                                                                    [01;31m[K^[m[K
+      |                                                                                              [32m[K)[m[K
+gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/dwa_main.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

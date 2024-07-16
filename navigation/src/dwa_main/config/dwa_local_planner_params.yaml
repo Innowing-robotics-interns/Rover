@@ -1,0 +1,21 @@
+dwa_local_planner:
+  ros__parameters:
+    max_vel_x: 0.3
+    max_vel_theta: 0.3
+    vx_samples: 10
+    vtheta_samples: 20
+    acc_lim_x: 1.0
+    acc_lim_theta: 1.0
+    path_topic: "/dstar_plan"
+    odom_topic: "/visual_slam/vis/slam_odometry"
+    cmd_vel_topic: "/cmd_vel_nav"
+    local_costmap_topic: "/local_costmap/costmap"
+    goal_tolerance: 0.01
+    local_costmap_frame: "local_costmap"
+    safe_distance: 0.1
+    heading_coefficient: 1.0
+    distance_coefficient: 1.0
+    velocity_coefficient: 1.0
+    dt: 0.1
+    steps: 10
+    target_select_point: 10

@@ -1,0 +1,16 @@
+[0.026s] Invoking command in '/mnt/nova_ssd/workspaces/navigation/build/dstar_main': CMAKE_PREFIX_PATH=/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_base:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dstar_main -- -j12 -l12
+[0.098s] [35m[1mConsolidate compiler generated dependencies of target dwa_main[0m
+[0.126s] [ 50%] Built target dstar_main
+[0.144s] [ 75%] [32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o[0m
+[9.417s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point dwaNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[9.417s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:113:110:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.417s]   113 | geometry_msgs::msg::Point dwaNode::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst std::string& target_frame[m[K, const std::string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+[9.417s]       |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[9.438s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[KdwaNode::Position dwaNode::get_current_position()[m[K’:
+[9.438s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:223:35:[m[K [01;31m[Kerror: [m[K‘[01m[KgetYaw[m[K’ is not a member of ‘[01m[Ktf2[m[K’
+[9.438s]   223 |     current_position.theta = tf2::[01;31m[KgetYaw[m[K(transform.transform.rotation);
+[9.438s]       |                                   [01;31m[K^~~~~~[m[K
+[15.813s] gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o] Error 1
+[15.814s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/dwa_main.dir/all] Error 2
+[15.814s] gmake: *** [Makefile:146: all] Error 2
+[15.820s] Invoked command in '/mnt/nova_ssd/workspaces/navigation/build/dstar_main' returned '2': CMAKE_PREFIX_PATH=/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_base:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dstar_main -- -j12 -l12

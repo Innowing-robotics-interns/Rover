@@ -1,0 +1,10 @@
+<launch>
+  <arg name="teb_params_file" default="$(find teb_local_planner)/params/teb_params.yaml" />
+  <rosparam command="load" file="$(arg teb_params_file)" />
+
+  <node pkg="teb_local_planner" type="TebLocalPlannerROS" respawn="false" name="teb_local_planner_node" output="screen">
+    <!-- Other configurations -->
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+    <param name="controller_frequency" value="10.0" />
+  </node>
+</launch>

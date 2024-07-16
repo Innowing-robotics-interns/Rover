@@ -1,0 +1,78 @@
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point scan2grid::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:18:107:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   18 | geometry_msgs::msg::Point scan2grid::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst string& target_frame[m[K, const string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                             [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:[m[K In member function ‘[01m[Kvoid scan2grid::laser_scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:75:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   75 |     for(int i = 0; [01;35m[Ki < msg->ranges.size()[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:87:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   87 |         if(x >= 0 && [01;35m[Kx < occupancy_grid.info.width[m[K && y >= 0 && y < occupancy_grid.info.height){
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:87:67:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   87 |         if(x >= 0 && x < occupancy_grid.info.width && y >= 0 && [01;35m[Ky < occupancy_grid.info.height[m[K){
+      |                                                                 [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:91:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   91 |     for(int i = 0; [01;35m[Ki < occupancy_grid.info.width[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:92:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   92 |         for(int j = 0; [01;35m[Kj < occupancy_grid.info.height[m[K; j++){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:96:47:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   96 |                         if(i + m < 0 || [01;35m[Ki + m >= occupancy_grid.info.width[m[K || j + n < 0 || j + n >= occupancy_grid.info.height){
+      |                                         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:96:98:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   96 |                         if(i + m < 0 || i + m >= occupancy_grid.info.width || j + n < 0 || [01;35m[Kj + n >= occupancy_grid.info.height[m[K){
+      |                                                                                            [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:101:93:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmax(__gnu_cxx::__enable_if<true, double>::__type, __gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type&)[m[K’
+  101 |                         occupancy_grid.data[new_y * occupancy_grid.info.width + new_x] = [01;31m[Kmax(100 - sqrt(m * m + n * n) * 5, occupancy_grid.data[new_y * occupancy_grid.info.width + new_x])[m[K;
+      |                                                                                          [01;31m[K~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:254:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr const _Tp& std::max(const _Tp&, const _Tp&)[m[K’
+  254 |     [01;36m[Kmax[m[K(const _Tp& __a, const _Tp& __b)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:254:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:101:93:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[Kconst _Tp[m[K’ (‘[01m[Kdouble[m[K’ and ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type[m[K’ {aka ‘[01m[Ksigned char[m[K’})
+  101 |                         occupancy_grid.data[new_y * occupancy_grid.info.width + new_x] = [01;36m[Kmax(100 - sqrt(m * m + n * n) * 5, occupancy_grid.data[new_y * occupancy_grid.info.width + new_x])[m[K;
+      |                                                                                          [01;36m[K~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:300:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Compare> constexpr const _Tp& std::max(const _Tp&, const _Tp&, _Compare)[m[K’
+  300 |     [01;36m[Kmax[m[K(const _Tp& __a, const _Tp& __b, _Compare __comp)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:300:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:101:93:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[Kconst _Tp[m[K’ (‘[01m[Kdouble[m[K’ and ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<signed char>, signed char>::value_type[m[K’ {aka ‘[01m[Ksigned char[m[K’})
+  101 |                         occupancy_grid.data[new_y * occupancy_grid.info.width + new_x] = [01;36m[Kmax(100 - sqrt(m * m + n * n) * 5, occupancy_grid.data[new_y * occupancy_grid.info.width + new_x])[m[K;
+      |                                                                                          [01;36m[K~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/algorithm:62[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algo.h:3461:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr _Tp std::max(std::initializer_list<_Tp>)[m[K’
+ 3461 |     [01;36m[Kmax[m[K(initializer_list<_Tp> __l)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algo.h:3461:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:101:93:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::initializer_list<_Tp>[m[K’ and ‘[01m[Kdouble[m[K’
+  101 |                         occupancy_grid.data[new_y * occupancy_grid.info.width + new_x] = [01;36m[Kmax(100 - sqrt(m * m + n * n) * 5, occupancy_grid.data[new_y * occupancy_grid.info.width + new_x])[m[K;
+      |                                                                                          [01;36m[K~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/algorithm:62[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algo.h:3467:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Compare> constexpr _Tp std::max(std::initializer_list<_Tp>, _Compare)[m[K’
+ 3467 |     [01;36m[Kmax[m[K(initializer_list<_Tp> __l, _Compare __comp)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algo.h:3467:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:101:93:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::initializer_list<_Tp>[m[K’ and ‘[01m[Kdouble[m[K’
+  101 |                         occupancy_grid.data[new_y * occupancy_grid.info.width + new_x] = [01;36m[Kmax(100 - sqrt(m * m + n * n) * 5, occupancy_grid.data[new_y * occupancy_grid.info.width + new_x])[m[K;
+      |                                                                                          [01;36m[K~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/scan2grid.dir/build.make:76: CMakeFiles/scan2grid.dir/src/scan2grid.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/scan2grid.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

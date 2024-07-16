@@ -1,0 +1,51 @@
+[ 25%] Built target dstar_main
+[35m[1mConsolidate compiler generated dependencies of target map2grid[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/map2grid.dir/src/scan2grid.cpp.o[0m
+In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:1[m[K:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/scan2grid/scan2grid.h:23:14:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdouble[m[K’
+   23 |         std::[01;31m[Kdouble[m[K map_size, map_resolution;
+      |              [01;31m[K^~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point scan2grid::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:13:107:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   13 | geometry_msgs::msg::Point scan2grid::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst string& target_frame[m[K, const string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                             [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:[m[K In constructor ‘[01m[Kscan2grid::scan2grid()[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:39:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_size[m[K’ was not declared in this scope
+   39 |     if(!this->get_parameter("map_size", [01;31m[Kmap_size[m[K)){
+      |                                         [01;31m[K^~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:42:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_resolution[m[K’ was not declared in this scope
+   42 |     if(!this->get_parameter("map_resolution", [01;31m[Kmap_resolution[m[K)){
+      |                                               [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:[m[K In member function ‘[01m[Kvoid scan2grid::laser_scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:62:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_resolution[m[K’ was not declared in this scope
+   62 |     occupancy_grid.info.resolution = [01;31m[Kmap_resolution[m[K;
+      |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:63:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_size[m[K’ was not declared in this scope
+   63 |     occupancy_grid.info.width = [01;31m[Kmap_size[m[K / map_resolution;
+      |                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:73:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   73 |     for(int i = 0; [01;35m[Ki < msg->ranges.size()[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:85:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   85 |         if(x >= 0 && [01;35m[Kx < occupancy_grid.info.width[m[K && y >= 0 && y < occupancy_grid.info.height){
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:85:67:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   85 |         if(x >= 0 && x < occupancy_grid.info.width && y >= 0 && [01;35m[Ky < occupancy_grid.info.height[m[K){
+      |                                                                 [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:89:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   89 |     for(int i = 0; [01;35m[Ki < occupancy_grid.info.width[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:90:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   90 |         for(int j = 0; [01;35m[Kj < occupancy_grid.info.height[m[K; j++){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:94:47:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   94 |                         if(i + m < 0 || [01;35m[Ki + m >= occupancy_grid.info.width[m[K || j + n < 0 || j + n >= occupancy_grid.info.height){
+      |                                         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:94:98:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   94 |                         if(i + m < 0 || i + m >= occupancy_grid.info.width || j + n < 0 || [01;35m[Kj + n >= occupancy_grid.info.height[m[K){
+      |                                                                                            [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/map2grid.dir/all] Error 2
+gmake: *** [Makefile:146: all] Interrupt

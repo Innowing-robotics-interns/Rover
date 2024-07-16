@@ -1,0 +1,11 @@
+[0.017s] Invoking command in '/mnt/nova_ssd/workspaces/navigation/build/dwa_main': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dwa_main -- -j12 -l12
+[0.079s] [35m[1mConsolidate compiler generated dependencies of target dwa_main[0m
+[0.109s] [ 50%] [32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_local_planner.cpp.o[0m
+[4.279s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:[m[K In member function ‘[01m[Kvoid DwaLocalPlanner::local_costmap_callback(nav_msgs::msg::OccupancyGrid_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.279s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:95:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing OccupancyGrid = struct nav_msgs::msg::OccupancyGrid_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav_msgs::msg::OccupancyGrid_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kempty[m[K’
+[4.279s]    95 |         std::cout<< "check: " <<local_costmap_.[01;31m[Kempty[m[K()<<std::endl;
+[4.279s]       |                                                [01;31m[K^~~~~[m[K
+[12.531s] gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_local_planner.cpp.o] Error 1
+[12.531s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dwa_main.dir/all] Error 2
+[12.532s] gmake: *** [Makefile:146: all] Error 2
+[12.535s] Invoked command in '/mnt/nova_ssd/workspaces/navigation/build/dwa_main' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dwa_main -- -j12 -l12

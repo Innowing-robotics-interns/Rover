@@ -1,0 +1,71 @@
+[35m[1mConsolidate compiler generated dependencies of target dstar_main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/dstar_main.dir/src/dstar_main.cpp.o[0m
+In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_main.h:14[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:2[m[K:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:[m[K In member function ‘[01m[Kvoid dstarNode::LinkCutTree::rotate(dstarNode::Nodeptr)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:12:13:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+   12 |             [01;35m[Kif[m[K(!is_root(f)) ff->son[get_son(f)] = x; x -> father = ff;
+      |             [01;35m[K^~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:12:54:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+   12 |             if(!is_root(f)) ff->son[get_son(f)] = x; [01;36m[Kx[m[K -> father = ff;
+      |                                                      [01;36m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:[m[K At global scope:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:94:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid dstarNode::solve_goal_msg()[m[K’
+   94 | void [01;31m[KdstarNode[m[K::solve_goal_msg(){
+      |      [01;31m[K^~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:94:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid dstarNode::solve_goal_msg()[m[K’
+In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:1[m[K:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_main.h:35:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass dstarNode[m[K’ defined here
+   35 | class [01;36m[KdstarNode[m[K : public rclcpp::Node{
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:[m[K In function ‘[01m[Kvoid solve_current_pose()[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:169:68:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_frame[m[K’ was not declared in this scope
+  169 |     geometry_msgs::msg::TransformStamped transform = get_transform([01;31m[Krobot_frame[m[K, map_topic);
+      |                                                                    [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:169:81:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_topic[m[K’ was not declared in this scope
+  169 |     geometry_msgs::msg::TransformStamped transform = get_transform(robot_frame, [01;31m[Kmap_topic[m[K);
+      |                                                                                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:169:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_transform[m[K’ was not declared in this scope; did you mean ‘[01m[Ktransform[m[K’?
+  169 |     geometry_msgs::msg::TransformStamped transform = [01;31m[Kget_transform[m[K(robot_frame, map_topic);
+      |                                                      [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                                      [32m[Ktransform[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:174:51:[m[K [01;31m[Kerror: [m[K‘[01m[KtransformPoint[m[K’ was not declared in this scope; did you mean ‘[01m[Ktransformed_point[m[K’?
+  174 |     geometry_msgs::msg::Point transformed_point = [01;31m[KtransformPoint[m[K(point, map_topic, robot_frame);
+      |                                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                   [32m[Ktransformed_point[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:175:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_ori_x[m[K’ was not declared in this scope
+  175 |     int x = round((transformed_point.x - [01;31m[Kglobal_ori_x[m[K) / global_resolution);
+      |                                          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:175:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_resolution[m[K’ was not declared in this scope
+  175 |     int x = round((transformed_point.x - global_ori_x) / [01;31m[Kglobal_resolution[m[K);
+      |                                                          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:176:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_ori_y[m[K’ was not declared in this scope
+  176 |     int y = round((transformed_point.y - [01;31m[Kglobal_ori_y[m[K) / global_resolution);
+      |                                          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:177:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_width[m[K’ was not declared in this scope
+  177 |     if(x < 0 || x >= [01;31m[Kglobal_width[m[K || y < 0 || y >= global_height || (x == start_node -> x && y == start_node -> y))return;
+      |                      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:177:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kglobal_height[m[K’ was not declared in this scope
+  177 |     if(x < 0 || x >= global_width || y < 0 || y >= [01;31m[Kglobal_height[m[K || (x == start_node -> x && y == start_node -> y))return;
+      |                                                    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:177:75:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_node[m[K’ was not declared in this scope
+  177 |     if(x < 0 || x >= global_width || y < 0 || y >= global_height || (x == [01;31m[Kstart_node[m[K -> x && y == start_node -> y))return;
+      |                                                                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:178:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_node[m[K’ was not declared in this scope
+  178 |     [01;31m[Kstart_node[m[K = node_map[x][y];
+      |     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:178:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode_map[m[K’ was not declared in this scope
+  178 |     start_node = [01;31m[Knode_map[m[K[x][y];
+      |                  [01;31m[K^~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:[m[K In member function ‘[01m[Kvoid dstarNode::dstar_callback()[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:222:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolve_goal_msg[m[K’ was not declared in this scope; did you mean ‘[01m[Ksolve_grid_msg[m[K’?
+  222 |         [01;31m[Ksolve_goal_msg[m[K();
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+      |         [32m[Ksolve_grid_msg[m[K
+gmake[2]: *** [CMakeFiles/dstar_main.dir/build.make:76: CMakeFiles/dstar_main.dir/src/dstar_main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dstar_main.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

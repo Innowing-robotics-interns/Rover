@@ -1,0 +1,103 @@
+[0.017s] Invoking command in '/mnt/nova_ssd/workspaces/navigation/build/dwa_main': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dwa_main -- -j12 -l12
+[0.051s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.254s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.323s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.329s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.340s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.358s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.382s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.469s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.472s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.625s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.670s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.736s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.749s] -- Looking for pthread.h
+[0.878s] -- Looking for pthread.h - found
+[0.879s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.999s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.001s] -- Found Threads: TRUE  
+[1.233s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.391s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.496s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[1.514s] -- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.532s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.534s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.535s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.972s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.070s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.071s] -- Configured cppcheck include dirs: /mnt/nova_ssd/workspaces/navigation/src/dwa_main/include
+[2.071s] -- Configured cppcheck exclude dirs and/or files: 
+[2.071s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.072s] -- Added test 'lint_cmake' to check CMake code style
+[2.072s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.073s] -- Added test 'uncrustify' to check C / C++ code style
+[2.073s] -- Configured uncrustify additional arguments: 
+[2.074s] -- Added test 'xmllint' to check XML markup files
+[2.075s] -- Configuring done
+[2.093s] -- Generating done
+[2.095s] -- Build files have been written to: /mnt/nova_ssd/workspaces/navigation/build/dwa_main
+[2.158s] [ 50%] [32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_local_planner.cpp.o[0m
+[2.507s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:8[m[K:
+[2.507s] [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+[2.507s]    35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+[2.507s]       |  [01;35m[K^~~~~~~[m[K
+[6.112s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:89:54:[m[K [01;31m[Kerror: [m[K‘[01m[KOccupancyGrid[m[K’ in namespace ‘[01m[Knav_msgs::msg[m[K’ does not name a type
+[6.112s]    89 |     void local_costmap_callback(const nav_msgs::msg::[01;31m[KOccupancyGrid[m[K::SharedPtr msg)
+[6.112s]       |                                                      [01;31m[K^~~~~~~~~~~~~[m[K
+[6.112s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:89:79:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+[6.112s]    89 |     void local_costmap_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr [01;31m[Kmsg[m[K)
+[6.112s]       |                                                                               [01;31m[K^~~[m[K
+[6.113s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:89:78:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+[6.113s]    89 |     void local_costmap_callback[34m[K([m[Kconst nav_msgs::msg::OccupancyGrid::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K)
+[6.113s]       |                                [34m[K~[m[K                                             [01;31m[K^[m[K[32m[K~~~[m[K
+[6.113s]       |                                                                              [32m[K)[m[K
+[6.114s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:89:69:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[6.114s]    89 |     void local_costmap_callback(const nav_msgs::msg::OccupancyGrid::[01;31m[KSharedPtr[m[K msg)
+[6.114s]       |                                                                     [01;31m[K^~~~~~~~~[m[K
+[6.114s]       |                                                                              [32m[K;[m[K
+[6.115s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:89:79:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+[6.115s]    89 |     void local_costmap_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr [01;31m[Kmsg[m[K)
+[6.116s]       |                                                                               [01;31m[K^~~[m[K
+[6.116s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:300:20:[m[K [01;31m[Kerror: [m[K‘[01m[KOccupancyGrid[m[K’ in namespace ‘[01m[Knav_msgs::msg[m[K’ does not name a type
+[6.117s]   300 |     nav_msgs::msg::[01;31m[KOccupancyGrid[m[K local_costmap_;
+[6.117s]       |                    [01;31m[K^~~~~~~~~~~~~[m[K
+[6.242s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:307:41:[m[K [01;31m[Kerror: [m[K‘[01m[KOccupancyGrid[m[K’ is not a member of ‘[01m[Knav_msgs::msg[m[K’
+[6.243s]   307 |     rclcpp::Subscription<nav_msgs::msg::[01;31m[KOccupancyGrid[m[K>::SharedPtr local_costmap_sub_;
+[6.243s]       |                                         [01;31m[K^~~~~~~~~~~~~[m[K
+[6.243s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:307:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[6.244s]   307 |     rclcpp::Subscription<nav_msgs::msg::OccupancyGrid[01;31m[K>[m[K::SharedPtr local_costmap_sub_;
+[6.244s]       |                                                      [01;31m[K^[m[K
+[6.244s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:307:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[6.244s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:307:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[6.244s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:307:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[6.244s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:307:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[6.245s]   307 |     rclcpp::Subscription<nav_msgs::msg::OccupancyGrid>::[01;31m[KSharedPtr[m[K local_costmap_sub_;
+[6.245s]       |                                                         [01;31m[K^~~~~~~~~[m[K
+[6.245s]       |                                                                  [32m[K;[m[K
+[6.247s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:307:67:[m[K [01;31m[Kerror: [m[K‘[01m[Klocal_costmap_sub_[m[K’ does not name a type
+[6.247s]   307 |     rclcpp::Subscription<nav_msgs::msg::OccupancyGrid>::SharedPtr [01;31m[Klocal_costmap_sub_[m[K;
+[6.248s]       |                                                                   [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[6.290s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:[m[K In constructor ‘[01m[KDwaLocalPlanner::DwaLocalPlanner()[m[K’:
+[6.291s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:52:52:[m[K [01;31m[Kerror: [m[K‘[01m[Klocal_costmap_topic_[m[K’ was not declared in this scope; did you mean ‘[01m[Klocal_costmap_frame_[m[K’?
+[6.291s]    52 |         this->get_parameter("local_costmap_topic", [01;31m[Klocal_costmap_topic_[m[K);
+[6.291s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[6.291s]       |                                                    [32m[Klocal_costmap_frame_[m[K
+[6.320s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:67:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klocal_costmap_sub_[m[K’ was not declared in this scope; did you mean ‘[01m[Klocal_costmap_frame_[m[K’?
+[6.320s]    67 |         [01;31m[Klocal_costmap_sub_[m[K = this->create_subscription<nav_msgs::msg::OccupancyGrid>(
+[6.320s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[6.321s]       |         [32m[Klocal_costmap_frame_[m[K
+[6.321s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:67:71:[m[K [01;31m[Kerror: [m[K‘[01m[KOccupancyGrid[m[K’ is not a member of ‘[01m[Knav_msgs::msg[m[K’
+[6.321s]    67 |         local_costmap_sub_ = this->create_subscription<nav_msgs::msg::[01;31m[KOccupancyGrid[m[K>(
+[6.321s]       |                                                                       [01;31m[K^~~~~~~~~~~~~[m[K
+[6.360s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:[m[K In member function ‘[01m[Kstd::optional<geometry_msgs::msg::Pose_<std::allocator<void> > > DwaLocalPlanner::get_target_point()[m[K’:
+[6.360s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:143:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmin_distance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.361s]   143 |         double [01;35m[Kmin_distance[m[K = std::numeric_limits<double>::max();
+[6.361s]       |                [01;35m[K^~~~~~~~~~~~[m[K
+[6.369s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:[m[K In member function ‘[01m[Kstd::vector<std::pair<double, double> > DwaLocalPlanner::generate_trajectory(double, double)[m[K’:
+[6.369s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dwa_main/src/dwa_local_planner.cpp:212:29:[m[K [01;31m[Kerror: [m[K‘[01m[KgetYaw[m[K’ is not a member of ‘[01m[Ktf2[m[K’
+[6.370s]   212 |         double theta = tf2::[01;31m[KgetYaw[m[K(current_pose_.orientation);
+[6.370s]       |                             [01;31m[K^~~~~~[m[K
+[11.879s] gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_local_planner.cpp.o] Error 1
+[11.880s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dwa_main.dir/all] Error 2
+[11.880s] gmake: *** [Makefile:146: all] Error 2
+[11.886s] Invoked command in '/mnt/nova_ssd/workspaces/navigation/build/dwa_main' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dwa_main -- -j12 -l12

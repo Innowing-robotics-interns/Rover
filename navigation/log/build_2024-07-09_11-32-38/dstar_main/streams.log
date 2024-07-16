@@ -1,0 +1,349 @@
+[0.029s] Invoking command in '/mnt/nova_ssd/workspaces/navigation/build/dstar_main': CMAKE_PREFIX_PATH=/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_base:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dstar_main -- -j12 -l12
+[0.084s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.340s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.407s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.413s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.430s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.459s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.495s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.610s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.615s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.813s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.056s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.244s] -- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.731s] -- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.741s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.744s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.744s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.757s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.869s] -- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)
+[2.055s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.097s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.107s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.107s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[2.107s] [0m** WARNING ** io features related to png will be disabled[0m
+[2.448s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[2.653s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.653s] -- looking for PCL_COMMON
+[2.654s] -- looking for PCL_OCTREE
+[2.654s] -- looking for PCL_IO
+[2.798s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.981s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.982s] -- Configured cppcheck include dirs: /mnt/nova_ssd/workspaces/navigation/src/dstar_main/include
+[2.982s] -- Configured cppcheck exclude dirs and/or files: 
+[2.983s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.984s] -- Added test 'lint_cmake' to check CMake code style
+[2.984s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.986s] -- Added test 'uncrustify' to check C / C++ code style
+[2.987s] -- Configured uncrustify additional arguments: 
+[2.987s] -- Added test 'xmllint' to check XML markup files
+[2.989s] -- Configuring done
+[3.062s] -- Generating done
+[3.066s] -- Build files have been written to: /mnt/nova_ssd/workspaces/navigation/build/dstar_main
+[3.121s] [35m[1mConsolidate compiler generated dependencies of target dstar_main[0m
+[3.132s] [ 25%] [32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o[0m
+[3.164s] [ 50%] [32mBuilding CXX object CMakeFiles/dstar_main.dir/src/dstar_main.cpp.o[0m
+[12.910s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[12.910s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:41:47:[m[K [01;31m[Kerror: [m[K‘[01m[KTwist[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’; did you mean ‘[01m[KKDL::Twist[m[K’?
+[12.910s]    41 |         rclcpp::Publisher<geometry_msgs::msg::[01;31m[KTwist[m[K>::SharedPtr cmd_vel_pub;
+[12.910s]       |                                               [01;31m[K^~~~~[m[K
+[12.911s] In file included from [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:53[m[K,
+[12.911s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:14[m[K,
+[12.911s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[12.911s] [01m[K/usr/include/kdl/frames.hpp:720:7:[m[K [01;36m[Knote: [m[K‘[01m[KKDL::Twist[m[K’ declared here
+[12.911s]   720 | class [01;36m[KTwist[m[K {
+[12.911s]       |       [01;36m[K^~~~~[m[K
+[12.911s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[12.911s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:41:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[12.911s]    41 |         rclcpp::Publisher<geometry_msgs::msg::Twist[01;31m[K>[m[K::SharedPtr cmd_vel_pub;
+[12.911s]       |                                                    [01;31m[K^[m[K
+[12.911s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:41:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[12.912s]    41 |         rclcpp::Publisher<geometry_msgs::msg::Twist>::[01;31m[KSharedPtr[m[K cmd_vel_pub;
+[12.912s]       |                                                       [01;31m[K^~~~~~~~~[m[K
+[12.912s]       |                                                                [32m[K;[m[K
+[12.918s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:41:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kcmd_vel_pub[m[K’ does not name a type
+[12.919s]    41 |         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr [01;31m[Kcmd_vel_pub[m[K;
+[12.919s]       |                                                                 [01;31m[K^~~~~~~~~~~[m[K
+[12.925s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[12.925s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:68:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type
+[12.925s]    68 |         [01;31m[Kvector[m[K<Position> get_trajectory(Position robot_position, Velocity robot_velocity);
+[12.925s]       |         [01;31m[K^~~~~~[m[K
+[12.925s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:69:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ has not been declared
+[12.925s]    69 |         double evaluate_trajectory([01;31m[Kvector[m[K<Position> trajectory);
+[12.926s]       |                                    [01;31m[K^~~~~~[m[K
+[12.926s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:69:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+[12.926s]    69 |         double evaluate_trajectory(vector[01;31m[K<[m[KPosition> trajectory);
+[12.926s]       |                                          [01;31m[K^[m[K
+[12.935s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:2[m[K:
+[12.935s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:[m[K In member function ‘[01m[Kvoid dstarNode::LinkCutTree::rotate(dstarNode::Nodeptr)[m[K’:
+[12.936s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:12:13:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[12.936s]    12 |             [01;35m[Kif[m[K(!is_root(f)) ff->son[get_son(f)] = x; x -> father = ff;
+[12.936s]       |             [01;35m[K^~[m[K
+[12.936s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:12:54:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[12.936s]    12 |             if(!is_root(f)) ff->son[get_son(f)] = x; [01;36m[Kx[m[K -> father = ff;
+[12.936s]       |                                                      [01;36m[K^[m[K
+[12.959s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In constructor ‘[01m[KdwaNode::dwaNode()[m[K’:
+[12.959s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:11:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_topic[m[K’ was not declared in this scope; did you mean ‘[01m[Kpath_copy[m[K’?
+[12.959s]    11 |     if(!this->get_parameter("path_topic", [01;31m[Kpath_topic[m[K)){
+[12.959s]       |                                           [01;31m[K^~~~~~~~~~[m[K
+[12.959s]       |                                           [32m[Kpath_copy[m[K
+[12.979s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:76:27:[m[K [01;31m[Kerror: [m[Kexpression in new-declarator must have integral or enumeration type
+[12.979s]    76 |     costmap = new double*[[01;31m[Kmap_width[m[K];
+[12.979s]       |                           [01;31m[K^~~~~~~~~[m[K
+[12.979s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:78:33:[m[K [01;31m[Kerror: [m[Kexpression in new-declarator must have integral or enumeration type
+[12.980s]    78 |         costmap[i] = new double[[01;31m[Kmap_height[m[K];
+[12.980s]       |                                 [01;31m[K^~~~~~~~~~[m[K
+[13.034s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point dstarNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[13.035s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:270:112:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.035s]   270 | geometry_msgs::msg::Point dstarNode::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst std::string& target_frame[m[K, const std::string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+[13.035s]       |                                                                                             [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[13.120s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:86:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_topic[m[K’ was not declared in this scope; did you mean ‘[01m[Kpath_copy[m[K’?
+[13.120s]    86 |     path_sub = this->create_subscription<nav_msgs::msg::Path>([01;31m[Kpath_topic[m[K, 10, std::bind(&dwaNode::path_callback, this, std::placeholders::_1));
+[13.120s]       |                                                               [01;31m[K^~~~~~~~~~[m[K
+[13.120s]       |                                                               [32m[Kpath_copy[m[K
+[13.147s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:87:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcmd_vel_pub[m[K’ was not declared in this scope; did you mean ‘[01m[Kcmd_vel_topic[m[K’?
+[13.147s]    87 |     [01;31m[Kcmd_vel_pub[m[K = this->create_publisher<geometry_msgs::msg::Twist>(cmd_vel_topic, 10);
+[13.147s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[13.147s]       |     [32m[Kcmd_vel_topic[m[K
+[13.148s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:87:62:[m[K [01;31m[Kerror: [m[K‘[01m[KTwist[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’; did you mean ‘[01m[KKDL::Twist[m[K’?
+[13.148s]    87 |     cmd_vel_pub = this->create_publisher<geometry_msgs::msg::[01;31m[KTwist[m[K>(cmd_vel_topic, 10);
+[13.148s]       |                                                              [01;31m[K^~~~~[m[K
+[13.149s] In file included from [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:53[m[K,
+[13.149s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:14[m[K,
+[13.149s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.149s] [01m[K/usr/include/kdl/frames.hpp:720:7:[m[K [01;36m[Knote: [m[K‘[01m[KKDL::Twist[m[K’ declared here
+[13.149s]   720 | class [01;36m[KTwist[m[K {
+[13.149s]       |       [01;36m[K^~~~~[m[K
+[13.149s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:87:68:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KdwaNode::create_publisher<<expression error> >(std::string&, int)[m[K’
+[13.149s]    87 |     cmd_vel_pub = [01;31m[Kthis->create_publisher<geometry_msgs::msg::Twist>(cmd_vel_topic, 10)[m[K;
+[13.149s]       |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[13.149s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[13.149s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[13.150s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.150s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:4[m[K,
+[13.150s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.150s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[13.150s]   195 |   [01;36m[Kcreate_publisher[m[K(
+[13.150s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[13.150s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[13.150s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:87:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[13.150s]    87 |     cmd_vel_pub = [01;31m[Kthis->create_publisher<geometry_msgs::msg::Twist>(cmd_vel_topic, 10)[m[K;
+[13.151s]       |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[13.172s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point dwaNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[13.172s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:110:110:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.172s]   110 | geometry_msgs::msg::Point dwaNode::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst std::string& target_frame[m[K, const std::string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+[13.172s]       |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[13.181s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kvoid dwaNode::dwa_callback()[m[K’:
+[13.181s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:143:18:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[KdwaNode::Position robot_position[m[K’ has initializer but incomplete type
+[13.181s]   143 |         Position [01;31m[Krobot_position[m[K = get_current_position();
+[13.181s]       |                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[13.181s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:143:55:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kstruct dwaNode::Position[m[K’
+[13.181s]   143 |         Position robot_position = [01;31m[Kget_current_position()[m[K;
+[13.181s]       |                                   [01;31m[K~~~~~~~~~~~~~~~~~~~~^~[m[K
+[13.181s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.181s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:61:16:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct dwaNode::Position[m[K’
+[13.182s]    61 |         struct [01;36m[KPosition[m[K;
+[13.182s]       |                [01;36m[K^~~~~~~~[m[K
+[13.182s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:144:9:[m[K [01;31m[Kerror: [m[K‘[01m[KPoint[m[K’ was not declared in this scope; did you mean ‘[01m[Kgeometry_msgs::msg::Point[m[K’?
+[13.182s]   144 |         [01;31m[KPoint[m[K goal = solve_path();
+[13.182s]       |         [01;31m[K^~~~~[m[K
+[13.183s]       |         [32m[Kgeometry_msgs::msg::Point[m[K
+[13.183s] In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:20[m[K,
+[13.183s]                  from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/map_meta_data__struct.hpp:22[m[K,
+[13.183s]                  from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/occupancy_grid__struct.hpp:22[m[K,
+[13.183s]                  from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/occupancy_grid.hpp:7[m[K,
+[13.183s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:5[m[K,
+[13.183s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.183s] [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:150:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Point[m[K’ declared here
+[13.183s]   150 | using [01;36m[KPoint[m[K =
+[13.183s]       |       [01;36m[K^~~~~[m[K
+[13.183s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:145:18:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[KdwaNode::Velocity best_velocity[m[K’ has initializer but incomplete type
+[13.184s]   145 |         Velocity [01;31m[Kbest_velocity[m[K = find_best_velocity(robot_position, goal);
+[13.184s]       |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[13.200s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:145:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal[m[K’ was not declared in this scope
+[13.201s]   145 |         Velocity best_velocity = find_best_velocity(robot_position, [01;31m[Kgoal[m[K);
+[13.201s]       |                                                                     [01;31m[K^~~~[m[K
+[13.202s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:146:29:[m[K [01;31m[Kerror: [m[K‘[01m[KTwist[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’; did you mean ‘[01m[KKDL::Twist[m[K’?
+[13.202s]   146 |         geometry_msgs::msg::[01;31m[KTwist[m[K cmd_vel;
+[13.202s]       |                             [01;31m[K^~~~~[m[K
+[13.202s] In file included from [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:53[m[K,
+[13.202s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:14[m[K,
+[13.202s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.202s] [01m[K/usr/include/kdl/frames.hpp:720:7:[m[K [01;36m[Knote: [m[K‘[01m[KKDL::Twist[m[K’ declared here
+[13.203s]   720 | class [01;36m[KTwist[m[K {
+[13.203s]       |       [01;36m[K^~~~~[m[K
+[13.222s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:147:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcmd_vel[m[K’ was not declared in this scope
+[13.222s]   147 |         [01;31m[Kcmd_vel[m[K.linear.x = best_velocity.v;
+[13.222s]       |         [01;31m[K^~~~~~~[m[K
+[13.246s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:149:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcmd_vel_pub[m[K’ was not declared in this scope; did you mean ‘[01m[Kcmd_vel_topic[m[K’?
+[13.246s]   149 |         [01;31m[Kcmd_vel_pub[m[K->publish(cmd_vel);
+[13.246s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[13.246s]       |         [32m[Kcmd_vel_topic[m[K
+[13.247s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K At global scope:
+[13.247s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:156:56:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_position[m[K’ has incomplete type
+[13.247s]   156 | dwaNode::Velocity dwaNode::find_best_velocity([01;31m[KPosition robot_position[m[K, Position goal_position){
+[13.247s]       |                                               [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[13.247s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.247s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:61:16:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct dwaNode::Position[m[K’
+[13.248s]    61 |         struct [01;36m[KPosition[m[K;
+[13.248s]       |                [01;36m[K^~~~~~~~[m[K
+[13.248s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:156:81:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_position[m[K’ has incomplete type
+[13.248s]   156 | dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, [01;31m[KPosition goal_position[m[K){
+[13.248s]       |                                                                        [01;31m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
+[13.248s] In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.248s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:61:16:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct dwaNode::Position[m[K’
+[13.248s]    61 |         struct [01;36m[KPosition[m[K;
+[13.248s]       |                [01;36m[K^~~~~~~~[m[K
+[13.248s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:156:94:[m[K [01;31m[Kerror: [m[Kreturn type ‘[01m[Kstruct dwaNode::Velocity[m[K’ is incomplete
+[13.248s]   156 | dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, Position goal_position[01;31m[K)[m[K{
+[13.249s]       |                                                                                              [01;31m[K^[m[K
+[13.249s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kvoid dwaNode::find_best_velocity(dwaNode::Position, dwaNode::Position)[m[K’:
+[13.249s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:158:14:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[KdwaNode::Velocity best_velocity[m[K’ has incomplete type and cannot be defined
+[13.249s]   158 |     Velocity [01;31m[Kbest_velocity[m[K;
+[13.249s]       |              [01;31m[K^~~~~~~~~~~~~[m[K
+[13.249s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:161:22:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[KdwaNode::Velocity velocity[m[K’ has incomplete type and cannot be defined
+[13.249s]   161 |             Velocity [01;31m[Kvelocity[m[K;
+[13.249s]       |                      [01;31m[K^~~~~~~~[m[K
+[13.250s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:164:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[13.250s]   164 |             [01;31m[Kvector[m[K<Position> trajectory = get_trajectory(robot_position, velocity);
+[13.250s]       |             [01;31m[K^~~~~~[m[K
+[13.250s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:164:13:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[13.250s] In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+[13.250s]                  from [01m[K/usr/include/c++/11/functional:62[m[K,
+[13.250s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[13.250s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[13.250s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[13.251s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.251s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.251s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.251s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:4[m[K,
+[13.251s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.251s] [01m[K/usr/include/c++/11/bits/stl_vector.h:389:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector[m[K’
+[13.251s]   389 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+[13.251s]       |           [01;36m[K^~~~~~[m[K
+[13.251s] In file included from [01m[K/usr/include/c++/11/functional:62[m[K,
+[13.251s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[13.251s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[13.251s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[13.252s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.252s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.252s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.252s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:4[m[K,
+[13.252s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.252s] [01m[K/usr/include/c++/11/vector:86:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::vector[m[K’
+[13.252s]    86 |       using [01;36m[Kvector[m[K = std::vector<_Tp, polymorphic_allocator<_Tp>>;
+[13.252s]       |             [01;36m[K^~~~~~[m[K
+[13.252s] In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+[13.252s]                  from [01m[K/usr/include/boost/mpl/vector.hpp:46[m[K,
+[13.252s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:43[m[K,
+[13.253s]                  from [01m[K/usr/include/pcl-1.12/pcl/type_traits.h:40[m[K,
+[13.253s]                  from [01m[K/usr/include/pcl-1.12/pcl/memory.h:46[m[K,
+[13.253s]                  from [01m[K/usr/include/pcl-1.12/pcl/PCLHeader.h:3[m[K,
+[13.253s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_cloud.h:47[m[K,
+[13.253s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:16[m[K,
+[13.253s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.253s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:22:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::vector[m[K’
+[13.253s]    22 | struct [01;36m[Kvector[m[K;
+[13.253s]       |        [01;36m[K^~~~~~[m[K
+[13.253s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:164:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[13.253s]   164 |             vector<Position[01;31m[K>[m[K trajectory = get_trajectory(robot_position, velocity);
+[13.254s]       |                            [01;31m[K^[m[K
+[13.274s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:164:30:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory[m[K’ was not declared in this scope
+[13.274s]   164 |             vector<Position> [01;31m[Ktrajectory[m[K = get_trajectory(robot_position, velocity);
+[13.274s]       |                              [01;31m[K^~~~~~~~~~[m[K
+[13.307s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:164:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_trajectory[m[K’ was not declared in this scope
+[13.307s]   164 |             vector<Position> trajectory = [01;31m[Kget_trajectory[m[K(robot_position, velocity);
+[13.307s]       |                                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[13.307s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:156:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_position[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.307s]   156 | dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, [01;35m[KPosition goal_position[m[K){
+[13.307s]       |                                                                        [01;35m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
+[13.311s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K At global scope:
+[13.311s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:174:1:[m[K [01;31m[Kerror: [m[K‘[01m[KPoint[m[K’ does not name a type
+[13.311s]   174 | [01;31m[KPoint[m[K dwaNode::solve_path(){
+[13.311s]       | [01;31m[K^~~~~[m[K
+[13.311s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kvoid dwaNode::solve_grid()[m[K’:
+[13.311s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:193:42:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K=[m[K’ token
+[13.312s]   193 |     geometry_msgs::msg::TransformStamped [01;31m[K=[m[K get_transform(static_frame, map_frame);
+[13.312s]       |                                          [01;31m[K^[m[K
+[13.313s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:203:106:[m[K [01;31m[Kerror: [m[K‘[01m[Ktransform[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::transform[m[K’?
+[13.313s]   203 |             geometry_msgs::msg::Point transformed_point = transformPoint(point, static_frame, map_frame, [01;31m[Ktransform[m[K);
+[13.313s]       |                                                                                                          [01;31m[K^~~~~~~~~[m[K
+[13.313s]       |                                                                                                          [32m[Kstd::transform[m[K
+[13.313s] In file included from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[13.313s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[13.314s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.314s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.314s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.314s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:4[m[K,
+[13.314s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.314s] [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:162:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::transform[m[K’ declared here
+[13.314s]   162 | [01;36m[Ktransform[m[K(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+[13.314s]       | [01;36m[K^~~~~~~~~[m[K
+[13.314s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K At global scope:
+[13.314s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:225:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after struct definition
+[13.315s]   225 | }
+[13.315s]       |  [01;31m[K^[m[K
+[13.315s]       |  [32m[K;[m[K
+[13.320s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:238:1:[m[K [01;31m[Kerror: [m[K‘[01m[KPosition[m[K’ does not name a type
+[13.320s]   238 | [01;31m[KPosition[m[K dwaNode::get_current_position(){
+[13.320s]       | [01;31m[K^~~~~~~~[m[K
+[13.324s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:247:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type
+[13.325s]   247 | [01;31m[Kvector[m[K<Position> dwaNode::get_trajectory(Position robot_position, Velocity robot_velocity){
+[13.325s]       | [01;31m[K^~~~~~[m[K
+[13.325s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:255:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble dwaNode::evaluate_trajectory[m[K’ is not a static data member of ‘[01m[Kclass dwaNode[m[K’
+[13.325s]   255 | double [01;31m[KdwaNode[m[K::evaluate_trajectory(vector<Position> trajectory){
+[13.325s]       |        [01;31m[K^~~~~~~[m[K
+[13.326s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:255:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[13.326s]   255 | double dwaNode::evaluate_trajectory([01;31m[Kvector[m[K<Position> trajectory){
+[13.326s]       |                                     [01;31m[K^~~~~~[m[K
+[13.326s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:255:37:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[13.326s] In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+[13.326s]                  from [01m[K/usr/include/c++/11/functional:62[m[K,
+[13.326s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[13.326s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[13.326s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[13.327s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.327s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.327s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.327s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:4[m[K,
+[13.327s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.327s] [01m[K/usr/include/c++/11/bits/stl_vector.h:389:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector[m[K’
+[13.327s]   389 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+[13.327s]       |           [01;36m[K^~~~~~[m[K
+[13.327s] In file included from [01m[K/usr/include/c++/11/functional:62[m[K,
+[13.327s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[13.327s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[13.328s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[13.328s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.328s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.328s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.328s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:4[m[K,
+[13.328s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.328s] [01m[K/usr/include/c++/11/vector:86:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::vector[m[K’
+[13.328s]    86 |       using [01;36m[Kvector[m[K = std::vector<_Tp, polymorphic_allocator<_Tp>>;
+[13.328s]       |             [01;36m[K^~~~~~[m[K
+[13.328s] In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+[13.328s]                  from [01m[K/usr/include/boost/mpl/vector.hpp:46[m[K,
+[13.328s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:43[m[K,
+[13.329s]                  from [01m[K/usr/include/pcl-1.12/pcl/type_traits.h:40[m[K,
+[13.329s]                  from [01m[K/usr/include/pcl-1.12/pcl/memory.h:46[m[K,
+[13.329s]                  from [01m[K/usr/include/pcl-1.12/pcl/PCLHeader.h:3[m[K,
+[13.329s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_cloud.h:47[m[K,
+[13.329s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:16[m[K,
+[13.329s]                  from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[13.329s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:22:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::vector[m[K’
+[13.329s]    22 | struct [01;36m[Kvector[m[K;
+[13.329s]       |        [01;36m[K^~~~~~[m[K
+[13.330s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:255:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[13.330s]   255 | double dwaNode::evaluate_trajectory(vector<Position[01;31m[K>[m[K trajectory){
+[13.330s]       |                                                    [01;31m[K^[m[K
+[13.352s] [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:255:54:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory[m[K’ was not declared in this scope
+[13.352s]   255 | double dwaNode::evaluate_trajectory(vector<Position> [01;31m[Ktrajectory[m[K){
+[13.352s]       |                                                      [01;31m[K^~~~~~~~~~[m[K
+[18.007s] gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o] Error 1
+[18.007s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/dwa_main.dir/all] Error 2
+[18.007s] gmake[1]: *** Waiting for unfinished jobs....
+[42.662s] [ 75%] [32m[1mLinking CXX executable dstar_main[0m
+[43.496s] [ 75%] Built target dstar_main
+[43.504s] gmake: *** [Makefile:146: all] Error 2
+[43.507s] Invoked command in '/mnt/nova_ssd/workspaces/navigation/build/dstar_main' returned '2': CMAKE_PREFIX_PATH=/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_base:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description /usr/bin/cmake --build /mnt/nova_ssd/workspaces/navigation/build/dstar_main -- -j12 -l12
