@@ -62,6 +62,21 @@ cv::KalmanFilter KF2(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
 cv::KalmanFilter KF3(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
 cv::KalmanFilter KF4(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
 cv::KalmanFilter KF5(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF6(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF7(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF8(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF9(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF10(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF11(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF12(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF13(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF14(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF15(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF16(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF17(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF18(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF19(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
+cv::KalmanFilter KF20(state_dim_, meas_dim_, ctrl_dim_, CV_32F);
 
 typedef pcl::PointCloud<pcl::PointXYZ> PointCloud;
 
@@ -92,6 +107,21 @@ private:
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster3;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster4;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster5;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster6;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster7;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster8;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster9;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster10;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster11;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster12;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster13;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster14;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster15;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster16;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster17;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster18;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster19;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster20;
 
     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr bbox_markers_pub_;
     rclcpp::Publisher<std_msgs::msg::Int32MultiArray>::SharedPtr object_ids_pub_;

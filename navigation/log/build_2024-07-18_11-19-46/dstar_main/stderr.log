@@ -1,0 +1,19 @@
+In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:1[m[K:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dwa_main/dwa_main.h:47:9:[m[K [01;31m[Kerror: [m[K‘[01m[KrclcPP[m[K’ does not name a type
+   47 |         [01;31m[KrclcPP[m[K::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub;
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In constructor ‘[01m[KdwaNode::dwaNode()[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:91:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmarker_pub[m[K’ was not declared in this scope
+   91 |     [01;31m[Kmarker_pub[m[K = this->create_publisher<visualization_msgs::msg::MarkerArray>("/dwa_trajectory", 10);
+      |     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point dwaNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:114:110:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  114 | geometry_msgs::msg::Point dwaNode::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst std::string& target_frame[m[K, const std::string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:[m[K In member function ‘[01m[KdwaNode::Velocity dwaNode::find_best_velocity(dwaNode::Position, dwaNode::Position)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:213:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmarker_pub[m[K’ was not declared in this scope
+  213 |     [01;31m[Kmarker_pub[m[K->publish(marker_array);
+      |     [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/dwa_main.dir/build.make:76: CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/dwa_main.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -10,7 +10,7 @@ class map2grid : public rclcpp::Node {
     public:
         map2grid();
         ~map2grid();
-        void laser_scan_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg);
+        void map_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg);
         
         //tf tools
         tf2_ros::Buffer* tfBuffer;

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp" "CMakeFiles/map2grid.dir/src/scan2grid.cpp.o" "gcc" "CMakeFiles/map2grid.dir/src/scan2grid.cpp.o.d"
+  "/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp" "CMakeFiles/map2grid.dir/src/map2grid.cpp.o" "gcc" "CMakeFiles/map2grid.dir/src/map2grid.cpp.o.d"
   )
 
 # Targets to which this target links.

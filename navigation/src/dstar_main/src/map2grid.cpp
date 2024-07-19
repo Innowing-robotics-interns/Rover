@@ -59,6 +59,7 @@ map2grid::~map2grid(){
 void map2grid::map_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg){
     nav_msgs::msg::OccupancyGrid occupancy_grid;
     occupancy_grid.header = msg->header;
+    occupancy_grid.header.frame_id = goal_frame;
     occupancy_grid.info.resolution = map_resolution;
     occupancy_grid.info.width = map_size / map_resolution;
     occupancy_grid.info.height = map_size / map_resolution;

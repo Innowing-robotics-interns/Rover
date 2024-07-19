@@ -297,13 +297,36 @@ src/dwa_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dwa_main.dir/build.make CMakeFiles/dwa_main.dir/src/dwa_main.cpp.s
 .PHONY : src/dwa_main.cpp.s
 
+src/map2grid.o: src/map2grid.cpp.o
+.PHONY : src/map2grid.o
+
+# target to build an object file
+src/map2grid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/map2grid.dir/build.make CMakeFiles/map2grid.dir/src/map2grid.cpp.o
+.PHONY : src/map2grid.cpp.o
+
+src/map2grid.i: src/map2grid.cpp.i
+.PHONY : src/map2grid.i
+
+# target to preprocess a source file
+src/map2grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/map2grid.dir/build.make CMakeFiles/map2grid.dir/src/map2grid.cpp.i
+.PHONY : src/map2grid.cpp.i
+
+src/map2grid.s: src/map2grid.cpp.s
+.PHONY : src/map2grid.s
+
+# target to generate assembly for a file
+src/map2grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/map2grid.dir/build.make CMakeFiles/map2grid.dir/src/map2grid.cpp.s
+.PHONY : src/map2grid.cpp.s
+
 src/scan2grid.o: src/scan2grid.cpp.o
 .PHONY : src/scan2grid.o
 
 # target to build an object file
 src/scan2grid.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan2grid.dir/build.make CMakeFiles/scan2grid.dir/src/scan2grid.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/map2grid.dir/build.make CMakeFiles/map2grid.dir/src/scan2grid.cpp.o
 .PHONY : src/scan2grid.cpp.o
 
 src/scan2grid.i: src/scan2grid.cpp.i
@@ -312,7 +335,6 @@ src/scan2grid.i: src/scan2grid.cpp.i
 # target to preprocess a source file
 src/scan2grid.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan2grid.dir/build.make CMakeFiles/scan2grid.dir/src/scan2grid.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/map2grid.dir/build.make CMakeFiles/map2grid.dir/src/scan2grid.cpp.i
 .PHONY : src/scan2grid.cpp.i
 
 src/scan2grid.s: src/scan2grid.cpp.s
@@ -321,7 +343,6 @@ src/scan2grid.s: src/scan2grid.cpp.s
 # target to generate assembly for a file
 src/scan2grid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/scan2grid.dir/build.make CMakeFiles/scan2grid.dir/src/scan2grid.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/map2grid.dir/build.make CMakeFiles/map2grid.dir/src/scan2grid.cpp.s
 .PHONY : src/scan2grid.cpp.s
 
 # Help Target
@@ -349,6 +370,9 @@ help:
 	@echo "... src/dwa_main.o"
 	@echo "... src/dwa_main.i"
 	@echo "... src/dwa_main.s"
+	@echo "... src/map2grid.o"
+	@echo "... src/map2grid.i"
+	@echo "... src/map2grid.s"
 	@echo "... src/scan2grid.o"
 	@echo "... src/scan2grid.i"
 	@echo "... src/scan2grid.s"

@@ -1,0 +1,59 @@
+[ 12%] [32mBuilding CXX object CMakeFiles/dstar_main.dir/src/dstar_main.cpp.o[0m
+In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:2[m[K:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:[m[K In member function ‘[01m[Kvoid dstarNode::LinkCutTree::rotate(dstarNode::Nodeptr)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:12:13:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+   12 |             [01;35m[Kif[m[K(!is_root(f)) ff->son[get_son(f)] = x; x -> father = ff;
+      |             [01;35m[K^~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/dstar_main/dstar_lct.hpp:12:54:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+   12 |             if(!is_root(f)) ff->son[get_son(f)] = x; [01;36m[Kx[m[K -> father = ff;
+      |                                                      [01;36m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:[m[K In member function ‘[01m[Kvoid dstarNode::dstar_update()[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:89:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Knum[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   89 |     int [01;35m[Knum[m[K=0;
+      |         [01;35m[K^~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point dstarNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dstar_main.cpp:278:112:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  278 | geometry_msgs::msg::Point dstarNode::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst std::string& target_frame[m[K, const std::string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                             [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[ 25%] [32m[1mLinking CXX executable dstar_main[0m
+[ 25%] Built target dstar_main
+[ 37%] [32mBuilding CXX object CMakeFiles/map2grid.dir/src/map2grid.cpp.o[0m
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point map2grid::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:13:106:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   13 | geometry_msgs::msg::Point map2grid::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst string& target_frame[m[K, const string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                            [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:[m[K In member function ‘[01m[Kvoid map2grid::map_callback(nav_msgs::msg::OccupancyGrid_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:61:29:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Knav_msgs::msg::OccupancyGrid_<std::allocator<void> >::_header_type[m[K’ {aka ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >[m[K’} and ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’})
+   61 |     occupancy_grid.header = [01;31m[Kgoal_frame[m[K;
+      |                             [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/occupancy_grid__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/occupancy_grid.hpp:7[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/map2grid/map2grid.h:2[m[K,
+                 from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:36:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >& std_msgs::msg::Header_<std::allocator<void> >::operator=(const std_msgs::msg::Header_<std::allocator<void> >&)[m[K’
+   36 | struct [01;36m[KHeader_[m[K
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:36:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst std_msgs::msg::Header_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:36:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >& std_msgs::msg::Header_<std::allocator<void> >::operator=(std_msgs::msg::Header_<std::allocator<void> >&&)[m[K’
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:36:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >&&[m[K’
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:89:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   89 |             if(x >= 0 && [01;35m[Kx < occupancy_grid.info.width[m[K && y >= 0 && y < occupancy_grid.info.height){
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:89:71:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   89 |             if(x >= 0 && x < occupancy_grid.info.width && y >= 0 && [01;35m[Ky < occupancy_grid.info.height[m[K){
+      |                                                                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:94:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   94 |     for(int i = 0; [01;35m[Ki < occupancy_grid.info.width[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:95:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   95 |         for(int j = 0; [01;35m[Kj < occupancy_grid.info.height[m[K; j++){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:99:47:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   99 |                         if(i + m < 0 || [01;35m[Ki + m >= occupancy_grid.info.width[m[K || j + n < 0 || j + n >= occupancy_grid.info.height){
+      |                                         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:99:98:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   99 |                         if(i + m < 0 || i + m >= occupancy_grid.info.width || j + n < 0 || [01;35m[Kj + n >= occupancy_grid.info.height[m[K){
+      |                                                                                            [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/map2grid.dir/build.make:76: CMakeFiles/map2grid.dir/src/map2grid.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/map2grid.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

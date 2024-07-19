@@ -1,0 +1,687 @@
+[0.000000] (-) TimerEvent: {}
+[0.004750] (costmap_converter_msgs) JobQueued: {'identifier': 'costmap_converter_msgs', 'dependencies': OrderedDict()}
+[0.004919] (dstar_main) JobQueued: {'identifier': 'dstar_main', 'dependencies': OrderedDict()}
+[0.004993] (dwa_main) JobQueued: {'identifier': 'dwa_main', 'dependencies': OrderedDict()}
+[0.005034] (costmap_converter) JobQueued: {'identifier': 'costmap_converter', 'dependencies': OrderedDict([('costmap_converter_msgs', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs')])}
+[0.005077] (costmap_converter_msgs) JobStarted: {'identifier': 'costmap_converter_msgs'}
+[0.018650] (dstar_main) JobStarted: {'identifier': 'dstar_main'}
+[0.029225] (dwa_main) JobStarted: {'identifier': 'dwa_main'}
+[0.046594] (costmap_converter_msgs) JobProgress: {'identifier': 'costmap_converter_msgs', 'progress': 'cmake'}
+[0.047682] (costmap_converter_msgs) JobProgress: {'identifier': 'costmap_converter_msgs', 'progress': 'build'}
+[0.048675] (costmap_converter_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter_msgs', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.107.56.6 56373 22'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp/lib:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/lib:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('BROWSER', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d703ee9-6230-4874-8874-2d06d4965259.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/mnt/nova_ssd/workspaces/texttopoint_ws/install:/mnt/nova_ssd/workspaces/kiss-icp_ws/install:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install:/mnt/nova_ssd/workspaces/scout/install:/mnt/nova_ssd/workspaces/navigation/install:/mnt/nova_ssd/workspaces/octomap_ws/install:/mnt/nova_ssd/workspaces/pcl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421124247420'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/remote-cli:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-4329a90660.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.107.56.6 56373 100.103.174.41 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package/lib/python3.10/site-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[0.053899] (dstar_main) JobProgress: {'identifier': 'dstar_main', 'progress': 'cmake'}
+[0.055283] (dstar_main) JobProgress: {'identifier': 'dstar_main', 'progress': 'build'}
+[0.055875] (dstar_main) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/navigation/build/dstar_main', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/navigation/build/dstar_main', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.107.56.6 56373 22'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp/lib:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/lib:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('BROWSER', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d703ee9-6230-4874-8874-2d06d4965259.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/mnt/nova_ssd/workspaces/texttopoint_ws/install:/mnt/nova_ssd/workspaces/kiss-icp_ws/install:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install:/mnt/nova_ssd/workspaces/scout/install:/mnt/nova_ssd/workspaces/navigation/install:/mnt/nova_ssd/workspaces/octomap_ws/install:/mnt/nova_ssd/workspaces/pcl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421124247420'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/remote-cli:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-4329a90660.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/mnt/nova_ssd/workspaces/navigation/build/dstar_main'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.107.56.6 56373 100.103.174.41 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package/lib/python3.10/site-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[0.071238] (dwa_main) JobProgress: {'identifier': 'dwa_main', 'progress': 'cmake'}
+[0.072119] (dwa_main) JobProgress: {'identifier': 'dwa_main', 'progress': 'build'}
+[0.072933] (dwa_main) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/navigation/build/dwa_main', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/navigation/build/dwa_main', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.107.56.6 56373 22'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp/lib:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/lib:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('BROWSER', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d703ee9-6230-4874-8874-2d06d4965259.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/mnt/nova_ssd/workspaces/texttopoint_ws/install:/mnt/nova_ssd/workspaces/kiss-icp_ws/install:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install:/mnt/nova_ssd/workspaces/scout/install:/mnt/nova_ssd/workspaces/navigation/install:/mnt/nova_ssd/workspaces/octomap_ws/install:/mnt/nova_ssd/workspaces/pcl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421124247420'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/remote-cli:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-4329a90660.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/mnt/nova_ssd/workspaces/navigation/build/dwa_main'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.107.56.6 56373 100.103.174.41 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package/lib/python3.10/site-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[0.099430] (-) TimerEvent: {}
+[0.136067] (costmap_converter_msgs) StdoutLine: {'line': b'[  2%] Built target costmap_converter_msgs__cpp\n'}
+[0.168109] (costmap_converter_msgs) StdoutLine: {'line': b'[ 12%] Built target costmap_converter_msgs__rosidl_generator_c\n'}
+[0.182448] (dwa_main) StdoutLine: {'line': b'[100%] Built target dwa_main\n'}
+[0.190536] (dstar_main) StdoutLine: {'line': b'[ 25%] Built target scan2grid\n'}
+[0.190995] (costmap_converter_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_costmap_converter_msgs\n'}
+[0.195490] (dstar_main) StdoutLine: {'line': b'[ 50%] Built target dstar_main\n'}
+[0.202725] (-) TimerEvent: {}
+[0.206950] (costmap_converter_msgs) StdoutLine: {'line': b'[ 23%] Built target costmap_converter_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.211770] (dwa_main) CommandEnded: {'returncode': 0}
+[0.212737] (dstar_main) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o\x1b[0m\n'}
+[0.219423] (costmap_converter_msgs) StdoutLine: {'line': b'[ 33%] Built target costmap_converter_msgs__rosidl_typesupport_cpp\n'}
+[0.243681] (costmap_converter_msgs) StdoutLine: {'line': b'[ 43%] Built target costmap_converter_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.260392] (costmap_converter_msgs) StdoutLine: {'line': b'[ 53%] Built target costmap_converter_msgs__rosidl_typesupport_c\n'}
+[0.272458] (dstar_main) StdoutLine: {'line': b'[ 87%] Built target map2grid\n'}
+[0.283085] (dwa_main) JobProgress: {'identifier': 'dwa_main', 'progress': 'install'}
+[0.299166] (dwa_main) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/navigation/build/dwa_main'], 'cwd': '/mnt/nova_ssd/workspaces/navigation/build/dwa_main', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.107.56.6 56373 22'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp/lib:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/lib:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('BROWSER', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d703ee9-6230-4874-8874-2d06d4965259.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/mnt/nova_ssd/workspaces/texttopoint_ws/install:/mnt/nova_ssd/workspaces/kiss-icp_ws/install:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install:/mnt/nova_ssd/workspaces/scout/install:/mnt/nova_ssd/workspaces/navigation/install:/mnt/nova_ssd/workspaces/octomap_ws/install:/mnt/nova_ssd/workspaces/pcl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421124247420'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/remote-cli:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-4329a90660.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/mnt/nova_ssd/workspaces/navigation/build/dwa_main'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.107.56.6 56373 100.103.174.41 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package/lib/python3.10/site-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[0.301766] (costmap_converter_msgs) StdoutLine: {'line': b'[ 64%] Built target costmap_converter_msgs__rosidl_typesupport_introspection_c\n'}
+[0.302786] (-) TimerEvent: {}
+[0.312609] (dwa_main) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.312946] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/lib/dwa_main/dwa_main\n'}
+[0.313078] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main//launch\n'}
+[0.313199] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main//launch/dwa_local_planner_launch.py\n'}
+[0.313418] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main//config\n'}
+[0.313561] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main//config/dwa_local_planner_params.yaml\n'}
+[0.313672] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/ament_index/resource_index/package_run_dependencies/dwa_main\n'}
+[0.313782] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/ament_index/resource_index/parent_prefix_path/dwa_main\n'}
+[0.313891] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/environment/ament_prefix_path.sh\n'}
+[0.313995] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/environment/ament_prefix_path.dsv\n'}
+[0.314094] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/environment/path.sh\n'}
+[0.314194] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/environment/path.dsv\n'}
+[0.314294] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/local_setup.bash\n'}
+[0.314390] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/local_setup.sh\n'}
+[0.314485] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/local_setup.zsh\n'}
+[0.314582] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/local_setup.dsv\n'}
+[0.314680] (dwa_main) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/package.dsv\n'}
+[0.314790] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/ament_index/resource_index/packages/dwa_main\n'}
+[0.314911] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/cmake/dwa_mainConfig.cmake\n'}
+[0.315021] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/cmake/dwa_mainConfig-version.cmake\n'}
+[0.315123] (dwa_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dwa_main/share/dwa_main/package.xml\n'}
+[0.315278] (costmap_converter_msgs) StdoutLine: {'line': b'[ 74%] Built target costmap_converter_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.316448] (dwa_main) CommandEnded: {'returncode': 0}
+[0.360311] (costmap_converter_msgs) StdoutLine: {'line': b'[ 74%] Built target costmap_converter_msgs\n'}
+[0.406588] (-) TimerEvent: {}
+[0.414998] (costmap_converter_msgs) StdoutLine: {'line': b'[ 76%] Built target costmap_converter_msgs__py\n'}
+[0.419734] (dwa_main) JobEnded: {'identifier': 'dwa_main', 'rc': 0}
+[0.454629] (costmap_converter_msgs) StdoutLine: {'line': b'[ 84%] Built target costmap_converter_msgs__rosidl_generator_py\n'}
+[0.492437] (costmap_converter_msgs) StdoutLine: {'line': b'[ 89%] Built target costmap_converter_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.498618] (costmap_converter_msgs) StdoutLine: {'line': b'[ 94%] Built target costmap_converter_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.506728] (-) TimerEvent: {}
+[0.531963] (costmap_converter_msgs) StdoutLine: {'line': b'[100%] Built target costmap_converter_msgs__rosidl_typesupport_c__pyext\n'}
+[0.606903] (-) TimerEvent: {}
+[0.621035] (costmap_converter_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.622784] (costmap_converter_msgs) StdoutLine: {'line': b'writing costmap_converter_msgs.egg-info/PKG-INFO\n'}
+[0.623194] (costmap_converter_msgs) StdoutLine: {'line': b'writing dependency_links to costmap_converter_msgs.egg-info/dependency_links.txt\n'}
+[0.623500] (costmap_converter_msgs) StdoutLine: {'line': b'writing top-level names to costmap_converter_msgs.egg-info/top_level.txt\n'}
+[0.627133] (costmap_converter_msgs) StdoutLine: {'line': b"reading manifest file 'costmap_converter_msgs.egg-info/SOURCES.txt'\n"}
+[0.628422] (costmap_converter_msgs) StdoutLine: {'line': b"writing manifest file 'costmap_converter_msgs.egg-info/SOURCES.txt'\n"}
+[0.697320] (costmap_converter_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_costmap_converter_msgs_egg\n'}
+[0.707014] (-) TimerEvent: {}
+[0.751160] (costmap_converter_msgs) CommandEnded: {'returncode': 0}
+[0.807135] (-) TimerEvent: {}
+[0.907636] (-) TimerEvent: {}
+[0.908568] (costmap_converter_msgs) JobProgress: {'identifier': 'costmap_converter_msgs', 'progress': 'install'}
+[0.909178] (costmap_converter_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter_msgs'], 'cwd': '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.107.56.6 56373 22'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp/lib:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/lib:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('BROWSER', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d703ee9-6230-4874-8874-2d06d4965259.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/mnt/nova_ssd/workspaces/texttopoint_ws/install:/mnt/nova_ssd/workspaces/kiss-icp_ws/install:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install:/mnt/nova_ssd/workspaces/scout/install:/mnt/nova_ssd/workspaces/navigation/install:/mnt/nova_ssd/workspaces/octomap_ws/install:/mnt/nova_ssd/workspaces/pcl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421124247420'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/remote-cli:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-4329a90660.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.107.56.6 56373 100.103.174.41 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package/lib/python3.10/site-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[0.928932] (costmap_converter_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.931176] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/ament_index/resource_index/rosidl_interfaces/costmap_converter_msgs\n'}
+[0.931564] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs\n'}
+[0.931874] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg\n'}
+[0.932014] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/obstacle_msg.h\n'}
+[0.933174] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail\n'}
+[0.933739] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__functions.h\n'}
+[0.934348] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__struct.h\n'}
+[0.934504] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__functions.c\n'}
+[0.934621] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__functions.h\n'}
+[0.935285] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__struct.h\n'}
+[0.935423] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__type_support.h\n'}
+[0.935850] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support.h\n'}
+[0.936000] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__functions.c\n'}
+[0.936132] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.936287] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/obstacle_array_msg.h\n'}
+[0.936591] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/library_path.sh\n'}
+[0.936857] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/library_path.dsv\n'}
+[0.936997] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_generator_c.so\n'}
+[0.937106] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs\n'}
+[0.937209] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg\n'}
+[0.937314] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail\n'}
+[0.937415] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[0.937518] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[0.937620] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.937720] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.937822] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs\n'}
+[0.937920] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg\n'}
+[0.938018] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail\n'}
+[0.938118] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__traits.hpp\n'}
+[0.938217] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__builder.hpp\n'}
+[0.938313] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__struct.hpp\n'}
+[0.938413] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__builder.hpp\n'}
+[0.938525] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__struct.hpp\n'}
+[0.938625] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__traits.hpp\n'}
+[0.938724] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/obstacle_msg.hpp\n'}
+[0.938822] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/obstacle_array_msg.hpp\n'}
+[0.938945] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs\n'}
+[0.939052] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg\n'}
+[0.939154] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail\n'}
+[0.939429] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.939552] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.939675] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/dds_fastrtps\n'}
+[0.939799] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.939902] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.940004] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs\n'}
+[0.940103] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg\n'}
+[0.940204] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail\n'}
+[0.940301] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__rosidl_typesupport_introspection_c.h\n'}
+[0.940399] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__type_support.c\n'}
+[0.940498] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__rosidl_typesupport_introspection_c.h\n'}
+[0.940606] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support.c\n'}
+[0.940705] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.940804] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.940901] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_c.so\n'}
+[0.940997] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs\n'}
+[0.941095] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg\n'}
+[0.941191] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail\n'}
+[0.941288] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support.cpp\n'}
+[0.941385] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.941481] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_array_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.941580] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/include/costmap_converter_msgs/costmap_converter_msgs/msg/detail/obstacle_msg__type_support.cpp\n'}
+[0.941682] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.941781] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_cpp.so\n'}
+[0.941879] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/pythonpath.sh\n'}
+[0.941988] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/pythonpath.dsv\n'}
+[0.942087] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs-0.1.2-py3.10.egg-info\n'}
+[0.942188] (costmap_converter_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs-0.1.2-py3.10.egg-info/PKG-INFO\n'}
+[0.942307] (costmap_converter_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs-0.1.2-py3.10.egg-info/dependency_links.txt\n'}
+[0.942416] (costmap_converter_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs-0.1.2-py3.10.egg-info/SOURCES.txt\n'}
+[0.942515] (costmap_converter_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs-0.1.2-py3.10.egg-info/top_level.txt\n'}
+[0.942615] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs\n'}
+[0.942714] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/libcostmap_converter_msgs__rosidl_generator_py.so\n'}
+[0.942811] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/_costmap_converter_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.942927] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.943029] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.943127] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/_costmap_converter_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.943225] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/msg\n'}
+[0.943320] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/msg/_obstacle_array_msg_s.c\n'}
+[0.943419] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/msg/_obstacle_array_msg.py\n'}
+[0.943517] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/msg/_obstacle_msg_s.c\n'}
+[0.943611] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/msg/_obstacle_msg.py\n'}
+[0.943706] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/msg/__init__.py\n'}
+[0.943800] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.943898] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/__init__.py\n'}
+[0.943995] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/_costmap_converter_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.990427] (costmap_converter_msgs) StdoutLine: {'line': b"Listing '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs'...\n"}
+[0.990835] (costmap_converter_msgs) StdoutLine: {'line': b"Listing '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/msg'...\n"}
+[1.000811] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.001314] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.001561] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.001753] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_generator_py.so\n'}
+[1.001961] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/msg/ObstacleMsg.idl\n'}
+[1.002430] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/msg/ObstacleArrayMsg.idl\n'}
+[1.002668] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/msg/ObstacleMsg.msg\n'}
+[1.002985] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/msg/ObstacleArrayMsg.msg\n'}
+[1.003153] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/ament_index/resource_index/package_run_dependencies/costmap_converter_msgs\n'}
+[1.003280] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/ament_index/resource_index/parent_prefix_path/costmap_converter_msgs\n'}
+[1.003544] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/ament_prefix_path.sh\n'}
+[1.003752] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/ament_prefix_path.dsv\n'}
+[1.003954] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/path.sh\n'}
+[1.004254] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/path.dsv\n'}
+[1.004450] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/local_setup.bash\n'}
+[1.004643] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/local_setup.sh\n'}
+[1.004916] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/local_setup.zsh\n'}
+[1.005124] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/local_setup.dsv\n'}
+[1.005327] (costmap_converter_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/package.dsv\n'}
+[1.005553] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/ament_index/resource_index/packages/costmap_converter_msgs\n'}
+[1.005969] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_generator_cExport.cmake\n'}
+[1.006105] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.006215] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.006325] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.006513] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_generator_cppExport.cmake\n'}
+[1.006626] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.006729] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.006832] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.006950] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.007075] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_cExport.cmake\n'}
+[1.007174] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.007275] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.007371] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.007551] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[1.007675] (-) TimerEvent: {}
+[1.008238] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.011053] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_generator_pyExport.cmake\n'}
+[1.024591] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/export_costmap_converter_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.025201] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[1.025341] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.025464] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.025585] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.025697] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.025807] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.025915] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.026022] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgsConfig.cmake\n'}
+[1.026123] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgsConfig-version.cmake\n'}
+[1.026250] (costmap_converter_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/share/costmap_converter_msgs/package.xml\n'}
+[1.026371] (costmap_converter_msgs) CommandEnded: {'returncode': 0}
+[1.107823] (-) TimerEvent: {}
+[1.208338] (-) TimerEvent: {}
+[1.290832] (costmap_converter_msgs) JobEnded: {'identifier': 'costmap_converter_msgs', 'rc': 0}
+[1.291822] (costmap_converter) JobStarted: {'identifier': 'costmap_converter'}
+[1.314020] (-) TimerEvent: {}
+[1.316853] (costmap_converter) JobProgress: {'identifier': 'costmap_converter', 'progress': 'cmake'}
+[1.317883] (costmap_converter) JobProgress: {'identifier': 'costmap_converter', 'progress': 'build'}
+[1.320102] (costmap_converter) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.107.56.6 56373 22'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp/lib:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/lib:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('BROWSER', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d703ee9-6230-4874-8874-2d06d4965259.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/mnt/nova_ssd/workspaces/texttopoint_ws/install:/mnt/nova_ssd/workspaces/kiss-icp_ws/install:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install:/mnt/nova_ssd/workspaces/scout/install:/mnt/nova_ssd/workspaces/navigation/install:/mnt/nova_ssd/workspaces/octomap_ws/install:/mnt/nova_ssd/workspaces/pcl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421124247420'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/remote-cli:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-4329a90660.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.107.56.6 56373 100.103.174.41 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package/lib/python3.10/site-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[1.414170] (-) TimerEvent: {}
+[1.430197] (costmap_converter) StdoutLine: {'line': b'[ 10%] Built target gtest_main\n'}
+[1.430727] (costmap_converter) StdoutLine: {'line': b'[ 21%] Built target gtest\n'}
+[1.449743] (costmap_converter) StdoutLine: {'line': b'[ 78%] Built target costmap_converter\n'}
+[1.503127] (costmap_converter) StdoutLine: {'line': b'[ 89%] Built target standalone_converter\n'}
+[1.512928] (costmap_converter) StdoutLine: {'line': b'[100%] Built target test_costmap_polygons\n'}
+[1.514259] (-) TimerEvent: {}
+[1.535240] (costmap_converter) CommandEnded: {'returncode': 0}
+[1.614386] (-) TimerEvent: {}
+[1.659478] (costmap_converter) JobProgress: {'identifier': 'costmap_converter', 'progress': 'install'}
+[1.660390] (costmap_converter) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter'], 'cwd': '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.107.56.6 56373 22'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp/lib:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/lib:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('BROWSER', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d703ee9-6230-4874-8874-2d06d4965259.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/mnt/nova_ssd/workspaces/texttopoint_ws/install:/mnt/nova_ssd/workspaces/kiss-icp_ws/install:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install:/mnt/nova_ssd/workspaces/scout/install:/mnt/nova_ssd/workspaces/navigation/install:/mnt/nova_ssd/workspaces/octomap_ws/install:/mnt/nova_ssd/workspaces/pcl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421124247420'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/remote-cli:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-4329a90660.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/mnt/nova_ssd/workspaces/navigation/build/costmap_converter'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.107.56.6 56373 100.103.174.41 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package/lib/python3.10/site-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[1.679548] (costmap_converter) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[1.680313] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib/libcostmap_converter.so\n'}
+[1.680593] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin/standalone_converter\n'}
+[1.680878] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include/\n'}
+[1.681095] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter\n'}
+[1.681241] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_lines_ransac.h\n'}
+[1.681392] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/misc.h\n'}
+[1.681508] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_polygons_concave.h\n'}
+[1.681615] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_converter_interface.h\n'}
+[1.681717] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_lines_convex_hull.h\n'}
+[1.682753] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles\n'}
+[1.682914] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h\n'}
+[1.683086] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker\n'}
+[1.683204] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/README.md\n'}
+[1.683394] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h\n'}
+[1.683520] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Kalman.h\n'}
+[1.683628] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/HungarianAlg.h\n'}
+[1.683730] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/defines.h\n'}
+[1.683858] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h\n'}
+[1.683978] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h\n'}
+[1.684087] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/include//costmap_converter/costmap_to_polygons.h\n'}
+[1.684251] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/environment/library_path.sh\n'}
+[1.684418] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/environment/library_path.dsv\n'}
+[1.684631] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/costmap_converter_plugins.xml\n'}
+[1.684793] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/ament_index/resource_index/package_run_dependencies/costmap_converter\n'}
+[1.684906] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/ament_index/resource_index/parent_prefix_path/costmap_converter\n'}
+[1.685019] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/environment/ament_prefix_path.sh\n'}
+[1.685142] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/environment/ament_prefix_path.dsv\n'}
+[1.685373] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/environment/path.sh\n'}
+[1.685481] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/environment/path.dsv\n'}
+[1.685741] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/local_setup.bash\n'}
+[1.685851] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/local_setup.sh\n'}
+[1.685954] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/local_setup.zsh\n'}
+[1.686053] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/local_setup.dsv\n'}
+[1.686156] (costmap_converter) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/package.dsv\n'}
+[1.686260] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/ament_index/resource_index/packages/costmap_converter\n'}
+[1.686357] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/ament_index/resource_index/costmap_converter__pluginlib__plugin/costmap_converter\n'}
+[1.686454] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.686555] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.686653] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.686761] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/cmake/costmap_converterConfig.cmake\n'}
+[1.686867] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/cmake/costmap_converterConfig-version.cmake\n'}
+[1.687025] (costmap_converter) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/costmap_converter/share/costmap_converter/package.xml\n'}
+[1.695294] (costmap_converter) CommandEnded: {'returncode': 0}
+[1.714510] (-) TimerEvent: {}
+[1.815155] (-) TimerEvent: {}
+[1.895742] (costmap_converter) JobEnded: {'identifier': 'costmap_converter', 'rc': 0}
+[1.915280] (-) TimerEvent: {}
+[2.015771] (-) TimerEvent: {}
+[2.116302] (-) TimerEvent: {}
+[2.223025] (-) TimerEvent: {}
+[2.323898] (-) TimerEvent: {}
+[2.424438] (-) TimerEvent: {}
+[2.524978] (-) TimerEvent: {}
+[2.628638] (-) TimerEvent: {}
+[2.729521] (-) TimerEvent: {}
+[2.830049] (-) TimerEvent: {}
+[2.930593] (-) TimerEvent: {}
+[3.031374] (-) TimerEvent: {}
+[3.131993] (-) TimerEvent: {}
+[3.232523] (-) TimerEvent: {}
+[3.333060] (-) TimerEvent: {}
+[3.433943] (-) TimerEvent: {}
+[3.534435] (-) TimerEvent: {}
+[3.634946] (-) TimerEvent: {}
+[3.735442] (-) TimerEvent: {}
+[3.835970] (-) TimerEvent: {}
+[3.936505] (-) TimerEvent: {}
+[4.037029] (-) TimerEvent: {}
+[4.137668] (-) TimerEvent: {}
+[4.238279] (-) TimerEvent: {}
+[4.338796] (-) TimerEvent: {}
+[4.439336] (-) TimerEvent: {}
+[4.539865] (-) TimerEvent: {}
+[4.640418] (-) TimerEvent: {}
+[4.740971] (-) TimerEvent: {}
+[4.845707] (-) TimerEvent: {}
+[4.946260] (-) TimerEvent: {}
+[5.053803] (-) TimerEvent: {}
+[5.154322] (-) TimerEvent: {}
+[5.254942] (-) TimerEvent: {}
+[5.355445] (-) TimerEvent: {}
+[5.455945] (-) TimerEvent: {}
+[5.556430] (-) TimerEvent: {}
+[5.658006] (-) TimerEvent: {}
+[5.759123] (-) TimerEvent: {}
+[5.859707] (-) TimerEvent: {}
+[5.960282] (-) TimerEvent: {}
+[6.060822] (-) TimerEvent: {}
+[6.161377] (-) TimerEvent: {}
+[6.261905] (-) TimerEvent: {}
+[6.362457] (-) TimerEvent: {}
+[6.463009] (-) TimerEvent: {}
+[6.563568] (-) TimerEvent: {}
+[6.664108] (-) TimerEvent: {}
+[6.764654] (-) TimerEvent: {}
+[6.865229] (-) TimerEvent: {}
+[6.965789] (-) TimerEvent: {}
+[7.066357] (-) TimerEvent: {}
+[7.166930] (-) TimerEvent: {}
+[7.267465] (-) TimerEvent: {}
+[7.368054] (-) TimerEvent: {}
+[7.468625] (-) TimerEvent: {}
+[7.569179] (-) TimerEvent: {}
+[7.669719] (-) TimerEvent: {}
+[7.774991] (-) TimerEvent: {}
+[7.875534] (-) TimerEvent: {}
+[7.976070] (-) TimerEvent: {}
+[8.076598] (-) TimerEvent: {}
+[8.177123] (-) TimerEvent: {}
+[8.277618] (-) TimerEvent: {}
+[8.378098] (-) TimerEvent: {}
+[8.478616] (-) TimerEvent: {}
+[8.579211] (-) TimerEvent: {}
+[8.680293] (-) TimerEvent: {}
+[8.780854] (-) TimerEvent: {}
+[8.881390] (-) TimerEvent: {}
+[8.981924] (-) TimerEvent: {}
+[9.083206] (-) TimerEvent: {}
+[9.184388] (-) TimerEvent: {}
+[9.284991] (-) TimerEvent: {}
+[9.390699] (-) TimerEvent: {}
+[9.491253] (-) TimerEvent: {}
+[9.591795] (-) TimerEvent: {}
+[9.693354] (-) TimerEvent: {}
+[9.793844] (-) TimerEvent: {}
+[9.894359] (-) TimerEvent: {}
+[9.994892] (-) TimerEvent: {}
+[10.095694] (-) TimerEvent: {}
+[10.196214] (-) TimerEvent: {}
+[10.300306] (-) TimerEvent: {}
+[10.400829] (-) TimerEvent: {}
+[10.501350] (-) TimerEvent: {}
+[10.555108] (dstar_main) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kgeometry_msgs::msg::Point dwaNode::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[10.555561] (dstar_main) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/dwa_main.cpp:114:110:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ktarget_frame\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[10.555733] (dstar_main) StderrLine: {'line': b'  114 | geometry_msgs::msg::Point dwaNode::transformPoint(const geometry_msgs::msg::Point& point, \x1b[01;35m\x1b[Kconst std::string& target_frame\x1b[m\x1b[K, const std::string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {\n'}
+[10.555863] (dstar_main) StderrLine: {'line': b'      |                                                                                           \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.601501] (-) TimerEvent: {}
+[10.702037] (-) TimerEvent: {}
+[10.802567] (-) TimerEvent: {}
+[10.903158] (-) TimerEvent: {}
+[11.003767] (-) TimerEvent: {}
+[11.104282] (-) TimerEvent: {}
+[11.204891] (-) TimerEvent: {}
+[11.305441] (-) TimerEvent: {}
+[11.406034] (-) TimerEvent: {}
+[11.506636] (-) TimerEvent: {}
+[11.607230] (-) TimerEvent: {}
+[11.707827] (-) TimerEvent: {}
+[11.808484] (-) TimerEvent: {}
+[11.909809] (-) TimerEvent: {}
+[12.010448] (-) TimerEvent: {}
+[12.111043] (-) TimerEvent: {}
+[12.211609] (-) TimerEvent: {}
+[12.312209] (-) TimerEvent: {}
+[12.412778] (-) TimerEvent: {}
+[12.513537] (-) TimerEvent: {}
+[12.619109] (-) TimerEvent: {}
+[12.719657] (-) TimerEvent: {}
+[12.820188] (-) TimerEvent: {}
+[12.920716] (-) TimerEvent: {}
+[13.021290] (-) TimerEvent: {}
+[13.122004] (-) TimerEvent: {}
+[13.222544] (-) TimerEvent: {}
+[13.323085] (-) TimerEvent: {}
+[13.423719] (-) TimerEvent: {}
+[13.524256] (-) TimerEvent: {}
+[13.624803] (-) TimerEvent: {}
+[13.725972] (-) TimerEvent: {}
+[13.826504] (-) TimerEvent: {}
+[13.927650] (-) TimerEvent: {}
+[14.028176] (-) TimerEvent: {}
+[14.132582] (-) TimerEvent: {}
+[14.235772] (-) TimerEvent: {}
+[14.336283] (-) TimerEvent: {}
+[14.436784] (-) TimerEvent: {}
+[14.537332] (-) TimerEvent: {}
+[14.637897] (-) TimerEvent: {}
+[14.738450] (-) TimerEvent: {}
+[14.838982] (-) TimerEvent: {}
+[14.939499] (-) TimerEvent: {}
+[15.040072] (-) TimerEvent: {}
+[15.140660] (-) TimerEvent: {}
+[15.241748] (-) TimerEvent: {}
+[15.342271] (-) TimerEvent: {}
+[15.443564] (-) TimerEvent: {}
+[15.544422] (-) TimerEvent: {}
+[15.644956] (-) TimerEvent: {}
+[15.745524] (-) TimerEvent: {}
+[15.846137] (-) TimerEvent: {}
+[15.946692] (-) TimerEvent: {}
+[16.047458] (-) TimerEvent: {}
+[16.148044] (-) TimerEvent: {}
+[16.248586] (-) TimerEvent: {}
+[16.349128] (-) TimerEvent: {}
+[16.449664] (-) TimerEvent: {}
+[16.552113] (-) TimerEvent: {}
+[16.652637] (-) TimerEvent: {}
+[16.753107] (-) TimerEvent: {}
+[16.853604] (-) TimerEvent: {}
+[16.958935] (-) TimerEvent: {}
+[17.059462] (-) TimerEvent: {}
+[17.160213] (-) TimerEvent: {}
+[17.260774] (-) TimerEvent: {}
+[17.361315] (-) TimerEvent: {}
+[17.462481] (-) TimerEvent: {}
+[17.563037] (-) TimerEvent: {}
+[17.663550] (-) TimerEvent: {}
+[17.764137] (-) TimerEvent: {}
+[17.864690] (-) TimerEvent: {}
+[17.965471] (-) TimerEvent: {}
+[18.066094] (-) TimerEvent: {}
+[18.166995] (-) TimerEvent: {}
+[18.268177] (-) TimerEvent: {}
+[18.368717] (-) TimerEvent: {}
+[18.469458] (-) TimerEvent: {}
+[18.569995] (-) TimerEvent: {}
+[18.670538] (-) TimerEvent: {}
+[18.777387] (-) TimerEvent: {}
+[18.879081] (-) TimerEvent: {}
+[18.979619] (-) TimerEvent: {}
+[19.080155] (-) TimerEvent: {}
+[19.180694] (-) TimerEvent: {}
+[19.281219] (-) TimerEvent: {}
+[19.382355] (-) TimerEvent: {}
+[19.491004] (-) TimerEvent: {}
+[19.591598] (-) TimerEvent: {}
+[19.692381] (-) TimerEvent: {}
+[19.792954] (-) TimerEvent: {}
+[19.902221] (-) TimerEvent: {}
+[20.002756] (-) TimerEvent: {}
+[20.103333] (-) TimerEvent: {}
+[20.203869] (-) TimerEvent: {}
+[20.304430] (-) TimerEvent: {}
+[20.405688] (-) TimerEvent: {}
+[20.506231] (-) TimerEvent: {}
+[20.606776] (-) TimerEvent: {}
+[20.707336] (-) TimerEvent: {}
+[20.808050] (-) TimerEvent: {}
+[20.909262] (-) TimerEvent: {}
+[21.009816] (-) TimerEvent: {}
+[21.110369] (-) TimerEvent: {}
+[21.210971] (-) TimerEvent: {}
+[21.311514] (-) TimerEvent: {}
+[21.413834] (-) TimerEvent: {}
+[21.514746] (-) TimerEvent: {}
+[21.615275] (-) TimerEvent: {}
+[21.723798] (-) TimerEvent: {}
+[21.824358] (-) TimerEvent: {}
+[21.924900] (-) TimerEvent: {}
+[22.025429] (-) TimerEvent: {}
+[22.126000] (-) TimerEvent: {}
+[22.229531] (-) TimerEvent: {}
+[22.330080] (-) TimerEvent: {}
+[22.430624] (-) TimerEvent: {}
+[22.531167] (-) TimerEvent: {}
+[22.631698] (-) TimerEvent: {}
+[22.732240] (-) TimerEvent: {}
+[22.832773] (-) TimerEvent: {}
+[22.933292] (-) TimerEvent: {}
+[23.033932] (-) TimerEvent: {}
+[23.134454] (-) TimerEvent: {}
+[23.234988] (-) TimerEvent: {}
+[23.339013] (-) TimerEvent: {}
+[23.439537] (-) TimerEvent: {}
+[23.540071] (-) TimerEvent: {}
+[23.640865] (-) TimerEvent: {}
+[23.741393] (-) TimerEvent: {}
+[23.841928] (-) TimerEvent: {}
+[23.942494] (-) TimerEvent: {}
+[24.050501] (-) TimerEvent: {}
+[24.151067] (-) TimerEvent: {}
+[24.251604] (-) TimerEvent: {}
+[24.352417] (-) TimerEvent: {}
+[24.453604] (-) TimerEvent: {}
+[24.554410] (-) TimerEvent: {}
+[24.655249] (-) TimerEvent: {}
+[24.756547] (-) TimerEvent: {}
+[24.857032] (-) TimerEvent: {}
+[24.966223] (-) TimerEvent: {}
+[25.066797] (-) TimerEvent: {}
+[25.167381] (-) TimerEvent: {}
+[25.268139] (-) TimerEvent: {}
+[25.368714] (-) TimerEvent: {}
+[25.469253] (-) TimerEvent: {}
+[25.569798] (-) TimerEvent: {}
+[25.670345] (-) TimerEvent: {}
+[25.770918] (-) TimerEvent: {}
+[25.871450] (-) TimerEvent: {}
+[25.972016] (-) TimerEvent: {}
+[26.072586] (-) TimerEvent: {}
+[26.173124] (-) TimerEvent: {}
+[26.274029] (-) TimerEvent: {}
+[26.374550] (-) TimerEvent: {}
+[26.475143] (-) TimerEvent: {}
+[26.575633] (-) TimerEvent: {}
+[26.676109] (-) TimerEvent: {}
+[26.776607] (-) TimerEvent: {}
+[26.877140] (-) TimerEvent: {}
+[26.977704] (-) TimerEvent: {}
+[27.078243] (-) TimerEvent: {}
+[27.178782] (-) TimerEvent: {}
+[27.279474] (-) TimerEvent: {}
+[27.380010] (-) TimerEvent: {}
+[27.480555] (-) TimerEvent: {}
+[27.581258] (-) TimerEvent: {}
+[27.681922] (-) TimerEvent: {}
+[27.782463] (-) TimerEvent: {}
+[27.883028] (-) TimerEvent: {}
+[27.983574] (-) TimerEvent: {}
+[28.084130] (-) TimerEvent: {}
+[28.184668] (-) TimerEvent: {}
+[28.285200] (-) TimerEvent: {}
+[28.385777] (-) TimerEvent: {}
+[28.486331] (-) TimerEvent: {}
+[28.586872] (-) TimerEvent: {}
+[28.687587] (-) TimerEvent: {}
+[28.788126] (-) TimerEvent: {}
+[28.889335] (-) TimerEvent: {}
+[28.989878] (-) TimerEvent: {}
+[29.090408] (-) TimerEvent: {}
+[29.191157] (-) TimerEvent: {}
+[29.291676] (-) TimerEvent: {}
+[29.392229] (-) TimerEvent: {}
+[29.492772] (-) TimerEvent: {}
+[29.593282] (-) TimerEvent: {}
+[29.693818] (-) TimerEvent: {}
+[29.794700] (-) TimerEvent: {}
+[29.895890] (-) TimerEvent: {}
+[29.996396] (-) TimerEvent: {}
+[30.096884] (-) TimerEvent: {}
+[30.197454] (-) TimerEvent: {}
+[30.298356] (-) TimerEvent: {}
+[30.399138] (-) TimerEvent: {}
+[30.499664] (-) TimerEvent: {}
+[30.600194] (-) TimerEvent: {}
+[30.701060] (-) TimerEvent: {}
+[30.801979] (-) TimerEvent: {}
+[30.902667] (-) TimerEvent: {}
+[31.003391] (-) TimerEvent: {}
+[31.103935] (-) TimerEvent: {}
+[31.204473] (-) TimerEvent: {}
+[31.305004] (-) TimerEvent: {}
+[31.405552] (-) TimerEvent: {}
+[31.506667] (-) TimerEvent: {}
+[31.607218] (-) TimerEvent: {}
+[31.707762] (-) TimerEvent: {}
+[31.808414] (-) TimerEvent: {}
+[31.908947] (-) TimerEvent: {}
+[32.009892] (-) TimerEvent: {}
+[32.110439] (-) TimerEvent: {}
+[32.210994] (-) TimerEvent: {}
+[32.315024] (-) TimerEvent: {}
+[32.415536] (-) TimerEvent: {}
+[32.516067] (-) TimerEvent: {}
+[32.616582] (-) TimerEvent: {}
+[32.717116] (-) TimerEvent: {}
+[32.817670] (-) TimerEvent: {}
+[32.918210] (-) TimerEvent: {}
+[33.018743] (-) TimerEvent: {}
+[33.119288] (-) TimerEvent: {}
+[33.219825] (-) TimerEvent: {}
+[33.320364] (-) TimerEvent: {}
+[33.420913] (-) TimerEvent: {}
+[33.521436] (-) TimerEvent: {}
+[33.621975] (-) TimerEvent: {}
+[33.722511] (-) TimerEvent: {}
+[33.823062] (-) TimerEvent: {}
+[33.923606] (-) TimerEvent: {}
+[34.030999] (-) TimerEvent: {}
+[34.131520] (-) TimerEvent: {}
+[34.232043] (-) TimerEvent: {}
+[34.332559] (-) TimerEvent: {}
+[34.433056] (-) TimerEvent: {}
+[34.533539] (-) TimerEvent: {}
+[34.634052] (-) TimerEvent: {}
+[34.734557] (-) TimerEvent: {}
+[34.835091] (-) TimerEvent: {}
+[34.935613] (-) TimerEvent: {}
+[35.036141] (-) TimerEvent: {}
+[35.136683] (-) TimerEvent: {}
+[35.237242] (-) TimerEvent: {}
+[35.337764] (-) TimerEvent: {}
+[35.438290] (-) TimerEvent: {}
+[35.538840] (-) TimerEvent: {}
+[35.639379] (-) TimerEvent: {}
+[35.739908] (-) TimerEvent: {}
+[35.840451] (-) TimerEvent: {}
+[35.940995] (-) TimerEvent: {}
+[36.041539] (-) TimerEvent: {}
+[36.142065] (-) TimerEvent: {}
+[36.242593] (-) TimerEvent: {}
+[36.343152] (-) TimerEvent: {}
+[36.447097] (-) TimerEvent: {}
+[36.550939] (-) TimerEvent: {}
+[36.651479] (-) TimerEvent: {}
+[36.752019] (-) TimerEvent: {}
+[36.854288] (-) TimerEvent: {}
+[36.954820] (-) TimerEvent: {}
+[37.055328] (-) TimerEvent: {}
+[37.155810] (-) TimerEvent: {}
+[37.256297] (-) TimerEvent: {}
+[37.356816] (-) TimerEvent: {}
+[37.409958] (dstar_main) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable dwa_main\x1b[0m\n'}
+[37.456958] (-) TimerEvent: {}
+[37.557533] (-) TimerEvent: {}
+[37.658085] (-) TimerEvent: {}
+[37.758997] (-) TimerEvent: {}
+[37.859523] (-) TimerEvent: {}
+[37.934006] (dstar_main) StdoutLine: {'line': b'[100%] Built target dwa_main\n'}
+[37.953534] (dstar_main) CommandEnded: {'returncode': 0}
+[37.959662] (-) TimerEvent: {}
+[38.015608] (dstar_main) JobProgress: {'identifier': 'dstar_main', 'progress': 'install'}
+[38.016447] (dstar_main) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/navigation/build/dstar_main'], 'cwd': '/mnt/nova_ssd/workspaces/navigation/build/dstar_main', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.107.56.6 56373 22'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/lib:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/lib:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp/lib:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/lib:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan/lib:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('BROWSER', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d703ee9-6230-4874-8874-2d06d4965259.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson AGX Orin Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/mnt/nova_ssd/workspaces/texttopoint_ws/install:/mnt/nova_ssd/workspaces/kiss-icp_ws/install:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install:/mnt/nova_ssd/workspaces/scout/install:/mnt/nova_ssd/workspaces/navigation/install:/mnt/nova_ssd/workspaces/octomap_ws/install:/mnt/nova_ssd/workspaces/pcl_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('JETSON_MODULE', 'NVIDIA Jetson AGX Orin (64GB ram)'), ('JETSON_SERIAL_NUMBER', '1421124247420'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/iwintern/.vscode-server/cli/servers/Stable-f1e16e1e6214d7c44d078b1f0607b2388f29d729/server/bin/remote-cli:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-4329a90660.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/mnt/nova_ssd/workspaces/navigation/build/dstar_main'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.107.56.6 56373 100.103.174.41 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package/lib/python3.10/site-packages:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/mnt/nova_ssd/workspaces/navigation/install/dwa_main:/mnt/nova_ssd/workspaces/navigation/install/dstar_main:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter:/mnt/nova_ssd/workspaces/navigation/install/costmap_converter_msgs:/mnt/nova_ssd/workspaces/texttopoint_ws/install/point_publisher_pkg:/mnt/nova_ssd/workspaces/kiss-icp_ws/install/kiss_icp:/mnt/nova_ssd/workspaces/3d_lidar/src/ws_livox/install/livox_ros_driver2:/mnt/nova_ssd/workspaces/scout/install/scout_base:/mnt/nova_ssd/workspaces/pcl_ws/install/my_package:/mnt/nova_ssd/workspaces/pcl_ws/install/livox_tf:/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/mnt/nova_ssd/workspaces/scout/install/scout_description:/mnt/nova_ssd/workspaces/octomap_ws/install/octomap_example:/mnt/nova_ssd/workspaces/pcl_ws/install/projected_pcl:/mnt/nova_ssd/workspaces/pcl_ws/install/pointcloud_to_laserscan:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_object_detection:/mnt/nova_ssd/workspaces/pcl_ws/install/pcl_filter'), ('JETSON_P_NUMBER', 'p3701-0005')]), 'shell': False}
+[38.046265] (dstar_main) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[38.046684] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//launch\n'}
+[38.046960] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//launch/map2grid.launch.py\n'}
+[38.047098] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//launch/scan2grid.launch.py\n'}
+[38.047216] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//launch/dstar_main.launch.py\n'}
+[38.047358] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//launch/dwa_main.launch copy.py\n'}
+[38.047472] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//config\n'}
+[38.047579] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//config/dstar_main.yaml\n'}
+[38.047680] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//config/dwa_main.yaml\n'}
+[38.047821] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//config/scan2grid.yaml\n'}
+[38.047932] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main//config/map2grid.yaml\n'}
+[38.048045] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/lib/dstar_main/dstar_main\n'}
+[38.048146] (dstar_main) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/lib/dstar_main/dwa_main\n'}
+[38.052532] (dstar_main) StdoutLine: {'line': b'-- Set runtime path of "/mnt/nova_ssd/workspaces/navigation/install/dstar_main/lib/dstar_main/dwa_main" to ""\n'}
+[38.052982] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/lib/dstar_main/scan2grid\n'}
+[38.053383] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/lib/dstar_main/map2grid\n'}
+[38.053715] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/ament_index/resource_index/package_run_dependencies/dstar_main\n'}
+[38.053931] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/ament_index/resource_index/parent_prefix_path/dstar_main\n'}
+[38.054109] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/environment/ament_prefix_path.sh\n'}
+[38.054249] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/environment/ament_prefix_path.dsv\n'}
+[38.054690] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/environment/path.sh\n'}
+[38.054822] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/environment/path.dsv\n'}
+[38.054953] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/local_setup.bash\n'}
+[38.055072] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/local_setup.sh\n'}
+[38.055576] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/local_setup.zsh\n'}
+[38.055747] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/local_setup.dsv\n'}
+[38.055862] (dstar_main) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/package.dsv\n'}
+[38.055963] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/ament_index/resource_index/packages/dstar_main\n'}
+[38.056096] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/cmake/dstar_mainConfig.cmake\n'}
+[38.056199] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/cmake/dstar_mainConfig-version.cmake\n'}
+[38.056299] (dstar_main) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/navigation/install/dstar_main/share/dstar_main/package.xml\n'}
+[38.058945] (dstar_main) CommandEnded: {'returncode': 0}
+[38.061733] (-) TimerEvent: {}
+[38.149934] (dstar_main) JobEnded: {'identifier': 'dstar_main', 'rc': 0}
+[38.151787] (-) EventReactorShutdown: {}

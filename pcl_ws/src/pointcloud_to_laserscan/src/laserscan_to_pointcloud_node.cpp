@@ -65,7 +65,10 @@ LaserScanToPointCloudNode::LaserScanToPointCloudNode(const rclcpp::NodeOptions &
   input_queue_size_ = this->declare_parameter(
     "queue_size", static_cast<int>(std::thread::hardware_concurrency()));
 
-  pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("cloud", rclcpp::SensorDataQoS());
+  pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>(
+    "pointcloud", 
+    rclcpp::SensorDataQoS().reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE)
+  );
 
   using std::placeholders::_1;
   // if pointcloud target frame specified, we need to filter by transform availability
@@ -111,6 +114,7 @@ void LaserScanToPointCloudNode::subscriptionListenerThreadLoop()
           "Got a subscriber to pointcloud, starting laserscan subscriber");
         rclcpp::SensorDataQoS qos;
         qos.keep_last(input_queue_size_);
+        qos.reliable();  // Set QoS reliability to ensure message delivery
         sub_.subscribe(this, "scan_in", qos.get_rmw_qos_profile());
       }
     } else if (sub_.getSubscriber()) {

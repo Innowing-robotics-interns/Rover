@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/mnt/nova_ssd/workspaces/pcl_ws/build/pointcloud_to_laserscan/dummy_pointcloud_publisher" "TARGETS" "dummy_pointcloud_publisher" "DESTINATION" "lib/pointcloud_to_laserscan")

@@ -18,6 +18,7 @@ find_package(tf2_geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(pcl_conversions REQUIRED)
+find_package(visualization_msgs REQUIRED)
 find_package(PCL REQUIRED COMPONENTS common io) # 根据需要，你可以添加或删除特定的组件
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
@@ -42,7 +43,7 @@ install(DIRECTORY
 add_executable(dstar_main src/dstar_main.cpp) # Assuming the file extension should be .cpp
 add_executable(dwa_main src/dwa_main.cpp) # Assuming the file extension should be .cpp
 add_executable(scan2grid src/scan2grid.cpp) # Assuming the file extension should be .cpp
-add_executable(map2grid src/scan2grid.cpp) # Assuming the file extension should be .cpp
+add_executable(map2grid src/map2grid.cpp) # Assuming the file extension should be .cpp
 # 安装可执行文件
 install(TARGETS
   dstar_main
@@ -71,6 +72,7 @@ ament_target_dependencies(dstar_main
   sensor_msgs
   std_msgs
   pcl_conversions
+  visualization_msgs
 )
 target_link_libraries(dstar_main
   ${PCL_LIBRARIES}
@@ -87,6 +89,7 @@ ament_target_dependencies(dwa_main
   sensor_msgs
   std_msgs
   pcl_conversions
+  visualization_msgs
 )
 target_link_libraries(dwa_main
   ${PCL_LIBRARIES}
@@ -102,6 +105,7 @@ ament_target_dependencies(scan2grid
   sensor_msgs
   std_msgs
   pcl_conversions
+  visualization_msgs
 )
 target_link_libraries(scan2grid
   ${PCL_LIBRARIES}
@@ -116,6 +120,7 @@ ament_target_dependencies(map2grid
   sensor_msgs
   std_msgs
   pcl_conversions
+  visualization_msgs
 )
 target_link_libraries(map2grid
   ${PCL_LIBRARIES}

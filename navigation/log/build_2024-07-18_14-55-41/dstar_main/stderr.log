@@ -1,0 +1,33 @@
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point scan2grid::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:13:107:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   13 | geometry_msgs::msg::Point scan2grid::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst string& target_frame[m[K, const string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                             [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:[m[K In member function ‘[01m[Kvoid scan2grid::laser_scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:73:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   73 |     for(int i = 0; [01;35m[Ki < msg->ranges.size()[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:83:16:[m[K [01;31m[Kerror: [m[K‘[01m[Ktranfomed_point[m[K’ was not declared in this scope; did you mean ‘[01m[Ktransformed_point[m[K’?
+   83 |         if(abs([01;31m[Ktranfomed_point[m[K.x) <= 0.1 && abs(transformed_point.y) <= 0.1){
+      |                [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                [32m[Ktransformed_point[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:88:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   88 |         if(x >= 0 && [01;35m[Kx < occupancy_grid.info.width[m[K && y >= 0 && y < occupancy_grid.info.height){
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:88:67:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   88 |         if(x >= 0 && x < occupancy_grid.info.width && y >= 0 && [01;35m[Ky < occupancy_grid.info.height[m[K){
+      |                                                                 [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:92:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   92 |     for(int i = 0; [01;35m[Ki < occupancy_grid.info.width[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:93:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   93 |         for(int j = 0; [01;35m[Kj < occupancy_grid.info.height[m[K; j++){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:97:47:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   97 |                         if(i + m < 0 || [01;35m[Ki + m >= occupancy_grid.info.width[m[K || j + n < 0 || j + n >= occupancy_grid.info.height){
+      |                                         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp:97:98:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   97 |                         if(i + m < 0 || i + m >= occupancy_grid.info.width || j + n < 0 || [01;35m[Kj + n >= occupancy_grid.info.height[m[K){
+      |                                                                                            [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/scan2grid.dir/build.make:76: CMakeFiles/scan2grid.dir/src/scan2grid.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/scan2grid.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

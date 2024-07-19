@@ -1680,6 +1680,22 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
   /opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/detail/polygon_mesh__struct.hpp \
   /opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/detail/polygon_mesh__builder.hpp \
   /opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/detail/polygon_mesh__traits.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__struct.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__struct.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/mesh_file__struct.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__builder.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__traits.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__traits.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/mesh_file__traits.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker_array.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__struct.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__builder.hpp \
+  /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__traits.hpp \
   /usr/include/c++/11/queue \
   /usr/include/c++/11/deque \
   /usr/include/c++/11/bits/stl_deque.h \
@@ -1702,6 +1718,16 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 /usr/include/c++/11/deque:
 
 /usr/include/c++/11/queue:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__builder.hpp:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/mesh_file__traits.hpp:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__struct.hpp:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp:
 
 /opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/detail/vertices__traits.hpp:
 
@@ -2297,6 +2323,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 
 /usr/include/boost/current_function.hpp:
 
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__traits.hpp:
+
 /usr/include/pcl-1.12/pcl/exceptions.h:
 
 /usr/include/boost/preprocessor/seq/size.hpp:
@@ -2304,6 +2332,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 /usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector10.hpp:
 
 /usr/include/boost/mpl/begin_end_fwd.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp:
 
 /usr/include/boost/mpl/vector/aux_/begin_end.hpp:
 
@@ -2376,6 +2406,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 /usr/include/boost/mpl/back_fwd.hpp:
 
 /usr/include/boost/mpl/pop_back_fwd.hpp:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__builder.hpp:
 
 /usr/include/boost/mpl/next.hpp:
 
@@ -2865,6 +2897,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 
 /usr/lib/gcc/aarch64-linux-gnu/11/include/stdbool.h:
 
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__traits.hpp:
+
 /opt/ros/humble/include/rcl/rcl/allocator.h:
 
 /usr/include/c++/11/bits/alloc_traits.h:
@@ -2946,6 +2980,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 /usr/include/boost/preprocessor/facilities/empty.hpp:
 
 /usr/include/c++/11/bits/enable_special_members.h:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__traits.hpp:
 
 /usr/include/boost/preprocessor/control/iif.hpp:
 
@@ -3103,6 +3139,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
 
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/mesh_file__struct.hpp:
+
 /usr/include/c++/11/cmath:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
@@ -3210,6 +3248,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 /usr/include/boost/mpl/aux_/config/eti.hpp:
 
 /usr/include/c++/11/future:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__traits.hpp:
 
 /usr/include/c++/11/istream:
 
@@ -4223,6 +4263,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_timers_interface.hpp:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__struct.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
@@ -4469,6 +4511,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__traits.hpp:
 
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp:
+
 /opt/ros/humble/include/tf2_ros/tf2_ros/visibility_control.h:
 
 /opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__struct.hpp:
@@ -4500,6 +4544,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3.hpp:
 
 /opt/ros/humble/include/tf2_ros/tf2_ros/create_timer_interface.h:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__struct.hpp:
 
 /usr/include/boost/algorithm/string/compare.hpp:
 
@@ -4602,6 +4648,8 @@ CMakeFiles/dwa_main.dir/src/dwa_main.cpp.o: /mnt/nova_ssd/workspaces/navigation/
 /usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/Memory.h:
+
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker_array.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
 

@@ -80,6 +80,9 @@ void scan2grid::laser_scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr
         point.z = 0;
         geometry_msgs::msg::TransformStamped transformStamped = get_transform(goal_frame, msg->header.frame_id);
         geometry_msgs::msg::Point transformed_point = transformPoint(point, goal_frame, msg->header.frame_id, transformStamped);
+        if(abs(transformed_point.x) <= 0.2 && abs(transformed_point.y) <= 0.2){
+            continue;
+        }
         int x = (transformed_point.x - occupancy_grid.info.origin.position.x) / occupancy_grid.info.resolution;
         int y = (transformed_point.y - occupancy_grid.info.origin.position.y) / occupancy_grid.info.resolution;
         if(x >= 0 && x < occupancy_grid.info.width && y >= 0 && y < occupancy_grid.info.height){

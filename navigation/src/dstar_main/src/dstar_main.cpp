@@ -9,13 +9,21 @@ dstarNode::dstarNode() : rclcpp::Node("dstar_main"){
     else{
         RCLCPP_INFO(this->get_logger(), "esdf_or_grid_map: %d", esdf_or_grid_map);
     }
-    this->declare_parameter<std::string>("read_in_topic", "esdf");
-    if(!this->get_parameter("read_in_topic", read_in_topic)){
-        RCLCPP_ERROR(this->get_logger(), "read_in_topic not set");
+    this->declare_parameter<std::string>("global_read_in_topic", "esdf");
+    if(!this->get_parameter("global_read_in_topic", global_read_in_topic)){
+        RCLCPP_ERROR(this->get_logger(), "global_read_in_topic not set");
         exit(1);
     }
     else{
-        RCLCPP_INFO(this->get_logger(), "read_in_topic: %s", read_in_topic.c_str());
+        RCLCPP_INFO(this->get_logger(), "global_read_in_topic: %s", global_read_in_topic.c_str());
+    }
+    this->declare_parameter<std::string>("local_read_in_topic", "esdf");
+    if(!this->get_parameter("local_read_in_topic", local_read_in_topic)){
+        RCLCPP_ERROR(this->get_logger(), "local_read_in_topic not set");
+        exit(1);
+    }
+    else{
+        RCLCPP_INFO(this->get_logger(), "local_read_in_topic: %s", local_read_in_topic.c_str());
     }
     this->declare_parameter<std::string>("path_topic", "path");
     if(!this->get_parameter("path_topic", path_topic)){
@@ -55,9 +63,10 @@ dstarNode::dstarNode() : rclcpp::Node("dstar_main"){
     status_pub = this->create_publisher<nav_msgs::msg::OccupancyGrid>("status", 10);
     // Create a subscriber for the map
     if(!esdf_or_grid_map)
-        esdf_sub = this->create_subscription<sensor_msgs::msg::PointCloud2>(read_in_topic, 10, std::bind(&dstarNode::esdf_callback, this, std::placeholders::_1));
+        esdf_sub = this->create_subscription<sensor_msgs::msg::PointCloud2>(global_read_in_topic, 10, std::bind(&dstarNode::esdf_callback, this, std::placeholders::_1));
     else 
-        grid_sub = this->create_subscription<nav_msgs::msg::OccupancyGrid>(read_in_topic, 10, std::bind(&dstarNode::map_callback, this, std::placeholders::_1));
+        grid_sub = this->create_subscription<nav_msgs::msg::OccupancyGrid>(global_read_in_topic, 10, std::bind(&dstarNode::map_callback, this, std::placeholders::_1));
+    local_grid_sub = this->create_subscription<nav_msgs::msg::OccupancyGrid>(local_read_in_topic, 10, std::bind(&dstarNode::map_callback, this, std::placeholders::_1));
     // Create a subscriber for the goal
     goal_sub = this->create_subscription<geometry_msgs::msg::PointStamped>(goal_topic, 10, std::bind(&dstarNode::goal_callback, this, std::placeholders::_1));
     // Create a timer for the main process
@@ -165,7 +174,7 @@ void dstarNode::map_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg){
             int x = round((transformed_point.x - global_ori_x) / global_resolution);
             int y = round((transformed_point.y - global_ori_y) / global_resolution);
             if(x < 0 || x >= global_width || y < 0 || y >= global_height){
-                RCLCPP_ERROR(this->get_logger(), "x: %d, y: %d", x, y);
+                // RCLCPP_ERROR(this->get_logger(), "x: %f, y: %f", transformed_point.x, transformed_point.y);
                 continue;
             }
             if(msg->data[i + j * width] != node_map[x][y]->obstacle_possibility && msg->data[i + j * width] != -1){

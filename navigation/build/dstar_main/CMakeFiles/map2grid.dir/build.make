@@ -69,28 +69,28 @@ include CMakeFiles/map2grid.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/map2grid.dir/flags.make
 
-CMakeFiles/map2grid.dir/src/scan2grid.cpp.o: CMakeFiles/map2grid.dir/flags.make
-CMakeFiles/map2grid.dir/src/scan2grid.cpp.o: /mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp
-CMakeFiles/map2grid.dir/src/scan2grid.cpp.o: CMakeFiles/map2grid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/nova_ssd/workspaces/navigation/build/dstar_main/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/map2grid.dir/src/scan2grid.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/map2grid.dir/src/scan2grid.cpp.o -MF CMakeFiles/map2grid.dir/src/scan2grid.cpp.o.d -o CMakeFiles/map2grid.dir/src/scan2grid.cpp.o -c /mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp
+CMakeFiles/map2grid.dir/src/map2grid.cpp.o: CMakeFiles/map2grid.dir/flags.make
+CMakeFiles/map2grid.dir/src/map2grid.cpp.o: /mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp
+CMakeFiles/map2grid.dir/src/map2grid.cpp.o: CMakeFiles/map2grid.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/nova_ssd/workspaces/navigation/build/dstar_main/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/map2grid.dir/src/map2grid.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/map2grid.dir/src/map2grid.cpp.o -MF CMakeFiles/map2grid.dir/src/map2grid.cpp.o.d -o CMakeFiles/map2grid.dir/src/map2grid.cpp.o -c /mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp
 
-CMakeFiles/map2grid.dir/src/scan2grid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/map2grid.dir/src/scan2grid.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp > CMakeFiles/map2grid.dir/src/scan2grid.cpp.i
+CMakeFiles/map2grid.dir/src/map2grid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/map2grid.dir/src/map2grid.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp > CMakeFiles/map2grid.dir/src/map2grid.cpp.i
 
-CMakeFiles/map2grid.dir/src/scan2grid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/map2grid.dir/src/scan2grid.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/scan2grid.cpp -o CMakeFiles/map2grid.dir/src/scan2grid.cpp.s
+CMakeFiles/map2grid.dir/src/map2grid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/map2grid.dir/src/map2grid.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp -o CMakeFiles/map2grid.dir/src/map2grid.cpp.s
 
 # Object files for target map2grid
 map2grid_OBJECTS = \
-"CMakeFiles/map2grid.dir/src/scan2grid.cpp.o"
+"CMakeFiles/map2grid.dir/src/map2grid.cpp.o"
 
 # External object files for target map2grid
 map2grid_EXTERNAL_OBJECTS =
 
-map2grid: CMakeFiles/map2grid.dir/src/scan2grid.cpp.o
+map2grid: CMakeFiles/map2grid.dir/src/map2grid.cpp.o
 map2grid: CMakeFiles/map2grid.dir/build.make
 map2grid: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_fastrtps_c.so
 map2grid: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_fastrtps_cpp.so
@@ -99,6 +99,12 @@ map2grid: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_introspection_cpp.
 map2grid: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_cpp.so
 map2grid: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_py.so
 map2grid: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
+map2grid: /opt/ros/humble/lib/libvisualization_msgs__rosidl_typesupport_fastrtps_c.so
+map2grid: /opt/ros/humble/lib/libvisualization_msgs__rosidl_typesupport_fastrtps_cpp.so
+map2grid: /opt/ros/humble/lib/libvisualization_msgs__rosidl_typesupport_introspection_c.so
+map2grid: /opt/ros/humble/lib/libvisualization_msgs__rosidl_typesupport_introspection_cpp.so
+map2grid: /opt/ros/humble/lib/libvisualization_msgs__rosidl_typesupport_cpp.so
+map2grid: /opt/ros/humble/lib/libvisualization_msgs__rosidl_generator_py.so
 map2grid: /opt/ros/humble/lib/libmessage_filters.so
 map2grid: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 map2grid: /opt/ros/humble/lib/librmw.so
@@ -133,7 +139,6 @@ map2grid: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
 map2grid: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 map2grid: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 map2grid: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-map2grid: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
 map2grid: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 map2grid: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 map2grid: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
@@ -240,14 +245,17 @@ map2grid: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.
 map2grid: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 map2grid: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 map2grid: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
-map2grid: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
-map2grid: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-map2grid: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
 map2grid: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 map2grid: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 map2grid: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
 map2grid: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
+map2grid: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
+map2grid: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
+map2grid: /opt/ros/humble/lib/libvisualization_msgs__rosidl_typesupport_c.so
+map2grid: /opt/ros/humble/lib/libvisualization_msgs__rosidl_generator_c.so
+map2grid: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
 map2grid: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+map2grid: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
 map2grid: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
 map2grid: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
 map2grid: /opt/ros/humble/lib/libpcl_msgs__rosidl_generator_c.so

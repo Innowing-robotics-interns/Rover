@@ -23,6 +23,8 @@
 #include "pcl/point_cloud.h"
 #include "pcl/point_types.h"
 #include "tf2/LinearMath/Quaternion.h"
+#include "visualization_msgs/msg/marker.hpp"
+#include "visualization_msgs/msg/marker_array.hpp"
 #include <queue>
 #include <vector>
 #include <stack>
@@ -42,6 +44,7 @@ class dwaNode : public rclcpp::Node{
         rclcpp::Subscription<nav_msgs::msg::OccupancyGrid>::SharedPtr grid_sub;
         rclcpp::Subscription<nav_msgs::msg::Path>::SharedPtr path_sub;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub;
+        rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub;
         rclcpp::TimerBase::SharedPtr dwa_timer;
 
         nav_msgs::msg::OccupancyGrid grid_copy;

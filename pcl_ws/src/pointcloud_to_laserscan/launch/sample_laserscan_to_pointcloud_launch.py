@@ -10,7 +10,7 @@ import yaml
 def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
-            name='scanner', default_value='scanner',
+            name='scan', default_value='scan',
             description='Namespace for sample topics'
         ),
         Node(

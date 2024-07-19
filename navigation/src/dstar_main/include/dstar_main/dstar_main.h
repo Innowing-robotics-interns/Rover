@@ -42,6 +42,7 @@ class dstarNode : public rclcpp::Node{
         void dstar_callback();
         rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr path_pub;
         rclcpp::Subscription<nav_msgs::msg::OccupancyGrid>::SharedPtr grid_sub;
+        rclcpp::Subscription<nav_msgs::msg::OccupancyGrid>::SharedPtr local_grid_sub;
         rclcpp::Subscription<geometry_msgs::msg::PointStamped>::SharedPtr goal_sub;
         rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr esdf_sub;
         rclcpp::Publisher<nav_msgs::msg::OccupancyGrid>::SharedPtr status_pub;
@@ -88,7 +89,8 @@ class dstarNode : public rclcpp::Node{
         //params defination
         std::string node_name = "dstar_node";
         bool esdf_or_grid_map;
-        std::string read_in_topic;
+        std::string global_read_in_topic;
+        std::string local_read_in_topic;
         std::string path_topic;
         std::string goal_topic;
         std::string robot_frame;

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/map2grid.dir/src/scan2grid.cpp.o"
-  "CMakeFiles/map2grid.dir/src/scan2grid.cpp.o.d"
+  "CMakeFiles/map2grid.dir/src/map2grid.cpp.o"
+  "CMakeFiles/map2grid.dir/src/map2grid.cpp.o.d"
   "map2grid"
   "map2grid.pdb"
 )

@@ -1,0 +1,52 @@
+[35m[1mConsolidate compiler generated dependencies of target map2grid[0m
+[ 25%] Built target scan2grid
+[ 50%] Built target dwa_main
+[ 62%] [32mBuilding CXX object CMakeFiles/map2grid.dir/src/map2grid.cpp.o[0m
+[ 87%] Built target dstar_main
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point map2grid::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:13:106:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   13 | geometry_msgs::msg::Point map2grid::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst string& target_frame[m[K, const string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                            [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:[m[K In member function ‘[01m[Kvoid map2grid::map_callback(nav_msgs::msg::OccupancyGrid_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:89:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   89 |             if(x >= 0 && [01;35m[Kx < occupancy_grid.info.width[m[K && y >= 0 && y < occupancy_grid.info.height){
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:89:71:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   89 |             if(x >= 0 && x < occupancy_grid.info.width && y >= 0 && [01;35m[Ky < occupancy_grid.info.height[m[K){
+      |                                                                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:94:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   94 |     for(int i = 0; [01;35m[Ki < occupancy_grid.info.width[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:95:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   95 |         for(int j = 0; [01;35m[Kj < occupancy_grid.info.height[m[K; j++){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:112:34:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  112 | int main(int argc, char* argv[]) [01;31m[K{[m[K
+      |                                  [01;31m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:118:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  118 | }
+      |  [01;31m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:96:78:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   96 |             if(occupancy_grid.data[j * occupancy_grid.info.width + i] == 100)[01;36m[K{[m[K
+      |                                                                              [01;36m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:118:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  118 | }
+      |  [01;31m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:95:60:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   95 |         for(int j = 0; j < occupancy_grid.info.height; j++)[01;36m[K{[m[K
+      |                                                            [01;36m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:118:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  118 | }
+      |  [01;31m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:94:55:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   94 |     for(int i = 0; i < occupancy_grid.info.width; i++)[01;36m[K{[m[K
+      |                                                       [01;36m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:118:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  118 | }
+      |  [01;31m[K^[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:59:79:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   59 | void map2grid::map_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg)[01;36m[K{[m[K
+      |                                                                               [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/map2grid.dir/build.make:76: CMakeFiles/map2grid.dir/src/map2grid.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/map2grid.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

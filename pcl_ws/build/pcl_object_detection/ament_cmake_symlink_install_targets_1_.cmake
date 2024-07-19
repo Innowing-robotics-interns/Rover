@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/mnt/nova_ssd/workspaces/pcl_ws/build/pcl_object_detection/pcl_object_detection_node" "TARGETS" "pcl_object_detection_node" "DESTINATION" "lib/pcl_object_detection")

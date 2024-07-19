@@ -88,6 +88,7 @@ dwaNode::dwaNode() : rclcpp::Node("dwa_main"){
     grid_sub = this->create_subscription<nav_msgs::msg::OccupancyGrid>(grid_topic, 10, std::bind(&dwaNode::grid_callback, this, std::placeholders::_1));
     path_sub = this->create_subscription<nav_msgs::msg::Path>(path_topic, 10, std::bind(&dwaNode::path_callback, this, std::placeholders::_1));
     cmd_vel_pub = this->create_publisher<geometry_msgs::msg::Twist>(cmd_vel_topic, 10);
+    marker_pub = this->create_publisher<visualization_msgs::msg::MarkerArray>("/dwa_trajectory", 10);
     
     //Initialize processing flag
     grid_received = path_received = main_process = false;
@@ -173,14 +174,35 @@ void dwaNode::dwa_callback(){
     main_process = false;
 }
 dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, Position goal_position){
-    double best_cost = 1e9;
+    double best_cost = 1e18;
     Velocity best_velocity;
+    visualization_msgs::msg::MarkerArray marker_array;
     for(double v = min_axis_speed; v <= max_axis_speed; v += axis_speed_resolution){
         for(double w = min_omega_speed; w <= max_omega_speed; w += omega_speed_resolution){
             Velocity velocity;
             velocity.v = v;
             velocity.w = w;
             vector<Position> trajectory = get_trajectory(robot_position, velocity);
+            visualization_msgs::msg::Marker marker;
+            marker.header.frame_id = static_frame;
+            marker.header.stamp = rclcpp::Clock().now();
+            marker.ns = "dwa_trajectory";
+            marker.id = v * 10 + w * 1000;
+            marker.type = visualization_msgs::msg::Marker::POINTS; // 修改类型为POINTS
+            marker.action = visualization_msgs::msg::Marker::ADD;
+            marker.pose.orientation.w = 1.0;
+            marker.scale.x = 0.01; // 点的大小在X方向
+            marker.scale.y = 0.01; // 点的大小在Y方向
+            marker.color.r = 1.0;
+            marker.color.a = 1.0;
+            for(size_t i = 0; i < trajectory.size(); i++){
+                geometry_msgs::msg::Point p;
+                p.x = trajectory[i].x;
+                p.y = trajectory[i].y;
+                p.z = 0;
+                if(i%1==0)marker.points.push_back(p);
+            }
+            marker_array.markers.push_back(marker);
             double cost = evaluate_trajectory(trajectory, goal_position);
             RCLCPP_INFO(this->get_logger(), "       Velocity: %f, %f, Cost: %f", v, w, cost);
             if(cost < best_cost){
@@ -189,6 +211,7 @@ dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, Position 
             }
         }
     }
+    marker_pub->publish(marker_array);
     // {
     //     Velocity minus_velocity;
     //     minus_velocity.v = -min_axis_speed;
@@ -205,10 +228,11 @@ dwaNode::Velocity dwaNode::find_best_velocity(Position robot_position, Position 
 }
 dwaNode::Position dwaNode::solve_path(){
     Position goal;
-    geometry_msgs::msg::PoseStamped goal_pose = path_copy.poses[min(path_copy.poses.size() - 1, static_cast<std::size_t>(15))];
+    int index = min(path_copy.poses.size() - 1, static_cast<std::size_t>(15));
+    geometry_msgs::msg::PoseStamped goal_pose = path_copy.poses[index];
     geometry_msgs::msg::PoseStamped angle_vector;
-    angle_vector.pose.position.x = path_copy.poses[1].pose.position.x - path_copy.poses[0].pose.position.x;
-    angle_vector.pose.position.y = path_copy.poses[1].pose.position.y - path_copy.poses[0].pose.position.y;
+    angle_vector.pose.position.x = path_copy.poses[index].pose.position.x - path_copy.poses[index-1].pose.position.x;
+    angle_vector.pose.position.y = path_copy.poses[index].pose.position.y - path_copy.poses[index-1].pose.position.y;
     angle_vector.pose.position.z = 0;
     std::string path_frame = path_copy.header.frame_id;
     geometry_msgs::msg::TransformStamped transform = get_transform(static_frame, path_frame);
@@ -272,16 +296,19 @@ vector<dwaNode::Position> dwaNode::get_trajectory(Position robot_position, Veloc
     return trajectory;
 }
 double dwaNode::evaluate_trajectory(vector<Position> trajectory, Position goal){
-    double cost = 0, final_cost = 0, min_dis = 114514;
+    double cost = 0, final_cost = 1e18, min_dis = 114514;
     for(size_t i = 0; i < trajectory.size(); i++){
         Position p = trajectory[i];
         int x = (p.x-map_origin_x) / map_resolution, y = (p.y-map_origin_y) / map_resolution;    
-        cost += costmap[x][y]==100?100:0;
-        if(min_dis > sqrt(pow(p.x - goal.x, 2) + pow(p.y - goal.y, 2))){
-            min_dis = sqrt(pow(p.x - goal.x, 2) + pow(p.y - goal.y, 2));
-            final_cost = min_dis + cost;
-        }
+        if(costmap[x][y]>=65)cost+=1e9;
+        else if(costmap[x][y]>=50) cost += (costmap[x][y]-50)/20;
+        // double dis = sqrt(pow(p.x - goal.x, 2) + pow(p.y - goal.y, 2));
+        // if(min_dis >= dis){
+        //     min_dis = dis;
+        //     final_cost = min_dis + cost;
+        // }
     }
+    final_cost = cost + sqrt(pow(trajectory.back().x - goal.x, 2) + pow(trajectory.back().y - goal.y, 2));
     return final_cost;
 }
 dwaNode::~dwaNode(){

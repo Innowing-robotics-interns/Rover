@@ -1,0 +1,22 @@
+[0m** WARNING ** io features related to pcap will be disabled[0m
+[0m** WARNING ** io features related to png will be disabled[0m
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point map2grid::transformPoint(const Point&, const string&, const string&, geometry_msgs::msg::TransformStamped)[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:13:106:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktarget_frame[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   13 | geometry_msgs::msg::Point map2grid::transformPoint(const geometry_msgs::msg::Point& point, [01;35m[Kconst string& target_frame[m[K, const string& source_frame, geometry_msgs::msg::TransformStamped transformStamped) {
+      |                                                                                            [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:[m[K In constructor ‘[01m[Kmap2grid::map2grid()[m[K’:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:50:102:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_callback[m[K’ is not a member of ‘[01m[Kmap2grid[m[K’
+   50 |     map_sub = this->create_subscription<nav_msgs::msg::OccupancyGrid>(map_topic, 10, bind(&map2grid::[01;31m[Kmap_callback[m[K, this, placeholders::_1));
+      |                                                                                                      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:[m[K At global scope:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:59:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid map2grid::map_callback(nav_msgs::msg::OccupancyGrid_<std::allocator<void> >::SharedPtr)[m[K’
+   59 | void [01;31m[Kmap2grid[m[K::map_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg){
+      |      [01;31m[K^~~~~~~~[m[K
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:59:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid map2grid::map_callback(nav_msgs::msg::OccupancyGrid_<std::allocator<void> >::SharedPtr)[m[K’
+In file included from [01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/src/map2grid.cpp:1[m[K:
+[01m[K/mnt/nova_ssd/workspaces/navigation/src/dstar_main/include/map2grid/map2grid.h:9:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass map2grid[m[K’ defined here
+    9 | class [01;36m[Kmap2grid[m[K : public rclcpp::Node {
+      |       [01;36m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/map2grid.dir/build.make:76: CMakeFiles/map2grid.dir/src/map2grid.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/map2grid.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
