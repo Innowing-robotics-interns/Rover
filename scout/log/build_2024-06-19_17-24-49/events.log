@@ -1,0 +1,844 @@
+[0.000000] (-) TimerEvent: {}
+[0.000847] (scout_description) JobQueued: {'identifier': 'scout_description', 'dependencies': OrderedDict()}
+[0.001208] (scout_msgs) JobQueued: {'identifier': 'scout_msgs', 'dependencies': OrderedDict()}
+[0.001304] (ugv_sdk) JobQueued: {'identifier': 'ugv_sdk', 'dependencies': OrderedDict()}
+[0.001378] (scout_base) JobQueued: {'identifier': 'scout_base', 'dependencies': OrderedDict([('scout_msgs', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs'), ('ugv_sdk', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk')])}
+[0.001473] (scout_msgs) JobStarted: {'identifier': 'scout_msgs'}
+[0.008665] (ugv_sdk) JobStarted: {'identifier': 'ugv_sdk'}
+[0.013004] (scout_description) JobStarted: {'identifier': 'scout_description'}
+[0.019009] (scout_msgs) JobProgress: {'identifier': 'scout_msgs', 'progress': 'cmake'}
+[0.019884] (scout_msgs) JobProgress: {'identifier': 'scout_msgs', 'progress': 'build'}
+[0.020754] (scout_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.024538] (ugv_sdk) JobProgress: {'identifier': 'ugv_sdk', 'progress': 'cmake'}
+[0.025278] (ugv_sdk) JobProgress: {'identifier': 'ugv_sdk', 'progress': 'build'}
+[0.025591] (ugv_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.030428] (scout_description) JobProgress: {'identifier': 'scout_description', 'progress': 'cmake'}
+[0.031229] (scout_description) JobProgress: {'identifier': 'scout_description', 'progress': 'build'}
+[0.031555] (scout_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/scout_description', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_description'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.078413] (scout_description) CommandEnded: {'returncode': 0}
+[0.095789] (scout_msgs) StdoutLine: {'line': b'[  4%] Built target scout_msgs__cpp\n'}
+[0.096267] (scout_msgs) StdoutLine: {'line': b'[ 12%] Built target scout_msgs__rosidl_generator_c\n'}
+[0.099448] (-) TimerEvent: {}
+[0.105050] (scout_description) JobProgress: {'identifier': 'scout_description', 'progress': 'install'}
+[0.110179] (scout_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_scout_msgs\n'}
+[0.110607] (ugv_sdk) StdoutLine: {'line': b'[ 42%] Built target ugv_sdk\n'}
+[0.116645] (scout_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/scout/build/scout_description'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_description'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.128335] (scout_msgs) StdoutLine: {'line': b'[ 23%] Built target scout_msgs__rosidl_typesupport_c\n'}
+[0.128832] (scout_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.129208] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//launch\n'}
+[0.129347] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//launch/scout_base_description.launch.py\n'}
+[0.129451] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf\n'}
+[0.129652] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/scout_wheel_type2.xacro\n'}
+[0.129760] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/scout_wheel_type1.xacro\n'}
+[0.129850] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/generate_urdf.sh\n'}
+[0.130005] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/scout_v2.urdf\n'}
+[0.130128] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/scout_v2.xacro\n'}
+[0.130215] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes\n'}
+[0.130301] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/base_link.dae\n'}
+[0.130383] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/base_link_full.dae\n'}
+[0.130464] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/hokuyo.dae\n'}
+[0.130545] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/wheel_type2.dae\n'}
+[0.130629] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/wheel_type1.dae\n'}
+[0.130710] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/ament_index/resource_index/package_run_dependencies/scout_description\n'}
+[0.130795] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/ament_index/resource_index/parent_prefix_path/scout_description\n'}
+[0.130879] (scout_msgs) StdoutLine: {'line': b'[ 34%] Built target scout_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.130991] (scout_msgs) StdoutLine: {'line': b'[ 46%] Built target scout_msgs__rosidl_typesupport_introspection_c\n'}
+[0.131227] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/environment/ament_prefix_path.sh\n'}
+[0.131337] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/environment/ament_prefix_path.dsv\n'}
+[0.131425] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/environment/path.sh\n'}
+[0.131508] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/environment/path.dsv\n'}
+[0.131588] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/local_setup.bash\n'}
+[0.131668] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/local_setup.sh\n'}
+[0.131748] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/local_setup.zsh\n'}
+[0.131826] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/local_setup.dsv\n'}
+[0.131903] (scout_description) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/package.dsv\n'}
+[0.131982] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/ament_index/resource_index/packages/scout_description\n'}
+[0.132059] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/cmake/scout_descriptionConfig.cmake\n'}
+[0.132165] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/cmake/scout_descriptionConfig-version.cmake\n'}
+[0.132250] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/package.xml\n'}
+[0.137706] (scout_description) CommandEnded: {'returncode': 0}
+[0.138463] (scout_msgs) StdoutLine: {'line': b'[ 57%] Built target scout_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.138718] (scout_msgs) StdoutLine: {'line': b'[ 68%] Built target scout_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.142061] (ugv_sdk) StdoutLine: {'line': b'[ 50%] Built target demo_bunker_robot\n'}
+[0.144466] (scout_msgs) StdoutLine: {'line': b'[ 79%] Built target scout_msgs__rosidl_typesupport_cpp\n'}
+[0.149615] (ugv_sdk) StdoutLine: {'line': b'[ 57%] Built target demo_scout_mini_omni_robot\n'}
+[0.150392] (ugv_sdk) StdoutLine: {'line': b'[ 71%] Built target demo_scout_robot\n'}
+[0.150664] (ugv_sdk) StdoutLine: {'line': b'[ 71%] Built target demo_ranger_robot\n'}
+[0.152822] (ugv_sdk) StdoutLine: {'line': b'[ 78%] Built target demo_hunter_robot\n'}
+[0.157196] (ugv_sdk) StdoutLine: {'line': b'[ 85%] Built target demo_tracer_robot\n'}
+[0.161183] (ugv_sdk) StdoutLine: {'line': b'[ 92%] Built target demo_protocol_detector\n'}
+[0.161922] (ugv_sdk) StdoutLine: {'line': b'[100%] Built target demo_robot_version\n'}
+[0.170233] (scout_msgs) StdoutLine: {'line': b'[ 79%] Built target scout_msgs\n'}
+[0.178509] (ugv_sdk) CommandEnded: {'returncode': 0}
+[0.197624] (scout_description) JobEnded: {'identifier': 'scout_description', 'rc': 0}
+[0.199523] (-) TimerEvent: {}
+[0.201520] (scout_msgs) StdoutLine: {'line': b'[ 80%] Built target scout_msgs__py\n'}
+[0.238396] (scout_msgs) StdoutLine: {'line': b'[ 90%] Built target scout_msgs__rosidl_generator_py\n'}
+[0.269851] (scout_msgs) StdoutLine: {'line': b'[ 93%] Built target scout_msgs__rosidl_typesupport_c__pyext\n'}
+[0.270237] (scout_msgs) StdoutLine: {'line': b'[ 96%] Built target scout_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.271538] (scout_msgs) StdoutLine: {'line': b'[100%] Built target scout_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.299636] (-) TimerEvent: {}
+[0.325831] (ugv_sdk) JobProgress: {'identifier': 'ugv_sdk', 'progress': 'install'}
+[0.326585] (ugv_sdk) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.339189] (ugv_sdk) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.339629] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/libugv_sdk.a\n'}
+[0.339935] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk\n'}
+[0.340200] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot\n'}
+[0.340412] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/bunker_robot.hpp\n'}
+[0.340605] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/ranger_robot.hpp\n'}
+[0.340747] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/hunter_robot.hpp\n'}
+[0.341003] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/titan_robot.hpp\n'}
+[0.341555] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/tracer_robot.hpp\n'}
+[0.341752] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/scout_robot.hpp\n'}
+[0.341861] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details\n'}
+[0.341964] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/async_port\n'}
+[0.342064] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/async_port/async_serial.hpp\n'}
+[0.342166] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/async_port/ring_buffer.hpp\n'}
+[0.342265] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/async_port/async_can.hpp\n'}
+[0.342362] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base\n'}
+[0.342458] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/scout_base.hpp\n'}
+[0.342554] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/titan_base.hpp\n'}
+[0.342649] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp\n'}
+[0.342744] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/agilex_base.hpp\n'}
+[0.342862] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/ranger_base.hpp\n'}
+[0.342960] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/hunter_base.hpp\n'}
+[0.343056] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/tracer_base.hpp\n'}
+[0.343151] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v1\n'}
+[0.343246] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/robot_limits.hpp\n'}
+[0.343340] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/protocol_v1_parser.hpp\n'}
+[0.343437] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/agilex_msg_parser_v1.h\n'}
+[0.343531] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface\n'}
+[0.343625] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/titan_interface.hpp\n'}
+[0.343733] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/ranger_interface.hpp\n'}
+[0.343830] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/tracer_interface.hpp\n'}
+[0.343926] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/bunker_interface.hpp\n'}
+[0.344022] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/agilex_types.h\n'}
+[0.344116] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/robot_common_interface.hpp\n'}
+[0.344210] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/hunter_interface.hpp\n'}
+[0.344732] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/scout_interface.hpp\n'}
+[0.345295] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/agilex_message.h\n'}
+[0.345637] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v2\n'}
+[0.346065] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v2/protocol_v2_parser.hpp\n'}
+[0.346227] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/parser_base.hpp\n'}
+[0.347093] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/utilities\n'}
+[0.347654] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/utilities/protocol_detector.hpp\n'}
+[0.347769] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkTargets.cmake\n'}
+[0.347874] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkTargets-release.cmake\n'}
+[0.347978] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkConfig.cmake\n'}
+[0.348103] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkConfigVersion.cmake\n'}
+[0.348208] (ugv_sdk) CommandEnded: {'returncode': 0}
+[0.399741] (-) TimerEvent: {}
+[0.451171] (ugv_sdk) JobEnded: {'identifier': 'ugv_sdk', 'rc': 0}
+[0.464410] (scout_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.465379] (scout_msgs) StdoutLine: {'line': b'writing scout_msgs.egg-info/PKG-INFO\n'}
+[0.465746] (scout_msgs) StdoutLine: {'line': b'writing dependency_links to scout_msgs.egg-info/dependency_links.txt\n'}
+[0.466077] (scout_msgs) StdoutLine: {'line': b'writing top-level names to scout_msgs.egg-info/top_level.txt\n'}
+[0.469014] (scout_msgs) StdoutLine: {'line': b"reading manifest file 'scout_msgs.egg-info/SOURCES.txt'\n"}
+[0.469873] (scout_msgs) StdoutLine: {'line': b"writing manifest file 'scout_msgs.egg-info/SOURCES.txt'\n"}
+[0.499860] (-) TimerEvent: {}
+[0.520353] (scout_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_scout_msgs_egg\n'}
+[0.541729] (scout_msgs) CommandEnded: {'returncode': 0}
+[0.600031] (-) TimerEvent: {}
+[0.700608] (-) TimerEvent: {}
+[0.749089] (scout_msgs) JobProgress: {'identifier': 'scout_msgs', 'progress': 'install'}
+[0.749969] (scout_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.765034] (scout_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.765577] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/ament_index/resource_index/rosidl_interfaces/scout_msgs\n'}
+[0.766053] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.766468] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.766777] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_rc_state.h\n'}
+[0.767076] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_status.h\n'}
+[0.767494] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.767780] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__functions.c\n'}
+[0.768104] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__functions.h\n'}
+[0.768566] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__type_support.h\n'}
+[0.769007] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__type_support.h\n'}
+[0.769319] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__functions.h\n'}
+[0.769813] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__struct.h\n'}
+[0.770241] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__struct.h\n'}
+[0.770647] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__functions.h\n'}
+[0.770923] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__struct.h\n'}
+[0.771202] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__struct.h\n'}
+[0.771683] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__struct.h\n'}
+[0.772021] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__type_support.h\n'}
+[0.772280] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__type_support.h\n'}
+[0.772581] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__functions.c\n'}
+[0.772935] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__type_support.h\n'}
+[0.773211] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__functions.c\n'}
+[0.773494] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__functions.h\n'}
+[0.773854] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__functions.c\n'}
+[0.774408] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__functions.c\n'}
+[0.774795] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__functions.h\n'}
+[0.775026] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_actuator_state.h\n'}
+[0.775251] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_light_state.h\n'}
+[0.775470] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_light_cmd.h\n'}
+[0.775686] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.775902] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/library_path.sh\n'}
+[0.776119] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/library_path.dsv\n'}
+[0.776385] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_generator_c.so\n'}
+[0.776618] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.776834] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.777049] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.777265] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.777477] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__rosidl_typesupport_fastrtps_c.h\n'}
+[0.777691] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__rosidl_typesupport_fastrtps_c.h\n'}
+[0.777906] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__rosidl_typesupport_fastrtps_c.h\n'}
+[0.778121] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__rosidl_typesupport_fastrtps_c.h\n'}
+[0.778334] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[0.778545] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.778783] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.778995] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.779206] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_rc_state.hpp\n'}
+[0.779436] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_status.hpp\n'}
+[0.779651] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.779862] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__struct.hpp\n'}
+[0.780075] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__struct.hpp\n'}
+[0.780310] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__builder.hpp\n'}
+[0.780542] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__traits.hpp\n'}
+[0.780759] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__traits.hpp\n'}
+[0.780975] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__struct.hpp\n'}
+[0.781189] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__builder.hpp\n'}
+[0.781448] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__builder.hpp\n'}
+[0.781670] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__builder.hpp\n'}
+[0.781890] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__traits.hpp\n'}
+[0.782109] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__builder.hpp\n'}
+[0.782326] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__struct.hpp\n'}
+[0.782541] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__struct.hpp\n'}
+[0.782756] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__traits.hpp\n'}
+[0.782969] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__traits.hpp\n'}
+[0.783179] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_light_cmd.hpp\n'}
+[0.783393] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_actuator_state.hpp\n'}
+[0.783606] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_light_state.hpp\n'}
+[0.783842] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.784056] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.784288] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.784519] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.784736] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.784949] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.785161] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/dds_fastrtps\n'}
+[0.785371] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.785584] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.785817] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.786035] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.786249] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.786458] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.786670] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.786883] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.787095] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__type_support.c\n'}
+[0.787308] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__type_support.c\n'}
+[0.787519] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__rosidl_typesupport_introspection_c.h\n'}
+[0.787729] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__type_support.c\n'}
+[0.787940] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__rosidl_typesupport_introspection_c.h\n'}
+[0.788195] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__rosidl_typesupport_introspection_c.h\n'}
+[0.788458] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__type_support.c\n'}
+[0.788700] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__rosidl_typesupport_introspection_c.h\n'}
+[0.788917] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__type_support.c\n'}
+[0.789130] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_introspection_c.h\n'}
+[0.789344] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.789556] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_c.so\n'}
+[0.789769] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.789979] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.790190] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.790401] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.790611] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__type_support.cpp\n'}
+[0.790823] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__type_support.cpp\n'}
+[0.791035] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.791243] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__type_support.cpp\n'}
+[0.791452] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__type_support.cpp\n'}
+[0.791660] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__type_support.cpp\n'}
+[0.791893] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.792109] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.792347] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.792571] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.792784] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_cpp.so\n'}
+[0.792997] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/pythonpath.sh\n'}
+[0.793205] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/pythonpath.dsv\n'}
+[0.793438] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info\n'}
+[0.793652] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[0.793866] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.794079] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.794293] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[0.794505] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs\n'}
+[0.794754] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.794972] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/libscout_msgs__rosidl_generator_py.so\n'}
+[0.795185] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/_scout_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.795395] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/_scout_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.795607] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg\n'}
+[0.795816] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_actuator_state_s.c\n'}
+[0.796027] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_light_state_s.c\n'}
+[0.796241] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_light_cmd.py\n'}
+[0.796488] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_light_state.py\n'}
+[0.796705] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_actuator_state.py\n'}
+[0.796919] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_rc_state_s.c\n'}
+[0.797128] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/__init__.py\n'}
+[0.797339] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_light_cmd_s.c\n'}
+[0.797550] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_status.py\n'}
+[0.797761] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_rc_state.py\n'}
+[0.798006] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_status_s.c\n'}
+[0.798221] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.798433] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.798645] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/__init__.py\n'}
+[0.798855] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/_scout_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.800680] (-) TimerEvent: {}
+[0.821702] (scout_msgs) StdoutLine: {'line': b"Listing '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs'...\n"}
+[0.822093] (scout_msgs) StdoutLine: {'line': b"Listing '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg'...\n"}
+[0.828814] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.829272] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.829652] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.830059] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_generator_py.so\n'}
+[0.830507] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutActuatorState.idl\n'}
+[0.830933] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutLightCmd.idl\n'}
+[0.831230] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutLightState.idl\n'}
+[0.831595] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutRCState.idl\n'}
+[0.831956] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutStatus.idl\n'}
+[0.832398] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutActuatorState.msg\n'}
+[0.832752] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutLightCmd.msg\n'}
+[0.833123] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutLightState.msg\n'}
+[0.833544] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutRCState.msg\n'}
+[0.833942] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutStatus.msg\n'}
+[0.834221] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/ament_index/resource_index/package_run_dependencies/scout_msgs\n'}
+[0.834449] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/ament_index/resource_index/parent_prefix_path/scout_msgs\n'}
+[0.834703] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/ament_prefix_path.sh\n'}
+[0.834929] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/ament_prefix_path.dsv\n'}
+[0.835149] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/path.sh\n'}
+[0.835365] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/path.dsv\n'}
+[0.835579] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/local_setup.bash\n'}
+[0.835793] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/local_setup.sh\n'}
+[0.836004] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/local_setup.zsh\n'}
+[0.836215] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/local_setup.dsv\n'}
+[0.836495] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/package.dsv\n'}
+[0.836737] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/ament_index/resource_index/packages/scout_msgs\n'}
+[0.837485] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_cExport.cmake\n'}
+[0.838272] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.840642] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.841245] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.841612] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.842059] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.842469] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.842926] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.843422] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.843717] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.844005] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.844514] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.844976] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.845497] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.845978] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.846465] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.847126] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.847557] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.847979] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.848328] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.848740] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.849042] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.849467] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.849791] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.850173] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgsConfig.cmake\n'}
+[0.850522] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgsConfig-version.cmake\n'}
+[0.850862] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/package.xml\n'}
+[0.851212] (scout_msgs) CommandEnded: {'returncode': 0}
+[0.900803] (-) TimerEvent: {}
+[1.001485] (-) TimerEvent: {}
+[1.102222] (-) TimerEvent: {}
+[1.111692] (scout_msgs) JobEnded: {'identifier': 'scout_msgs', 'rc': 0}
+[1.115833] (scout_base) JobStarted: {'identifier': 'scout_base'}
+[1.134576] (scout_base) JobProgress: {'identifier': 'scout_base', 'progress': 'cmake'}
+[1.136080] (scout_base) JobProgress: {'identifier': 'scout_base', 'progress': 'build'}
+[1.136767] (scout_base) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/scout_base', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_base', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_base'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs')]), 'shell': False}
+[1.178818] (scout_base) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.202359] (-) TimerEvent: {}
+[1.302922] (-) TimerEvent: {}
+[1.399162] (scout_base) StdoutLine: {'line': b'-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.403029] (-) TimerEvent: {}
+[1.469513] (scout_base) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.473282] (scout_base) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.482219] (scout_base) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.497414] (scout_base) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.503116] (-) TimerEvent: {}
+[1.517274] (scout_base) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.589049] (scout_base) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.590687] (scout_base) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.603214] (-) TimerEvent: {}
+[1.703732] (-) TimerEvent: {}
+[1.750640] (scout_base) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.803911] (-) TimerEvent: {}
+[1.904606] (-) TimerEvent: {}
+[1.946067] (scout_base) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.998792] (scout_base) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[2.004690] (-) TimerEvent: {}
+[2.100251] (scout_base) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.104801] (-) TimerEvent: {}
+[2.201794] (scout_base) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[2.204923] (-) TimerEvent: {}
+[2.211254] (scout_base) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[2.305074] (-) TimerEvent: {}
+[2.405647] (-) TimerEvent: {}
+[2.506210] (-) TimerEvent: {}
+[2.606765] (-) TimerEvent: {}
+[2.608588] (scout_base) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[2.613772] (scout_base) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[2.615494] (scout_base) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.626834] (scout_base) StdoutLine: {'line': b'-- Found scout_msgs: 0.1.0 (/mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake)\n'}
+[2.706897] (-) TimerEvent: {}
+[2.707904] (scout_base) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.807038] (-) TimerEvent: {}
+[2.814457] (scout_base) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.815850] (scout_base) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.816231] (scout_base) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include\n'}
+[2.816583] (scout_base) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.817588] (scout_base) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.817918] (scout_base) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.818161] (scout_base) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.818453] (scout_base) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.818751] (scout_base) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.819801] (scout_base) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.820042] (scout_base) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.820330] (scout_base) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.821271] (scout_base) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.841516] (scout_base) StdoutLine: {'line': b'-- Generating done\n'}
+[2.844243] (scout_base) StdoutLine: {'line': b'-- Build files have been written to: /mnt/nova_ssd/workspaces/scout/build/scout_base\n'}
+[2.894585] (scout_base) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target scout_base_node\x1b[0m\n'}
+[2.907144] (-) TimerEvent: {}
+[2.925025] (scout_base) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/scout_base_node.dir/src/scout_base_ros.cpp.o\x1b[0m\n'}
+[2.926564] (scout_base) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/scout_base_node.dir/src/scout_base_node.cpp.o\x1b[0m\n'}
+[3.007291] (-) TimerEvent: {}
+[3.107781] (-) TimerEvent: {}
+[3.208302] (-) TimerEvent: {}
+[3.304419] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_messenger.hpp:21\x1b[m\x1b[K,\n'}
+[3.304789] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:12\x1b[m\x1b[K:\n'}
+[3.304913] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K#warning is a GCC extension\n'}
+[3.305010] (scout_base) StderrLine: {'line': b'   35 | #\x1b[01;35m\x1b[Kwarning\x1b[m\x1b[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead\n'}
+[3.305098] (scout_base) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.305182] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp\x07-Wcpp\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.308352] (-) TimerEvent: {}
+[3.408654] (-) TimerEvent: {}
+[3.509032] (-) TimerEvent: {}
+[3.609398] (-) TimerEvent: {}
+[3.709755] (-) TimerEvent: {}
+[3.810144] (-) TimerEvent: {}
+[3.910593] (-) TimerEvent: {}
+[4.011007] (-) TimerEvent: {}
+[4.111453] (-) TimerEvent: {}
+[4.211817] (-) TimerEvent: {}
+[4.312164] (-) TimerEvent: {}
+[4.412559] (-) TimerEvent: {}
+[4.513211] (-) TimerEvent: {}
+[4.613905] (-) TimerEvent: {}
+[4.714590] (-) TimerEvent: {}
+[4.815276] (-) TimerEvent: {}
+[4.915965] (-) TimerEvent: {}
+[5.016501] (-) TimerEvent: {}
+[5.117017] (-) TimerEvent: {}
+[5.217687] (-) TimerEvent: {}
+[5.318360] (-) TimerEvent: {}
+[5.419048] (-) TimerEvent: {}
+[5.519732] (-) TimerEvent: {}
+[5.620419] (-) TimerEvent: {}
+[5.721109] (-) TimerEvent: {}
+[5.821635] (-) TimerEvent: {}
+[5.922319] (-) TimerEvent: {}
+[6.022840] (-) TimerEvent: {}
+[6.123518] (-) TimerEvent: {}
+[6.224174] (-) TimerEvent: {}
+[6.324857] (-) TimerEvent: {}
+[6.425543] (-) TimerEvent: {}
+[6.526227] (-) TimerEvent: {}
+[6.626895] (-) TimerEvent: {}
+[6.727589] (-) TimerEvent: {}
+[6.828091] (-) TimerEvent: {}
+[6.928579] (-) TimerEvent: {}
+[7.028985] (-) TimerEvent: {}
+[7.129418] (-) TimerEvent: {}
+[7.229809] (-) TimerEvent: {}
+[7.330171] (-) TimerEvent: {}
+[7.430523] (-) TimerEvent: {}
+[7.530904] (-) TimerEvent: {}
+[7.631329] (-) TimerEvent: {}
+[7.731696] (-) TimerEvent: {}
+[7.832075] (-) TimerEvent: {}
+[7.932749] (-) TimerEvent: {}
+[7.978189] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::ScoutBaseRos(std::string)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.979381] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:18:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::declare_parameter(const char [10])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.980112] (scout_base) StderrLine: {'line': b'   18 |   \x1b[01;31m\x1b[Kthis->declare_parameter("port_name")\x1b[m\x1b[K;\n'}
+[7.980248] (scout_base) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.980364] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.980452] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.980534] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.980631] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.980710] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.980788] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.980869] (scout_base) StderrLine: {'line': b'  421 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.980946] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.981021] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.981097] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:18:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.981174] (scout_base) StderrLine: {'line': b'   18 |   \x1b[01;36m\x1b[Kthis->declare_parameter("port_name")\x1b[m\x1b[K;\n'}
+[7.981250] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.981325] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.981401] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.981476] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.981552] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.981628] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.981704] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.981781] (scout_base) StderrLine: {'line': b'  434 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.981855] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.981929] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.982005] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:18:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KParameterT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.982093] (scout_base) StderrLine: {'line': b'   18 |   \x1b[01;36m\x1b[Kthis->declare_parameter("port_name")\x1b[m\x1b[K;\n'}
+[7.982173] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.982260] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.982337] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.982422] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.982499] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.982574] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.982649] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.982728] (scout_base) StderrLine: {'line': b'  366 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.982804] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.982878] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.982954] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.983042] (scout_base) StderrLine: {'line': b'  391 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.983118] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.983195] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.983272] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:20:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::declare_parameter(const char [11])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.983350] (scout_base) StderrLine: {'line': b'   20 |   \x1b[01;31m\x1b[Kthis->declare_parameter("odom_frame")\x1b[m\x1b[K;\n'}
+[7.983425] (scout_base) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.983499] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.983575] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.983652] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.983726] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.983801] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.983875] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.983951] (scout_base) StderrLine: {'line': b'  421 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.984035] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.984110] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.984186] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:20:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.984278] (scout_base) StderrLine: {'line': b'   20 |   \x1b[01;36m\x1b[Kthis->declare_parameter("odom_frame")\x1b[m\x1b[K;\n'}
+[7.984365] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.984442] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.984519] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.984595] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.984672] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.984759] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.984836] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.984915] (scout_base) StderrLine: {'line': b'  434 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.985000] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.985075] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.985151] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:20:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KParameterT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.985229] (scout_base) StderrLine: {'line': b'   20 |   \x1b[01;36m\x1b[Kthis->declare_parameter("odom_frame")\x1b[m\x1b[K;\n'}
+[7.985304] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.985379] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.985454] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.985529] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.985604] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.985681] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.985756] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.985853] (scout_base) StderrLine: {'line': b'  366 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.985929] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.986005] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.986081] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.986158] (scout_base) StderrLine: {'line': b'  391 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.986233] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.986308] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.986384] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:21:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::declare_parameter(const char [11])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.986461] (scout_base) StderrLine: {'line': b'   21 |   \x1b[01;31m\x1b[Kthis->declare_parameter("base_frame")\x1b[m\x1b[K;\n'}
+[7.986535] (scout_base) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.986610] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.986686] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.986760] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.986838] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.986916] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.986991] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.987068] (scout_base) StderrLine: {'line': b'  421 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.987142] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.987216] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.987308] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:21:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.987387] (scout_base) StderrLine: {'line': b'   21 |   \x1b[01;36m\x1b[Kthis->declare_parameter("base_frame")\x1b[m\x1b[K;\n'}
+[7.987472] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.987548] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.987625] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.987700] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.987775] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.987859] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.987934] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.988012] (scout_base) StderrLine: {'line': b'  434 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.988087] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.988162] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.988237] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:21:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KParameterT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.988339] (scout_base) StderrLine: {'line': b'   21 |   \x1b[01;36m\x1b[Kthis->declare_parameter("base_frame")\x1b[m\x1b[K;\n'}
+[7.988417] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.988493] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.988568] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.988643] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.988717] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.988804] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.988880] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.988959] (scout_base) StderrLine: {'line': b'  366 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.989035] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.989110] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.989187] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.989274] (scout_base) StderrLine: {'line': b'  391 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.989349] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.989424] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.989500] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:22:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::declare_parameter(const char [16])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.989577] (scout_base) StderrLine: {'line': b'   22 |   \x1b[01;31m\x1b[Kthis->declare_parameter("odom_topic_name")\x1b[m\x1b[K;\n'}
+[7.989655] (scout_base) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.989730] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.989805] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.989888] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.989966] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.990042] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.990117] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.990195] (scout_base) StderrLine: {'line': b'  421 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.990270] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.990344] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.990419] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:22:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.990506] (scout_base) StderrLine: {'line': b'   22 |   \x1b[01;36m\x1b[Kthis->declare_parameter("odom_topic_name")\x1b[m\x1b[K;\n'}
+[7.990582] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.990657] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.990732] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.990808] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.990882] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.990967] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.991043] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.991120] (scout_base) StderrLine: {'line': b'  434 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.991196] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.991272] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.991347] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:22:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KParameterT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.991432] (scout_base) StderrLine: {'line': b'   22 |   \x1b[01;36m\x1b[Kthis->declare_parameter("odom_topic_name")\x1b[m\x1b[K;\n'}
+[7.991509] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.991583] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.991658] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.991732] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.991806] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.991881] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.991956] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.992034] (scout_base) StderrLine: {'line': b'  366 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.992109] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.992184] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.992274] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.992370] (scout_base) StderrLine: {'line': b'  391 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.992449] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.992527] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.992605] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:24:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::declare_parameter(const char [14])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.992694] (scout_base) StderrLine: {'line': b'   24 |   \x1b[01;31m\x1b[Kthis->declare_parameter("is_scout_mini")\x1b[m\x1b[K;\n'}
+[7.992770] (scout_base) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.992847] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.992923] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.992999] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.993076] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.993153] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.993228] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.993316] (scout_base) StderrLine: {'line': b'  421 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.993393] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.993469] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.993546] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:24:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.993624] (scout_base) StderrLine: {'line': b'   24 |   \x1b[01;36m\x1b[Kthis->declare_parameter("is_scout_mini")\x1b[m\x1b[K;\n'}
+[7.993703] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.993779] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.993855] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.993929] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.994004] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.994079] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.994153] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.994241] (scout_base) StderrLine: {'line': b'  434 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.994316] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.994400] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.994476] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:24:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KParameterT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.994552] (scout_base) StderrLine: {'line': b'   24 |   \x1b[01;36m\x1b[Kthis->declare_parameter("is_scout_mini")\x1b[m\x1b[K;\n'}
+[7.994627] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.994701] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.994774] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.994849] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.994922] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.994997] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.995079] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.995158] (scout_base) StderrLine: {'line': b'  366 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.995234] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.995308] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.995383] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.995459] (scout_base) StderrLine: {'line': b'  391 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.995532] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.995606] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.995682] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:25:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::declare_parameter(const char [14])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.995759] (scout_base) StderrLine: {'line': b'   25 |   \x1b[01;31m\x1b[Kthis->declare_parameter("is_omni_wheel")\x1b[m\x1b[K;\n'}
+[7.995835] (scout_base) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.995909] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.995997] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.996082] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.996171] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.996248] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.996344] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.996422] (scout_base) StderrLine: {'line': b'  421 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.996498] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.996572] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.996647] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:25:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.996722] (scout_base) StderrLine: {'line': b'   25 |   \x1b[01;36m\x1b[Kthis->declare_parameter("is_omni_wheel")\x1b[m\x1b[K;\n'}
+[7.996796] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.996871] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.996946] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.997033] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.997109] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.997186] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.997263] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.997342] (scout_base) StderrLine: {'line': b'  434 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.997416] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.997490] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.997576] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:25:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KParameterT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.997655] (scout_base) StderrLine: {'line': b'   25 |   \x1b[01;36m\x1b[Kthis->declare_parameter("is_omni_wheel")\x1b[m\x1b[K;\n'}
+[7.997741] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.997817] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.997892] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.997967] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.998042] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.998119] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.998194] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.998272] (scout_base) StderrLine: {'line': b'  366 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.998346] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.998419] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.998495] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.998573] (scout_base) StderrLine: {'line': b'  391 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.998649] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.998724] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.998799] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:27:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::declare_parameter(const char [16])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.998891] (scout_base) StderrLine: {'line': b'   27 |   \x1b[01;31m\x1b[Kthis->declare_parameter("simulated_robot")\x1b[m\x1b[K;\n'}
+[7.998970] (scout_base) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.999045] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[7.999119] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[7.999193] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.999268] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[7.999344] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[7.999420] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.999508] (scout_base) StderrLine: {'line': b'  421 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[7.999583] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.999658] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.999742] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:27:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[7.999819] (scout_base) StderrLine: {'line': b'   27 |   \x1b[01;36m\x1b[Kthis->declare_parameter("simulated_robot")\x1b[m\x1b[K;\n'}
+[7.999894] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.999969] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[8.000044] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[8.000127] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[8.000203] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[8.000294] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[8.000373] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.000452] (scout_base) StderrLine: {'line': b'  434 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[8.000529] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.000605] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[8.000682] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:27:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KParameterT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.000758] (scout_base) StderrLine: {'line': b'   27 |   \x1b[01;36m\x1b[Kthis->declare_parameter("simulated_robot")\x1b[m\x1b[K;\n'}
+[8.000834] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.000908] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[8.000983] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[8.001058] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[8.001132] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[8.001217] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[8.001292] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.001370] (scout_base) StderrLine: {'line': b'  366 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[8.001444] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.001518] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[8.001603] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.001680] (scout_base) StderrLine: {'line': b'  391 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[8.001753] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.001827] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[8.001903] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:28:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kwestonrobot::ScoutBaseRos::declare_parameter(const char [13])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.001980] (scout_base) StderrLine: {'line': b'   28 |   \x1b[01;31m\x1b[Kthis->declare_parameter("control_rate")\x1b[m\x1b[K;\n'}
+[8.002056] (scout_base) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.002131] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[8.002206] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[8.002280] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[8.002353] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[8.002429] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[8.002515] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.002599] (scout_base) StderrLine: {'line': b'  421 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[8.002676] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.002752] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:421:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[8.002836] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:28:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[8.002914] (scout_base) StderrLine: {'line': b'   28 |   \x1b[01;36m\x1b[Kthis->declare_parameter("control_rate")\x1b[m\x1b[K;\n'}
+[8.002989] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.003064] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[8.003138] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[8.003212] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[8.003287] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[8.003361] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[8.003436] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.003512] (scout_base) StderrLine: {'line': b'  434 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[8.003586] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.003659] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[8.003734] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:28:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KParameterT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.003810] (scout_base) StderrLine: {'line': b'   28 |   \x1b[01;36m\x1b[Kthis->declare_parameter("control_rate")\x1b[m\x1b[K;\n'}
+[8.003883] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.003956] (scout_base) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[8.004030] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[8.004105] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[8.004179] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_base_ros.hpp:16\x1b[m\x1b[K,\n'}
+[8.004267] (scout_base) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:10\x1b[m\x1b[K:\n'}
+[8.004362] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.004440] (scout_base) StderrLine: {'line': b'  366 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[8.004515] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.004602] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[8.004679] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.004756] (scout_base) StderrLine: {'line': b'  391 |   \x1b[01;36m\x1b[Kdeclare_parameter\x1b[m\x1b[K(\n'}
+[8.004831] (scout_base) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.004906] (scout_base) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 1 provided\n'}
+[8.032838] (-) TimerEvent: {}
+[8.133460] (-) TimerEvent: {}
+[8.234147] (-) TimerEvent: {}
+[8.334832] (-) TimerEvent: {}
+[8.435501] (-) TimerEvent: {}
+[8.536185] (-) TimerEvent: {}
+[8.636908] (-) TimerEvent: {}
+[8.737589] (-) TimerEvent: {}
+[8.838114] (-) TimerEvent: {}
+[8.938598] (-) TimerEvent: {}
+[9.039035] (-) TimerEvent: {}
+[9.139516] (-) TimerEvent: {}
+[9.239906] (-) TimerEvent: {}
+[9.340282] (-) TimerEvent: {}
+[9.440690] (-) TimerEvent: {}
+[9.541187] (-) TimerEvent: {}
+[9.641650] (-) TimerEvent: {}
+[9.742053] (-) TimerEvent: {}
+[9.842429] (-) TimerEvent: {}
+[9.942851] (-) TimerEvent: {}
+[10.043532] (-) TimerEvent: {}
+[10.144054] (-) TimerEvent: {}
+[10.244585] (-) TimerEvent: {}
+[10.345251] (-) TimerEvent: {}
+[10.445924] (-) TimerEvent: {}
+[10.546586] (-) TimerEvent: {}
+[10.647265] (-) TimerEvent: {}
+[10.747940] (-) TimerEvent: {}
+[10.848471] (-) TimerEvent: {}
+[10.948986] (-) TimerEvent: {}
+[11.049646] (-) TimerEvent: {}
+[11.150316] (-) TimerEvent: {}
+[11.250992] (-) TimerEvent: {}
+[11.351502] (-) TimerEvent: {}
+[11.452152] (-) TimerEvent: {}
+[11.552814] (-) TimerEvent: {}
+[11.653479] (-) TimerEvent: {}
+[11.754145] (-) TimerEvent: {}
+[11.854805] (-) TimerEvent: {}
+[11.955322] (-) TimerEvent: {}
+[12.055997] (-) TimerEvent: {}
+[12.156674] (-) TimerEvent: {}
+[12.257182] (-) TimerEvent: {}
+[12.357692] (-) TimerEvent: {}
+[12.458337] (-) TimerEvent: {}
+[12.558841] (-) TimerEvent: {}
+[12.659489] (-) TimerEvent: {}
+[12.760167] (-) TimerEvent: {}
+[12.860848] (-) TimerEvent: {}
+[12.961359] (-) TimerEvent: {}
+[13.062049] (-) TimerEvent: {}
+[13.162557] (-) TimerEvent: {}
+[13.263213] (-) TimerEvent: {}
+[13.363881] (-) TimerEvent: {}
+[13.464537] (-) TimerEvent: {}
+[13.565028] (-) TimerEvent: {}
+[13.665664] (-) TimerEvent: {}
+[13.766164] (-) TimerEvent: {}
+[13.866668] (-) TimerEvent: {}
+[13.869020] (scout_base) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/scout_base_node.dir/build.make:76: CMakeFiles/scout_base_node.dir/src/scout_base_ros.cpp.o] Error 1\n'}
+[13.869639] (scout_base) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/scout_base_node.dir/all] Error 2\n'}
+[13.870017] (scout_base) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[13.874567] (scout_base) CommandEnded: {'returncode': 2}
+[13.933815] (scout_base) JobEnded: {'identifier': 'scout_base', 'rc': 2}
+[13.945288] (-) EventReactorShutdown: {}

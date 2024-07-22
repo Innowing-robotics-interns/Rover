@@ -1,0 +1,202 @@
+[0.000000] (-) TimerEvent: {}
+[0.000512] (scout_description) JobQueued: {'identifier': 'scout_description', 'dependencies': OrderedDict()}
+[0.000936] (scout_msgs) JobQueued: {'identifier': 'scout_msgs', 'dependencies': OrderedDict()}
+[0.001147] (ugv_sdk) JobQueued: {'identifier': 'ugv_sdk', 'dependencies': OrderedDict()}
+[0.001193] (scout_base) JobQueued: {'identifier': 'scout_base', 'dependencies': OrderedDict([('scout_msgs', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs'), ('ugv_sdk', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk')])}
+[0.001391] (scout_msgs) JobStarted: {'identifier': 'scout_msgs'}
+[0.012265] (ugv_sdk) JobStarted: {'identifier': 'ugv_sdk'}
+[0.014919] (scout_description) JobStarted: {'identifier': 'scout_description'}
+[0.019494] (scout_msgs) JobProgress: {'identifier': 'scout_msgs', 'progress': 'cmake'}
+[0.020572] (scout_msgs) JobProgress: {'identifier': 'scout_msgs', 'progress': 'build'}
+[0.021536] (scout_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2894'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'iwintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2707,unix/ubuntu:/tmp/.ICE-unix/2707'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/be04561b_424b_4574_85e5_6c5287ea21b3'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.99'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.027181] (ugv_sdk) JobProgress: {'identifier': 'ugv_sdk', 'progress': 'cmake'}
+[0.028149] (ugv_sdk) JobProgress: {'identifier': 'ugv_sdk', 'progress': 'build'}
+[0.028512] (ugv_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2894'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'iwintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2707,unix/ubuntu:/tmp/.ICE-unix/2707'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/be04561b_424b_4574_85e5_6c5287ea21b3'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.99'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.034166] (scout_description) JobProgress: {'identifier': 'scout_description', 'progress': 'cmake'}
+[0.035017] (scout_description) JobProgress: {'identifier': 'scout_description', 'progress': 'build'}
+[0.035364] (scout_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/scout_description', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2894'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'iwintern'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2707,unix/ubuntu:/tmp/.ICE-unix/2707'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/be04561b_424b_4574_85e5_6c5287ea21b3'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.99'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.099487] (-) TimerEvent: {}
+[0.108677] (ugv_sdk) StdoutLine: {'line': b'-- Build package with cmake\n'}
+[0.109318] (ugv_sdk) StdoutLine: {'line': b'-- Tests will not be built\n'}
+[0.119141] (scout_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.119560] (ugv_sdk) StdoutLine: {'line': b"-- Project will be installed to /mnt/nova_ssd/workspaces/scout/install/ugv_sdk with 'make install'\n"}
+[0.119750] (ugv_sdk) StdoutLine: {'line': b'--  - To install LIB components to /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib\n'}
+[0.119850] (ugv_sdk) StdoutLine: {'line': b'--  - To install BIN components to /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/bin\n'}
+[0.119958] (ugv_sdk) StdoutLine: {'line': b'--  - To install INCLUDE components to /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include\n'}
+[0.120046] (ugv_sdk) StdoutLine: {'line': b'--  - To install CMAKE components to /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share/cmake/ugv_sdk\n'}
+[0.135441] (ugv_sdk) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.139689] (scout_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.172640] (ugv_sdk) StdoutLine: {'line': b'-- Generating done\n'}
+[0.176491] (ugv_sdk) StdoutLine: {'line': b'-- Build files have been written to: /mnt/nova_ssd/workspaces/scout/build/ugv_sdk\n'}
+[0.199611] (-) TimerEvent: {}
+[0.222957] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ugv_sdk\x1b[0m\n'}
+[0.299728] (-) TimerEvent: {}
+[0.311627] (ugv_sdk) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/async_port/async_serial.cpp.o\x1b[0m\n'}
+[0.312112] (ugv_sdk) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/async_port/async_can.cpp.o\x1b[0m\n'}
+[0.313353] (ugv_sdk) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/utilities/protocol_detector.cpp.o\x1b[0m\n'}
+[0.313609] (ugv_sdk) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/scout_robot.cpp.o\x1b[0m\n'}
+[0.315779] (ugv_sdk) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/hunter_robot.cpp.o\x1b[0m\n'}
+[0.316157] (ugv_sdk) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/bunker_robot.cpp.o\x1b[0m\n'}
+[0.317965] (ugv_sdk) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/titan_robot.cpp.o\x1b[0m\n'}
+[0.318233] (ugv_sdk) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/ranger_robot.cpp.o\x1b[0m\n'}
+[0.318351] (ugv_sdk) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.o\x1b[0m\n'}
+[0.323238] (ugv_sdk) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.o\x1b[0m\n'}
+[0.324711] (ugv_sdk) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.o\x1b[0m\n'}
+[0.337421] (scout_description) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[0.337774] (scout_description) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>\n'}
+[0.337882] (scout_description) StderrLine: {'line': b'    from ament_package.templates import get_environment_hook_template_path\n'}
+[0.337974] (scout_description) StderrLine: {'line': b"ModuleNotFoundError: No module named 'ament_package'\n"}
+[0.352923] (scout_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[0.353305] (scout_msgs) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>\n'}
+[0.353432] (scout_msgs) StderrLine: {'line': b'    from ament_package.templates import get_environment_hook_template_path\n'}
+[0.353518] (scout_msgs) StderrLine: {'line': b"ModuleNotFoundError: No module named 'ament_package'\n"}
+[0.358755] (scout_description) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):\n'}
+[0.359127] (scout_description) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[0.359371] (scout_description) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py\n'}
+[0.359498] (scout_description) StderrLine: {'line': b'  /mnt/nova_ssd/workspaces/scout/build/scout_description/ament_cmake_package_templates/templates.cmake)\n'}
+[0.359613] (scout_description) StderrLine: {'line': b'  returned error code 1\n'}
+[0.359722] (scout_description) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.359828] (scout_description) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.359984] (scout_description) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.360094] (scout_description) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.360198] (scout_description) StderrLine: {'line': b'  CMakeLists.txt:18 (find_package)\n'}
+[0.360299] (scout_description) StderrLine: {'line': b'\n'}
+[0.360398] (scout_description) StderrLine: {'line': b'\x1b[0m\n'}
+[0.360498] (scout_description) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.360619] (scout_description) StdoutLine: {'line': b'See also "/mnt/nova_ssd/workspaces/scout/build/scout_description/CMakeFiles/CMakeOutput.log".\n'}
+[0.363389] (scout_description) StderrLine: {'line': b'gmake: *** [Makefile:226: cmake_check_build_system] Error 1\n'}
+[0.367122] (scout_description) CommandEnded: {'returncode': 2}
+[0.375348] (scout_msgs) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):\n'}
+[0.376253] (scout_msgs) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[0.376426] (scout_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py\n'}
+[0.376562] (scout_msgs) StderrLine: {'line': b'  /mnt/nova_ssd/workspaces/scout/build/scout_msgs/ament_cmake_package_templates/templates.cmake)\n'}
+[0.376690] (scout_msgs) StderrLine: {'line': b'  returned error code 1\n'}
+[0.376839] (scout_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.376947] (scout_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.377050] (scout_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.377152] (scout_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.377426] (scout_msgs) StderrLine: {'line': b'  CMakeLists.txt:14 (find_package)\n'}
+[0.377533] (scout_msgs) StderrLine: {'line': b'\n'}
+[0.377632] (scout_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[0.377727] (scout_msgs) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.377842] (scout_msgs) StdoutLine: {'line': b'See also "/mnt/nova_ssd/workspaces/scout/build/scout_msgs/CMakeFiles/CMakeOutput.log".\n'}
+[0.380328] (scout_msgs) StderrLine: {'line': b'gmake: *** [Makefile:1611: cmake_check_build_system] Error 1\n'}
+[0.383730] (scout_msgs) CommandEnded: {'returncode': 2}
+[0.399844] (-) TimerEvent: {}
+[0.500325] (-) TimerEvent: {}
+[0.601005] (-) TimerEvent: {}
+[0.627424] (scout_description) JobEnded: {'identifier': 'scout_description', 'rc': 2}
+[0.629582] (scout_msgs) JobEnded: {'identifier': 'scout_msgs', 'rc': 'SIGINT'}
+[0.701161] (-) TimerEvent: {}
+[0.801666] (-) TimerEvent: {}
+[0.902179] (-) TimerEvent: {}
+[1.002688] (-) TimerEvent: {}
+[1.103189] (-) TimerEvent: {}
+[1.203724] (-) TimerEvent: {}
+[1.304276] (-) TimerEvent: {}
+[1.404804] (-) TimerEvent: {}
+[1.505346] (-) TimerEvent: {}
+[1.605895] (-) TimerEvent: {}
+[1.706425] (-) TimerEvent: {}
+[1.806979] (-) TimerEvent: {}
+[1.907507] (-) TimerEvent: {}
+[2.008046] (-) TimerEvent: {}
+[2.108564] (-) TimerEvent: {}
+[2.209097] (-) TimerEvent: {}
+[2.309668] (-) TimerEvent: {}
+[2.410233] (-) TimerEvent: {}
+[2.510801] (-) TimerEvent: {}
+[2.611355] (-) TimerEvent: {}
+[2.711897] (-) TimerEvent: {}
+[2.812419] (-) TimerEvent: {}
+[2.912938] (-) TimerEvent: {}
+[3.013440] (-) TimerEvent: {}
+[3.113969] (-) TimerEvent: {}
+[3.214485] (-) TimerEvent: {}
+[3.314986] (-) TimerEvent: {}
+[3.415496] (-) TimerEvent: {}
+[3.515986] (-) TimerEvent: {}
+[3.616521] (-) TimerEvent: {}
+[3.717204] (-) TimerEvent: {}
+[3.817855] (-) TimerEvent: {}
+[3.918334] (-) TimerEvent: {}
+[4.018835] (-) TimerEvent: {}
+[4.119343] (-) TimerEvent: {}
+[4.219845] (-) TimerEvent: {}
+[4.320350] (-) TimerEvent: {}
+[4.420860] (-) TimerEvent: {}
+[4.521372] (-) TimerEvent: {}
+[4.621875] (-) TimerEvent: {}
+[4.722397] (-) TimerEvent: {}
+[4.822901] (-) TimerEvent: {}
+[4.923407] (-) TimerEvent: {}
+[5.023976] (-) TimerEvent: {}
+[5.124510] (-) TimerEvent: {}
+[5.225214] (-) TimerEvent: {}
+[5.325909] (-) TimerEvent: {}
+[5.426553] (-) TimerEvent: {}
+[5.498552] (ugv_sdk) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX static library lib/libugv_sdk.a\x1b[0m\n'}
+[5.526703] (-) TimerEvent: {}
+[5.590078] (ugv_sdk) StdoutLine: {'line': b'[ 42%] Built target ugv_sdk\n'}
+[5.603285] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target demo_bunker_robot\x1b[0m\n'}
+[5.603734] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target demo_hunter_robot\x1b[0m\n'}
+[5.603936] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target demo_tracer_robot\x1b[0m\n'}
+[5.604047] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target demo_scout_mini_omni_robot\x1b[0m\n'}
+[5.604142] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target demo_ranger_robot\x1b[0m\n'}
+[5.604230] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target demo_protocol_detector\x1b[0m\n'}
+[5.604317] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target demo_scout_robot\x1b[0m\n'}
+[5.604401] (ugv_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target demo_robot_version\x1b[0m\n'}
+[5.619989] (ugv_sdk) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object sample/bunker_demo/CMakeFiles/demo_bunker_robot.dir/bunker_robot_demo.cpp.o\x1b[0m\n'}
+[5.626854] (-) TimerEvent: {}
+[5.633661] (ugv_sdk) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object sample/scout_demo/CMakeFiles/demo_scout_robot.dir/scout_robot_demo.cpp.o\x1b[0m\n'}
+[5.633994] (ugv_sdk) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object sample/utils_demo/CMakeFiles/demo_protocol_detector.dir/demo_protocol_detector.cpp.o\x1b[0m\n'}
+[5.634112] (ugv_sdk) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object sample/utils_demo/CMakeFiles/demo_robot_version.dir/demo_robot_version.cpp.o\x1b[0m\n'}
+[5.634213] (ugv_sdk) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object sample/tracer_demo/CMakeFiles/demo_tracer_robot.dir/tracer_robot_demo.cpp.o\x1b[0m\n'}
+[5.634305] (ugv_sdk) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object sample/scout_demo/CMakeFiles/demo_scout_mini_omni_robot.dir/scout_mini_omni_demo.cpp.o\x1b[0m\n'}
+[5.634398] (ugv_sdk) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object sample/ranger_demo/CMakeFiles/demo_ranger_robot.dir/ranger_robot_demo.cpp.o\x1b[0m\n'}
+[5.634484] (ugv_sdk) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object sample/hunter_demo/CMakeFiles/demo_hunter_robot.dir/hunter_robot_demo.cpp.o\x1b[0m\n'}
+[5.726994] (-) TimerEvent: {}
+[5.827534] (-) TimerEvent: {}
+[5.928090] (-) TimerEvent: {}
+[6.028610] (-) TimerEvent: {}
+[6.129139] (-) TimerEvent: {}
+[6.229694] (-) TimerEvent: {}
+[6.246115] (ugv_sdk) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable ../../bin/demo_bunker_robot\x1b[0m\n'}
+[6.329843] (-) TimerEvent: {}
+[6.399698] (ugv_sdk) StdoutLine: {'line': b'[ 75%] Built target demo_bunker_robot\n'}
+[6.429999] (-) TimerEvent: {}
+[6.530582] (-) TimerEvent: {}
+[6.631112] (-) TimerEvent: {}
+[6.731678] (-) TimerEvent: {}
+[6.832238] (-) TimerEvent: {}
+[6.932779] (-) TimerEvent: {}
+[7.033325] (-) TimerEvent: {}
+[7.133875] (-) TimerEvent: {}
+[7.234424] (-) TimerEvent: {}
+[7.334965] (-) TimerEvent: {}
+[7.435530] (-) TimerEvent: {}
+[7.536086] (-) TimerEvent: {}
+[7.586720] (ugv_sdk) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX executable ../../bin/demo_protocol_detector\x1b[0m\n'}
+[7.613359] (ugv_sdk) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX executable ../../bin/demo_robot_version\x1b[0m\n'}
+[7.636197] (-) TimerEvent: {}
+[7.656758] (ugv_sdk) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable ../../bin/demo_hunter_robot\x1b[0m\n'}
+[7.716794] (ugv_sdk) StdoutLine: {'line': b'[ 85%] Built target demo_protocol_detector\n'}
+[7.736347] (-) TimerEvent: {}
+[7.740999] (ugv_sdk) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking CXX executable ../../bin/demo_scout_mini_omni_robot\x1b[0m\n'}
+[7.758238] (ugv_sdk) StdoutLine: {'line': b'[ 89%] Built target demo_robot_version\n'}
+[7.794472] (ugv_sdk) StdoutLine: {'line': b'[ 92%] Built target demo_hunter_robot\n'}
+[7.794894] (ugv_sdk) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable ../../bin/demo_scout_robot\x1b[0m\n'}
+[7.836510] (-) TimerEvent: {}
+[7.874465] (ugv_sdk) StdoutLine: {'line': b'[ 92%] Built target demo_scout_mini_omni_robot\n'}
+[7.926751] (ugv_sdk) StdoutLine: {'line': b'[ 92%] Built target demo_scout_robot\n'}
+[7.936653] (-) TimerEvent: {}
+[7.952040] (ugv_sdk) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable ../../bin/demo_ranger_robot\x1b[0m\n'}
+[8.036976] (-) TimerEvent: {}
+[8.086574] (ugv_sdk) StdoutLine: {'line': b'[ 96%] Built target demo_ranger_robot\n'}
+[8.137125] (-) TimerEvent: {}
+[8.141546] (ugv_sdk) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ../../bin/demo_tracer_robot\x1b[0m\n'}
+[8.237301] (-) TimerEvent: {}
+[8.261688] (ugv_sdk) StdoutLine: {'line': b'[100%] Built target demo_tracer_robot\n'}
+[8.282802] (ugv_sdk) JobEnded: {'identifier': 'ugv_sdk', 'rc': 'SIGINT'}
+[8.294414] (scout_base) JobSkipped: {'identifier': 'scout_base'}
+[8.294572] (-) EventReactorShutdown: {}

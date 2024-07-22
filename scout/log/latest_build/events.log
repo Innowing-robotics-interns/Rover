@@ -1,0 +1,648 @@
+[0.000000] (-) TimerEvent: {}
+[0.000739] (scout_description) JobQueued: {'identifier': 'scout_description', 'dependencies': OrderedDict()}
+[0.000961] (scout_msgs) JobQueued: {'identifier': 'scout_msgs', 'dependencies': OrderedDict()}
+[0.001181] (ugv_sdk) JobQueued: {'identifier': 'ugv_sdk', 'dependencies': OrderedDict()}
+[0.001267] (scout_base) JobQueued: {'identifier': 'scout_base', 'dependencies': OrderedDict([('scout_msgs', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs'), ('ugv_sdk', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk')])}
+[0.001350] (scout_msgs) JobStarted: {'identifier': 'scout_msgs'}
+[0.008402] (ugv_sdk) JobStarted: {'identifier': 'ugv_sdk'}
+[0.012337] (scout_description) JobStarted: {'identifier': 'scout_description'}
+[0.018686] (scout_msgs) JobProgress: {'identifier': 'scout_msgs', 'progress': 'cmake'}
+[0.019669] (scout_msgs) JobProgress: {'identifier': 'scout_msgs', 'progress': 'build'}
+[0.020528] (scout_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.024648] (ugv_sdk) JobProgress: {'identifier': 'ugv_sdk', 'progress': 'cmake'}
+[0.025464] (ugv_sdk) JobProgress: {'identifier': 'ugv_sdk', 'progress': 'build'}
+[0.025786] (ugv_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.030668] (scout_description) JobProgress: {'identifier': 'scout_description', 'progress': 'cmake'}
+[0.031464] (scout_description) JobProgress: {'identifier': 'scout_description', 'progress': 'build'}
+[0.031792] (scout_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/scout_description', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_description'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.079827] (scout_description) CommandEnded: {'returncode': 0}
+[0.092042] (scout_msgs) StdoutLine: {'line': b'[  1%] Built target scout_msgs__cpp\n'}
+[0.095200] (scout_msgs) StdoutLine: {'line': b'[ 12%] Built target scout_msgs__rosidl_generator_c\n'}
+[0.099372] (-) TimerEvent: {}
+[0.108087] (scout_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_scout_msgs\n'}
+[0.112896] (scout_description) JobProgress: {'identifier': 'scout_description', 'progress': 'install'}
+[0.120590] (ugv_sdk) StdoutLine: {'line': b'[ 42%] Built target ugv_sdk\n'}
+[0.123391] (scout_msgs) StdoutLine: {'line': b'[ 34%] Built target scout_msgs__rosidl_typesupport_c\n'}
+[0.123725] (scout_msgs) StdoutLine: {'line': b'[ 34%] Built target scout_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.124191] (scout_msgs) StdoutLine: {'line': b'[ 46%] Built target scout_msgs__rosidl_typesupport_introspection_c\n'}
+[0.124625] (scout_msgs) StdoutLine: {'line': b'[ 57%] Built target scout_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.125559] (scout_msgs) StdoutLine: {'line': b'[ 68%] Built target scout_msgs__rosidl_typesupport_cpp\n'}
+[0.126393] (scout_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/scout/build/scout_description'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_description'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.128876] (scout_msgs) StdoutLine: {'line': b'[ 79%] Built target scout_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.137182] (scout_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.138031] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//launch\n'}
+[0.138331] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//launch/scout_base_description.launch.py\n'}
+[0.138501] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf\n'}
+[0.138601] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/scout_wheel_type2.xacro\n'}
+[0.138719] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/scout_wheel_type1.xacro\n'}
+[0.138967] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/generate_urdf.sh\n'}
+[0.139125] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/scout_v2.urdf\n'}
+[0.139234] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//urdf/scout_v2.xacro\n'}
+[0.139330] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes\n'}
+[0.139420] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/base_link.dae\n'}
+[0.139509] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/base_link_full.dae\n'}
+[0.139597] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/hokuyo.dae\n'}
+[0.139681] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/wheel_type2.dae\n'}
+[0.139766] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description//meshes/wheel_type1.dae\n'}
+[0.139848] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/ament_index/resource_index/package_run_dependencies/scout_description\n'}
+[0.139934] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/ament_index/resource_index/parent_prefix_path/scout_description\n'}
+[0.140018] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/environment/ament_prefix_path.sh\n'}
+[0.140101] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/environment/ament_prefix_path.dsv\n'}
+[0.140181] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/environment/path.sh\n'}
+[0.140260] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/environment/path.dsv\n'}
+[0.140348] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/local_setup.bash\n'}
+[0.140436] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/local_setup.sh\n'}
+[0.140518] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/local_setup.zsh\n'}
+[0.140599] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/local_setup.dsv\n'}
+[0.140680] (scout_description) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/package.dsv\n'}
+[0.140760] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/ament_index/resource_index/packages/scout_description\n'}
+[0.141719] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/cmake/scout_descriptionConfig.cmake\n'}
+[0.142119] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/cmake/scout_descriptionConfig-version.cmake\n'}
+[0.144032] (scout_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_description/share/scout_description/package.xml\n'}
+[0.145507] (scout_description) CommandEnded: {'returncode': 0}
+[0.155574] (ugv_sdk) StdoutLine: {'line': b'[ 50%] Built target demo_bunker_robot\n'}
+[0.156964] (scout_msgs) StdoutLine: {'line': b'[ 79%] Built target scout_msgs\n'}
+[0.157289] (ugv_sdk) StdoutLine: {'line': b'[ 57%] Built target demo_scout_mini_omni_robot\n'}
+[0.158556] (ugv_sdk) StdoutLine: {'line': b'[ 64%] Built target demo_tracer_robot\n'}
+[0.159945] (ugv_sdk) StdoutLine: {'line': b'[ 78%] Built target demo_hunter_robot\n'}
+[0.160155] (ugv_sdk) StdoutLine: {'line': b'[ 85%] Built target demo_ranger_robot\n'}
+[0.160272] (ugv_sdk) StdoutLine: {'line': b'[ 85%] Built target demo_scout_robot\n'}
+[0.160380] (ugv_sdk) StdoutLine: {'line': b'[100%] Built target demo_robot_version\n'}
+[0.160484] (ugv_sdk) StdoutLine: {'line': b'[100%] Built target demo_protocol_detector\n'}
+[0.177059] (ugv_sdk) CommandEnded: {'returncode': 0}
+[0.185567] (scout_msgs) StdoutLine: {'line': b'[ 80%] Built target scout_msgs__py\n'}
+[0.199489] (-) TimerEvent: {}
+[0.201833] (scout_description) JobEnded: {'identifier': 'scout_description', 'rc': 0}
+[0.221980] (scout_msgs) StdoutLine: {'line': b'[ 90%] Built target scout_msgs__rosidl_generator_py\n'}
+[0.251411] (scout_msgs) StdoutLine: {'line': b'[ 93%] Built target scout_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.252297] (scout_msgs) StdoutLine: {'line': b'[ 96%] Built target scout_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.254464] (scout_msgs) StdoutLine: {'line': b'[100%] Built target scout_msgs__rosidl_typesupport_c__pyext\n'}
+[0.299602] (-) TimerEvent: {}
+[0.313942] (ugv_sdk) JobProgress: {'identifier': 'ugv_sdk', 'progress': 'install'}
+[0.314405] (ugv_sdk) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/ugv_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.326738] (ugv_sdk) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.327077] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/libugv_sdk.a\n'}
+[0.327305] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk\n'}
+[0.327498] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot\n'}
+[0.327710] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/bunker_robot.hpp\n'}
+[0.327919] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/ranger_robot.hpp\n'}
+[0.328098] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/hunter_robot.hpp\n'}
+[0.328294] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/titan_robot.hpp\n'}
+[0.328472] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/tracer_robot.hpp\n'}
+[0.328587] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/mobile_robot/scout_robot.hpp\n'}
+[0.328718] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details\n'}
+[0.328870] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/async_port\n'}
+[0.329373] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/async_port/async_serial.hpp\n'}
+[0.329498] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/async_port/ring_buffer.hpp\n'}
+[0.329609] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/async_port/async_can.hpp\n'}
+[0.329716] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base\n'}
+[0.329822] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/scout_base.hpp\n'}
+[0.329924] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/titan_base.hpp\n'}
+[0.330026] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp\n'}
+[0.330155] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/agilex_base.hpp\n'}
+[0.330260] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/ranger_base.hpp\n'}
+[0.330363] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/hunter_base.hpp\n'}
+[0.330466] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/robot_base/tracer_base.hpp\n'}
+[0.330567] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v1\n'}
+[0.330670] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/robot_limits.hpp\n'}
+[0.330772] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/protocol_v1_parser.hpp\n'}
+[0.330875] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/agilex_msg_parser_v1.h\n'}
+[0.330977] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface\n'}
+[0.331078] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/titan_interface.hpp\n'}
+[0.331197] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/ranger_interface.hpp\n'}
+[0.331302] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/tracer_interface.hpp\n'}
+[0.331404] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/bunker_interface.hpp\n'}
+[0.331504] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/agilex_types.h\n'}
+[0.331606] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/robot_common_interface.hpp\n'}
+[0.331704] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/hunter_interface.hpp\n'}
+[0.331802] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/scout_interface.hpp\n'}
+[0.332119] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/interface/agilex_message.h\n'}
+[0.332503] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v2\n'}
+[0.332954] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/protocol_v2/protocol_v2_parser.hpp\n'}
+[0.333474] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/details/parser_base.hpp\n'}
+[0.333662] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/utilities\n'}
+[0.334443] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/include/ugv_sdk/utilities/protocol_detector.hpp\n'}
+[0.334889] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkTargets.cmake\n'}
+[0.335392] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkTargets-release.cmake\n'}
+[0.335519] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkConfig.cmake\n'}
+[0.335662] (ugv_sdk) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkConfigVersion.cmake\n'}
+[0.335782] (ugv_sdk) CommandEnded: {'returncode': 0}
+[0.399706] (-) TimerEvent: {}
+[0.441858] (ugv_sdk) JobEnded: {'identifier': 'ugv_sdk', 'rc': 0}
+[0.459957] (scout_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.460942] (scout_msgs) StdoutLine: {'line': b'writing scout_msgs.egg-info/PKG-INFO\n'}
+[0.461322] (scout_msgs) StdoutLine: {'line': b'writing dependency_links to scout_msgs.egg-info/dependency_links.txt\n'}
+[0.461640] (scout_msgs) StdoutLine: {'line': b'writing top-level names to scout_msgs.egg-info/top_level.txt\n'}
+[0.464554] (scout_msgs) StdoutLine: {'line': b"reading manifest file 'scout_msgs.egg-info/SOURCES.txt'\n"}
+[0.465431] (scout_msgs) StdoutLine: {'line': b"writing manifest file 'scout_msgs.egg-info/SOURCES.txt'\n"}
+[0.499797] (-) TimerEvent: {}
+[0.515990] (scout_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_scout_msgs_egg\n'}
+[0.536997] (scout_msgs) CommandEnded: {'returncode': 0}
+[0.599992] (-) TimerEvent: {}
+[0.700522] (-) TimerEvent: {}
+[0.746102] (scout_msgs) JobProgress: {'identifier': 'scout_msgs', 'progress': 'install'}
+[0.746987] (scout_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.762394] (scout_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.763223] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/ament_index/resource_index/rosidl_interfaces/scout_msgs\n'}
+[0.763760] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.764093] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.764422] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_rc_state.h\n'}
+[0.764829] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_status.h\n'}
+[0.765217] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.765796] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__functions.c\n'}
+[0.766284] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__functions.h\n'}
+[0.766678] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__type_support.h\n'}
+[0.766964] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__type_support.h\n'}
+[0.767447] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__functions.h\n'}
+[0.767776] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__struct.h\n'}
+[0.768054] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__struct.h\n'}
+[0.768331] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__functions.h\n'}
+[0.768833] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__struct.h\n'}
+[0.769252] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__struct.h\n'}
+[0.769535] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__struct.h\n'}
+[0.769891] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__type_support.h\n'}
+[0.770175] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__type_support.h\n'}
+[0.770444] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__functions.c\n'}
+[0.770763] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__type_support.h\n'}
+[0.771195] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__functions.c\n'}
+[0.771735] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__functions.h\n'}
+[0.772012] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__functions.c\n'}
+[0.772238] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__functions.c\n'}
+[0.772456] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__functions.h\n'}
+[0.772671] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_actuator_state.h\n'}
+[0.772888] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_light_state.h\n'}
+[0.773122] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_light_cmd.h\n'}
+[0.773353] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.773569] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/library_path.sh\n'}
+[0.773785] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/library_path.dsv\n'}
+[0.773999] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_generator_c.so\n'}
+[0.774215] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.774429] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.774642] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.774858] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.775072] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__rosidl_typesupport_fastrtps_c.h\n'}
+[0.775285] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__rosidl_typesupport_fastrtps_c.h\n'}
+[0.775495] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__rosidl_typesupport_fastrtps_c.h\n'}
+[0.775712] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__rosidl_typesupport_fastrtps_c.h\n'}
+[0.775924] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[0.776136] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.776377] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.776590] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.776799] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_rc_state.hpp\n'}
+[0.777029] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_status.hpp\n'}
+[0.777288] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.777509] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__struct.hpp\n'}
+[0.777724] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__struct.hpp\n'}
+[0.777939] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__builder.hpp\n'}
+[0.778150] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__traits.hpp\n'}
+[0.778362] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__traits.hpp\n'}
+[0.778574] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__struct.hpp\n'}
+[0.778786] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__builder.hpp\n'}
+[0.779039] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__builder.hpp\n'}
+[0.779254] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__builder.hpp\n'}
+[0.779464] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__traits.hpp\n'}
+[0.779682] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__builder.hpp\n'}
+[0.779897] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__struct.hpp\n'}
+[0.780110] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__struct.hpp\n'}
+[0.780324] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__traits.hpp\n'}
+[0.780535] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__traits.hpp\n'}
+[0.780746] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_light_cmd.hpp\n'}
+[0.780958] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_actuator_state.hpp\n'}
+[0.781200] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/scout_light_state.hpp\n'}
+[0.781441] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.781653] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.781866] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.782080] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.782292] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.782507] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.782721] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/dds_fastrtps\n'}
+[0.782933] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.783143] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.783374] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.783596] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.783810] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.784021] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.784233] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.784448] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.784663] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__type_support.c\n'}
+[0.784876] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__type_support.c\n'}
+[0.785119] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__rosidl_typesupport_introspection_c.h\n'}
+[0.785355] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__type_support.c\n'}
+[0.785572] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__rosidl_typesupport_introspection_c.h\n'}
+[0.785835] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__rosidl_typesupport_introspection_c.h\n'}
+[0.786052] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__type_support.c\n'}
+[0.786293] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__rosidl_typesupport_introspection_c.h\n'}
+[0.786509] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__type_support.c\n'}
+[0.786722] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_introspection_c.h\n'}
+[0.786937] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.787149] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_c.so\n'}
+[0.787361] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs\n'}
+[0.787571] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg\n'}
+[0.787780] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail\n'}
+[0.787992] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.788202] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__type_support.cpp\n'}
+[0.788412] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__type_support.cpp\n'}
+[0.788625] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.788838] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_rc_state__type_support.cpp\n'}
+[0.789049] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__type_support.cpp\n'}
+[0.789302] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_cmd__type_support.cpp\n'}
+[0.789542] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_actuator_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.789759] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_light_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.789974] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/include/scout_msgs/scout_msgs/msg/detail/scout_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.790189] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.790403] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_typesupport_cpp.so\n'}
+[0.790614] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/pythonpath.sh\n'}
+[0.790824] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/pythonpath.dsv\n'}
+[0.791064] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info\n'}
+[0.791277] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[0.791488] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.791700] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.791913] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[0.792125] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs\n'}
+[0.792372] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.792589] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/libscout_msgs__rosidl_generator_py.so\n'}
+[0.792798] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/_scout_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.793006] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/_scout_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.793244] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg\n'}
+[0.793458] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_actuator_state_s.c\n'}
+[0.793670] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_light_state_s.c\n'}
+[0.793878] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_light_cmd.py\n'}
+[0.794085] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_light_state.py\n'}
+[0.794294] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_actuator_state.py\n'}
+[0.794500] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_rc_state_s.c\n'}
+[0.794707] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/__init__.py\n'}
+[0.794914] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_light_cmd_s.c\n'}
+[0.795121] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_status.py\n'}
+[0.795330] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_rc_state.py\n'}
+[0.795574] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg/_scout_status_s.c\n'}
+[0.795784] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.795996] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.796207] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/__init__.py\n'}
+[0.796415] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/_scout_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.800612] (-) TimerEvent: {}
+[0.820133] (scout_msgs) StdoutLine: {'line': b"Listing '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs'...\n"}
+[0.820653] (scout_msgs) StdoutLine: {'line': b"Listing '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/msg'...\n"}
+[0.827125] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.827558] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.827941] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages/scout_msgs/scout_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[0.828354] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib/libscout_msgs__rosidl_generator_py.so\n'}
+[0.828790] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutActuatorState.idl\n'}
+[0.829261] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutLightCmd.idl\n'}
+[0.829622] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutLightState.idl\n'}
+[0.829920] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutRCState.idl\n'}
+[0.830221] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutStatus.idl\n'}
+[0.830568] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutActuatorState.msg\n'}
+[0.830930] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutLightCmd.msg\n'}
+[0.831300] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutLightState.msg\n'}
+[0.831667] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutRCState.msg\n'}
+[0.832020] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/msg/ScoutStatus.msg\n'}
+[0.832432] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/ament_index/resource_index/package_run_dependencies/scout_msgs\n'}
+[0.832831] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/ament_index/resource_index/parent_prefix_path/scout_msgs\n'}
+[0.833125] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/ament_prefix_path.sh\n'}
+[0.833376] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/ament_prefix_path.dsv\n'}
+[0.833601] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/path.sh\n'}
+[0.833822] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/environment/path.dsv\n'}
+[0.834043] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/local_setup.bash\n'}
+[0.834259] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/local_setup.sh\n'}
+[0.834475] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/local_setup.zsh\n'}
+[0.834689] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/local_setup.dsv\n'}
+[0.834929] (scout_msgs) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/package.dsv\n'}
+[0.835148] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/ament_index/resource_index/packages/scout_msgs\n'}
+[0.835362] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_cExport.cmake\n'}
+[0.835576] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.836254] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.837438] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.839897] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.840503] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.840855] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.841231] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.841705] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.842181] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.842607] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.843110] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.843403] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.843869] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.844338] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.844746] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.845204] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/export_scout_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.845664] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.846299] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.846723] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.847136] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.847595] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.847934] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.848239] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.848659] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgsConfig.cmake\n'}
+[0.848983] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake/scout_msgsConfig-version.cmake\n'}
+[0.849375] (scout_msgs) StdoutLine: {'line': b'-- Up-to-date: /mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/package.xml\n'}
+[0.849678] (scout_msgs) CommandEnded: {'returncode': 0}
+[0.900774] (-) TimerEvent: {}
+[1.001298] (-) TimerEvent: {}
+[1.102455] (scout_msgs) JobEnded: {'identifier': 'scout_msgs', 'rc': 0}
+[1.106042] (-) TimerEvent: {}
+[1.106353] (scout_base) JobStarted: {'identifier': 'scout_base'}
+[1.121954] (scout_base) JobProgress: {'identifier': 'scout_base', 'progress': 'cmake'}
+[1.123671] (scout_base) JobProgress: {'identifier': 'scout_base', 'progress': 'build'}
+[1.124607] (scout_base) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/nova_ssd/workspaces/scout/build/scout_base', '--', '-j12', '-l12'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_base', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_base'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs')]), 'shell': False}
+[1.169874] (scout_base) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.206183] (-) TimerEvent: {}
+[1.306720] (-) TimerEvent: {}
+[1.376393] (scout_base) StdoutLine: {'line': b'-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.406838] (-) TimerEvent: {}
+[1.425704] (scout_base) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.429240] (scout_base) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.437905] (scout_base) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.452296] (scout_base) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.471890] (scout_base) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.506925] (-) TimerEvent: {}
+[1.543830] (scout_base) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.545308] (scout_base) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.607085] (-) TimerEvent: {}
+[1.702578] (scout_base) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.707182] (-) TimerEvent: {}
+[1.807636] (-) TimerEvent: {}
+[1.897523] (scout_base) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.907742] (-) TimerEvent: {}
+[1.950125] (scout_base) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[2.008049] (-) TimerEvent: {}
+[2.051872] (scout_base) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.108344] (-) TimerEvent: {}
+[2.152908] (scout_base) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[2.162429] (scout_base) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[2.208634] (-) TimerEvent: {}
+[2.309243] (-) TimerEvent: {}
+[2.409694] (-) TimerEvent: {}
+[2.510328] (-) TimerEvent: {}
+[2.559604] (scout_base) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[2.564641] (scout_base) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[2.566462] (scout_base) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.577383] (scout_base) StdoutLine: {'line': b'-- Found scout_msgs: 0.1.0 (/mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake)\n'}
+[2.610414] (-) TimerEvent: {}
+[2.650558] (scout_base) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.710570] (-) TimerEvent: {}
+[2.762211] (scout_base) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.763338] (scout_base) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.763807] (scout_base) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include\n'}
+[2.764082] (scout_base) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.764599] (scout_base) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.764862] (scout_base) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.765193] (scout_base) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.765575] (scout_base) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.765989] (scout_base) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.767067] (scout_base) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.767308] (scout_base) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.767601] (scout_base) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.768447] (scout_base) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.788774] (scout_base) StdoutLine: {'line': b'-- Generating done\n'}
+[2.791464] (scout_base) StdoutLine: {'line': b'-- Build files have been written to: /mnt/nova_ssd/workspaces/scout/build/scout_base\n'}
+[2.810648] (-) TimerEvent: {}
+[2.840446] (scout_base) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target scout_base_node\x1b[0m\n'}
+[2.880650] (scout_base) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/scout_base_node.dir/src/scout_base_node.cpp.o\x1b[0m\n'}
+[2.880902] (scout_base) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/scout_base_node.dir/src/scout_base_ros.cpp.o\x1b[0m\n'}
+[2.910766] (-) TimerEvent: {}
+[3.011391] (-) TimerEvent: {}
+[3.111908] (-) TimerEvent: {}
+[3.212581] (-) TimerEvent: {}
+[3.313254] (-) TimerEvent: {}
+[3.413936] (-) TimerEvent: {}
+[3.514636] (-) TimerEvent: {}
+[3.615152] (-) TimerEvent: {}
+[3.715820] (-) TimerEvent: {}
+[3.816523] (-) TimerEvent: {}
+[3.917196] (-) TimerEvent: {}
+[4.017882] (-) TimerEvent: {}
+[4.118402] (-) TimerEvent: {}
+[4.219081] (-) TimerEvent: {}
+[4.319765] (-) TimerEvent: {}
+[4.420448] (-) TimerEvent: {}
+[4.521147] (-) TimerEvent: {}
+[4.621660] (-) TimerEvent: {}
+[4.722170] (-) TimerEvent: {}
+[4.822857] (-) TimerEvent: {}
+[4.923532] (-) TimerEvent: {}
+[5.024221] (-) TimerEvent: {}
+[5.124735] (-) TimerEvent: {}
+[5.225424] (-) TimerEvent: {}
+[5.326102] (-) TimerEvent: {}
+[5.426767] (-) TimerEvent: {}
+[5.527443] (-) TimerEvent: {}
+[5.628119] (-) TimerEvent: {}
+[5.728818] (-) TimerEvent: {}
+[5.829536] (-) TimerEvent: {}
+[5.930239] (-) TimerEvent: {}
+[6.030922] (-) TimerEvent: {}
+[6.131573] (-) TimerEvent: {}
+[6.232244] (-) TimerEvent: {}
+[6.332908] (-) TimerEvent: {}
+[6.433607] (-) TimerEvent: {}
+[6.534120] (-) TimerEvent: {}
+[6.634812] (-) TimerEvent: {}
+[6.735494] (-) TimerEvent: {}
+[6.836190] (-) TimerEvent: {}
+[6.936856] (-) TimerEvent: {}
+[7.037554] (-) TimerEvent: {}
+[7.138232] (-) TimerEvent: {}
+[7.238921] (-) TimerEvent: {}
+[7.339601] (-) TimerEvent: {}
+[7.440302] (-) TimerEvent: {}
+[7.541131] (-) TimerEvent: {}
+[7.641843] (-) TimerEvent: {}
+[7.742465] (-) TimerEvent: {}
+[7.842913] (-) TimerEvent: {}
+[7.943530] (-) TimerEvent: {}
+[8.044159] (-) TimerEvent: {}
+[8.144790] (-) TimerEvent: {}
+[8.245453] (-) TimerEvent: {}
+[8.346077] (-) TimerEvent: {}
+[8.446708] (-) TimerEvent: {}
+[8.547335] (-) TimerEvent: {}
+[8.647959] (-) TimerEvent: {}
+[8.748586] (-) TimerEvent: {}
+[8.849054] (-) TimerEvent: {}
+[8.949735] (-) TimerEvent: {}
+[9.050377] (-) TimerEvent: {}
+[9.151004] (-) TimerEvent: {}
+[9.251475] (-) TimerEvent: {}
+[9.352100] (-) TimerEvent: {}
+[9.452746] (-) TimerEvent: {}
+[9.553407] (-) TimerEvent: {}
+[9.654043] (-) TimerEvent: {}
+[9.754593] (-) TimerEvent: {}
+[9.855431] (-) TimerEvent: {}
+[9.956177] (-) TimerEvent: {}
+[10.056888] (-) TimerEvent: {}
+[10.157592] (-) TimerEvent: {}
+[10.258094] (-) TimerEvent: {}
+[10.358742] (-) TimerEvent: {}
+[10.459390] (-) TimerEvent: {}
+[10.560040] (-) TimerEvent: {}
+[10.660680] (-) TimerEvent: {}
+[10.761170] (-) TimerEvent: {}
+[10.861821] (-) TimerEvent: {}
+[10.962456] (-) TimerEvent: {}
+[11.063088] (-) TimerEvent: {}
+[11.163721] (-) TimerEvent: {}
+[11.264367] (-) TimerEvent: {}
+[11.365008] (-) TimerEvent: {}
+[11.465655] (-) TimerEvent: {}
+[11.566283] (-) TimerEvent: {}
+[11.666767] (-) TimerEvent: {}
+[11.767251] (-) TimerEvent: {}
+[11.867904] (-) TimerEvent: {}
+[11.968540] (-) TimerEvent: {}
+[12.069174] (-) TimerEvent: {}
+[12.169808] (-) TimerEvent: {}
+[12.270442] (-) TimerEvent: {}
+[12.370914] (-) TimerEvent: {}
+[12.471562] (-) TimerEvent: {}
+[12.572197] (-) TimerEvent: {}
+[12.672827] (-) TimerEvent: {}
+[12.773320] (-) TimerEvent: {}
+[12.873970] (-) TimerEvent: {}
+[12.974594] (-) TimerEvent: {}
+[13.075222] (-) TimerEvent: {}
+[13.175851] (-) TimerEvent: {}
+[13.276474] (-) TimerEvent: {}
+[13.377117] (-) TimerEvent: {}
+[13.477742] (-) TimerEvent: {}
+[13.578368] (-) TimerEvent: {}
+[13.678845] (-) TimerEvent: {}
+[13.779352] (-) TimerEvent: {}
+[13.880089] (-) TimerEvent: {}
+[13.980752] (-) TimerEvent: {}
+[14.081449] (-) TimerEvent: {}
+[14.182094] (-) TimerEvent: {}
+[14.282730] (-) TimerEvent: {}
+[14.383358] (-) TimerEvent: {}
+[14.483995] (-) TimerEvent: {}
+[14.584631] (-) TimerEvent: {}
+[14.685265] (-) TimerEvent: {}
+[14.785943] (-) TimerEvent: {}
+[14.886583] (-) TimerEvent: {}
+[14.987210] (-) TimerEvent: {}
+[15.087835] (-) TimerEvent: {}
+[15.188464] (-) TimerEvent: {}
+[15.289108] (-) TimerEvent: {}
+[15.389740] (-) TimerEvent: {}
+[15.490373] (-) TimerEvent: {}
+[15.591006] (-) TimerEvent: {}
+[15.691498] (-) TimerEvent: {}
+[15.792137] (-) TimerEvent: {}
+[15.892789] (-) TimerEvent: {}
+[15.993457] (-) TimerEvent: {}
+[16.094100] (-) TimerEvent: {}
+[16.194737] (-) TimerEvent: {}
+[16.295370] (-) TimerEvent: {}
+[16.396018] (-) TimerEvent: {}
+[16.496672] (-) TimerEvent: {}
+[16.597314] (-) TimerEvent: {}
+[16.698005] (-) TimerEvent: {}
+[16.798501] (-) TimerEvent: {}
+[16.899219] (-) TimerEvent: {}
+[16.999928] (-) TimerEvent: {}
+[17.100570] (-) TimerEvent: {}
+[17.201255] (-) TimerEvent: {}
+[17.301928] (-) TimerEvent: {}
+[17.402545] (-) TimerEvent: {}
+[17.503042] (-) TimerEvent: {}
+[17.603575] (-) TimerEvent: {}
+[17.704191] (-) TimerEvent: {}
+[17.804774] (-) TimerEvent: {}
+[17.905432] (-) TimerEvent: {}
+[18.006027] (-) TimerEvent: {}
+[18.106656] (-) TimerEvent: {}
+[18.207324] (-) TimerEvent: {}
+[18.307990] (-) TimerEvent: {}
+[18.408689] (-) TimerEvent: {}
+[18.509421] (-) TimerEvent: {}
+[18.610120] (-) TimerEvent: {}
+[18.710814] (-) TimerEvent: {}
+[18.811505] (-) TimerEvent: {}
+[18.912180] (-) TimerEvent: {}
+[19.012843] (-) TimerEvent: {}
+[19.113519] (-) TimerEvent: {}
+[19.214116] (-) TimerEvent: {}
+[19.314707] (-) TimerEvent: {}
+[19.415359] (-) TimerEvent: {}
+[19.516184] (-) TimerEvent: {}
+[19.616833] (-) TimerEvent: {}
+[19.717332] (-) TimerEvent: {}
+[19.817811] (-) TimerEvent: {}
+[19.918294] (-) TimerEvent: {}
+[20.018769] (-) TimerEvent: {}
+[20.119238] (-) TimerEvent: {}
+[20.219714] (-) TimerEvent: {}
+[20.320190] (-) TimerEvent: {}
+[20.420661] (-) TimerEvent: {}
+[20.521162] (-) TimerEvent: {}
+[20.621626] (-) TimerEvent: {}
+[20.722097] (-) TimerEvent: {}
+[20.822562] (-) TimerEvent: {}
+[20.923037] (-) TimerEvent: {}
+[21.023508] (-) TimerEvent: {}
+[21.123972] (-) TimerEvent: {}
+[21.224453] (-) TimerEvent: {}
+[21.324935] (-) TimerEvent: {}
+[21.425452] (-) TimerEvent: {}
+[21.525951] (-) TimerEvent: {}
+[21.626438] (-) TimerEvent: {}
+[21.726912] (-) TimerEvent: {}
+[21.827440] (-) TimerEvent: {}
+[21.928249] (-) TimerEvent: {}
+[22.028848] (-) TimerEvent: {}
+[22.129468] (-) TimerEvent: {}
+[22.230045] (-) TimerEvent: {}
+[22.330535] (-) TimerEvent: {}
+[22.431142] (-) TimerEvent: {}
+[22.531729] (-) TimerEvent: {}
+[22.632370] (-) TimerEvent: {}
+[22.733017] (-) TimerEvent: {}
+[22.833634] (-) TimerEvent: {}
+[22.934140] (-) TimerEvent: {}
+[23.034737] (-) TimerEvent: {}
+[23.135342] (-) TimerEvent: {}
+[23.235842] (-) TimerEvent: {}
+[23.336440] (-) TimerEvent: {}
+[23.437152] (-) TimerEvent: {}
+[23.458829] (scout_base) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable scout_base_node\x1b[0m\n'}
+[23.537318] (-) TimerEvent: {}
+[23.637914] (-) TimerEvent: {}
+[23.738503] (-) TimerEvent: {}
+[23.839188] (-) TimerEvent: {}
+[23.939885] (-) TimerEvent: {}
+[24.040581] (-) TimerEvent: {}
+[24.141282] (-) TimerEvent: {}
+[24.241939] (-) TimerEvent: {}
+[24.342610] (-) TimerEvent: {}
+[24.443300] (-) TimerEvent: {}
+[24.544192] (-) TimerEvent: {}
+[24.550510] (scout_base) StdoutLine: {'line': b'[100%] Built target scout_base_node\n'}
+[24.570042] (scout_base) CommandEnded: {'returncode': 0}
+[24.615286] (scout_base) JobProgress: {'identifier': 'scout_base', 'progress': 'install'}
+[24.616254] (scout_base) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/nova_ssd/workspaces/scout/build/scout_base'], 'cwd': '/mnt/nova_ssd/workspaces/scout/build/scout_base', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'iwintern'), ('SSH_CLIENT', '100.100.204.2 52314 22'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_PACKAGE_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/iwintern'), ('OLDPWD', '/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iwintern'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('PKG_CONFIG_PATH', '/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '10'), ('ISAAC_ROS_WS', '/mnt/nova_ssd/workspaces/isaac_ros-dev/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/nova_ssd/workspaces/scout/build/scout_base'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '100.100.204.2 52314 100.124.75.65 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs')]), 'shell': False}
+[24.630879] (scout_base) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[24.631387] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/lib/scout_base/scout_base_node\n'}
+[24.642921] (scout_base) StdoutLine: {'line': b'-- Set runtime path of "/mnt/nova_ssd/workspaces/scout/install/scout_base/lib/scout_base/scout_base_node" to ""\n'}
+[24.643317] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base//launch\n'}
+[24.643638] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base//launch/scout_base.launch.py\n'}
+[24.643939] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base//launch/scout_mini_omni_base.launch.py\n'}
+[24.644218] (-) TimerEvent: {}
+[24.644585] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base//launch/scout_mini_base.launch.py\n'}
+[24.644949] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/ament_index/resource_index/package_run_dependencies/scout_base\n'}
+[24.645290] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/ament_index/resource_index/parent_prefix_path/scout_base\n'}
+[24.645627] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/environment/ament_prefix_path.sh\n'}
+[24.645914] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/environment/ament_prefix_path.dsv\n'}
+[24.646239] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/environment/path.sh\n'}
+[24.646581] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/environment/path.dsv\n'}
+[24.646870] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/local_setup.bash\n'}
+[24.647199] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/local_setup.sh\n'}
+[24.647484] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/local_setup.zsh\n'}
+[24.647711] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/local_setup.dsv\n'}
+[24.647930] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/package.dsv\n'}
+[24.648147] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/ament_index/resource_index/packages/scout_base\n'}
+[24.648364] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/cmake/scout_baseConfig.cmake\n'}
+[24.648578] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/cmake/scout_baseConfig-version.cmake\n'}
+[24.648791] (scout_base) StdoutLine: {'line': b'-- Installing: /mnt/nova_ssd/workspaces/scout/install/scout_base/share/scout_base/package.xml\n'}
+[24.650715] (scout_base) CommandEnded: {'returncode': 0}
+[24.737414] (scout_base) JobEnded: {'identifier': 'scout_base', 'rc': 0}
+[24.739974] (-) EventReactorShutdown: {}

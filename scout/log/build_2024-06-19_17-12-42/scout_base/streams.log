@@ -1,0 +1,48 @@
+[0.022s] Invoking command in '/mnt/nova_ssd/workspaces/scout/build/scout_base': AMENT_PREFIX_PATH=/mnt/nova_ssd/workspaces/scout/install/scout_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs LD_LIBRARY_PATH=/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share /usr/bin/cmake --build /mnt/nova_ssd/workspaces/scout/build/scout_base -- -j12 -l12
+[0.061s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.267s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.336s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.339s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.349s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.364s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.384s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.457s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.458s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.617s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.813s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.866s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.967s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.069s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[1.078s] -- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.478s] -- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.496s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.498s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.498s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.509s] -- Found scout_msgs: 0.1.0 (/mnt/nova_ssd/workspaces/scout/install/scout_msgs/share/scout_msgs/cmake)
+[1.584s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.685s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.686s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.686s] -- Configured cppcheck include dirs: /mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include
+[1.687s] -- Configured cppcheck exclude dirs and/or files: 
+[1.688s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.688s] -- Configured cpplint exclude dirs and/or files: 
+[1.688s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.689s] -- Added test 'lint_cmake' to check CMake code style
+[1.689s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.690s] -- Added test 'uncrustify' to check C / C++ code style
+[1.690s] -- Configured uncrustify additional arguments: 
+[1.691s] -- Added test 'xmllint' to check XML markup files
+[1.692s] -- Configuring done
+[1.712s] -- Generating done
+[1.714s] -- Build files have been written to: /mnt/nova_ssd/workspaces/scout/build/scout_base
+[1.763s] [35m[1mConsolidate compiler generated dependencies of target scout_base_node[0m
+[1.789s] [ 33%] [32mBuilding CXX object CMakeFiles/scout_base_node.dir/src/scout_base_ros.cpp.o[0m
+[2.139s] In file included from [01m[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/src/scout_base_ros.cpp:12[m[K:
+[2.139s] [01m[K/mnt/nova_ssd/workspaces/scout/src/scout_ros2/scout_base/include/scout_base/scout_messenger.hpp:21:10:[m[K [01;31m[Kfatal error: [m[Ktf2_geometry_msgs/tf2_geometry_msgs.h: No such file or directory
+[2.140s]    21 | #include [01;31m[K<tf2_geometry_msgs/tf2_geometry_msgs.h>[m[K
+[2.140s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.140s] compilation terminated.
+[2.147s] gmake[2]: *** [CMakeFiles/scout_base_node.dir/build.make:76: CMakeFiles/scout_base_node.dir/src/scout_base_ros.cpp.o] Error 1
+[2.148s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/scout_base_node.dir/all] Error 2
+[2.148s] gmake: *** [Makefile:146: all] Error 2
+[2.153s] Invoked command in '/mnt/nova_ssd/workspaces/scout/build/scout_base' returned '2': AMENT_PREFIX_PATH=/mnt/nova_ssd/workspaces/scout/install/scout_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk:/mnt/nova_ssd/workspaces/scout/install/scout_msgs LD_LIBRARY_PATH=/mnt/nova_ssd/workspaces/scout/install/scout_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/mnt/nova_ssd/workspaces/scout/install/scout_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/mnt/nova_ssd/workspaces/scout/install/ugv_sdk/share /usr/bin/cmake --build /mnt/nova_ssd/workspaces/scout/build/scout_base -- -j12 -l12
