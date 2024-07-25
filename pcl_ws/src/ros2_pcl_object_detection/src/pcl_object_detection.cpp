@@ -21,6 +21,7 @@ SOFTWARE.
 */
 
 #include "pcl_object_detection.hpp"
+#include <cmath>
 
 namespace pcl_object_detection
 {
@@ -60,27 +61,28 @@ PclObjectDetection::PclObjectDetection(
   // Create a ROS publisher for the output point cloud
   rclcpp::QoS qos(1);
   qos.reliable();
+  pub_filtered_clouds = this->create_publisher<sensor_msgs::msg::PointCloud2>("filtered_clouds", 1);
   pub_cluster0 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_0", 1);
   pub_cluster1 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_1", 1);
   pub_cluster2 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_2", 1);
   pub_cluster3 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_3", 1);
   pub_cluster4 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_4", 1);
   pub_cluster5 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_5", 1);
-  pub_cluster6 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_6", 1);
-  pub_cluster7 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_7", 1);
-  pub_cluster8 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_8", 1);
-  pub_cluster9 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_9", 1);
-  pub_cluster10 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_10", 1);
-  pub_cluster11 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_11", 1);
-  pub_cluster12 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_12", 1);
-  pub_cluster13 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_13", 1);
-  pub_cluster14 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_14", 1);
-  pub_cluster15 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_15", 1);
-  pub_cluster16 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_16", 1);
-  pub_cluster17 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_17", 1);
-  pub_cluster18 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_18", 1);
-  pub_cluster19 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_19", 1);
-  pub_cluster20 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_20", 1);
+  // pub_cluster6 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_6", 1);
+  // pub_cluster7 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_7", 1);
+  // pub_cluster8 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_8", 1);
+  // pub_cluster9 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_9", 1);
+  // pub_cluster10 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_10", 1);
+  // pub_cluster11 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_11", 1);
+  // pub_cluster12 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_12", 1);
+  // pub_cluster13 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_13", 1);
+  // pub_cluster14 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_14", 1);
+  // pub_cluster15 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_15", 1);
+  // pub_cluster16 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_16", 1);
+  // pub_cluster17 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_17", 1);
+  // pub_cluster18 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_18", 1);
+  // pub_cluster19 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_19", 1);
+  // pub_cluster20 = this->create_publisher<sensor_msgs::msg::PointCloud2>("cluster_20", 1);
   // Subscribe to the clustered pointclouds
   // ros::Subscriber c1=nh.subscribe("ccs",100,KFT);
   object_ids_pub_ = this->create_publisher<std_msgs::msg::Int32MultiArray>("obj_id", 1);
@@ -93,6 +95,11 @@ PclObjectDetection::PclObjectDetection(
   /* Point cloud clustering
    */
 }
+
+float euclideanDistance(const pcl::PointXYZ& point1, const pcl::PointXYZ& point2) {
+  return std::sqrt(std::pow(point2.x - point1.x, 2) +
+                   std::pow(point2.y - point1.y, 2));
+  }
 
 void PclObjectDetection::kft(const std_msgs::msg::Float32MultiArray ccs)
 {
@@ -129,15 +136,15 @@ void PclObjectDetection::kft(const std_msgs::msg::Float32MultiArray ccs)
 
     // Find the cluster that is more probable to be belonging to a given KF.
     obj_ids.clear();   // Clear the obj_id vector
-    obj_ids.resize(21); // Allocate default elements so that [i] doesnt segfault. Should be done better
+    obj_ids.resize(6); // Allocate default elements so that [i] doesnt segfault. Should be done better
     // Copy cluster centres for modifying it and preventing multiple assignments of the same ID
     std::vector<geometry_msgs::msg::Point> copy_of_cluster_centers(cluster_centers);
     std::vector<std::vector<float>> dist_mat;
 
-    for (int filter_n = 0; filter_n < 21; filter_n++)
+    for (int filter_n = 0; filter_n < 6; filter_n++)
     {
         std::vector<float> dist_vec;
-        for (int n = 0; n < 21; n++)
+        for (int n = 0; n < 6; n++)
         {
             dist_vec.push_back(euclidean_distance(kf_predictions[filter_n], copy_of_cluster_centers[n]));
         }
@@ -145,7 +152,7 @@ void PclObjectDetection::kft(const std_msgs::msg::Float32MultiArray ccs)
         dist_mat.push_back(dist_vec);
     }
 
-    for (int cluster_count = 0; cluster_count < 21; cluster_count++)
+    for (int cluster_count = 0; cluster_count < 6; cluster_count++)
     {
         // 1. Find min(distMax)==> (i,j);
         std::pair<int, int> min_index(find_index_of_min(dist_mat));
@@ -153,7 +160,7 @@ void PclObjectDetection::kft(const std_msgs::msg::Float32MultiArray ccs)
         obj_ids[min_index.first] = min_index.second;
 
         // 3. distMat[i,:]=10000; distMat[:,j]=10000
-        dist_mat[min_index.first] = std::vector<float>(21, 10000.0); // Set the row to a high number.
+        dist_mat[min_index.first] = std::vector<float>(6, 10000.0); // Set the row to a high number.
         for (int row = 0; row < dist_mat.size(); row++)             //set the column to a high number
         {
             dist_mat[row][min_index.second] = 10000.0;
@@ -169,7 +176,7 @@ void PclObjectDetection::kft(const std_msgs::msg::Float32MultiArray ccs)
 
     // convert clusterCenters from geometry_msgs::msg::Point to floats
     std::vector<std::vector<float>> cc;
-    for (int i = 0; i < 21; i++)
+    for (int i = 0; i < 6; i++)
     {
         std::vector<float> pt;
         pt.push_back(cluster_centers[obj_ids[i]].x);
@@ -212,7 +219,7 @@ void PclObjectDetection::publish_bbox_marker(std::vector<geometry_msgs::msg::Poi
 {
     //visualization_msgs::msg::MarkerArray cluster_markers;
 
-    for (int i = 0; i < 21; i++)
+    for (int i = 0; i < 6; i++)
     {
         visualization_msgs::msg::Marker m;
 
@@ -259,6 +266,7 @@ void PclObjectDetection::publish_cloud(rclcpp::Publisher<sensor_msgs::msg::Point
     pub->publish(*cluster_msg);
 }
 
+
 void PclObjectDetection::initialize_kalman_filter()
 {
     // Initialize 6 Kalman Filters; Assuming 6 max objects in the dataset.
@@ -281,36 +289,36 @@ void PclObjectDetection::initialize_kalman_filter()
                             dvx, 0, 0, 0, 0, dvy);
     KF5.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
                             dvx, 0, 0, 0, 0, dvy);
-    KF6.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF7.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF8.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF9.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF10.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF11.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF12.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF13.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF14.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF15.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF16.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF17.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF18.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF19.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
-    KF20.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
-                            dvx, 0, 0, 0, 0, dvy);
+    // KF6.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF7.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF8.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF9.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF10.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF11.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF12.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF13.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF14.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF15.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF16.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF17.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF18.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF19.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
+    // KF20.transitionMatrix = (cv::Mat_<float>(4, 4) << dx, 0, 1, 0, 0, dy, 0, 1, 0, 0,
+    //                         dvx, 0, 0, 0, 0, dvy);
 
     cv::setIdentity(KF0.measurementMatrix);
     cv::setIdentity(KF1.measurementMatrix);
@@ -318,21 +326,21 @@ void PclObjectDetection::initialize_kalman_filter()
     cv::setIdentity(KF3.measurementMatrix);
     cv::setIdentity(KF4.measurementMatrix);
     cv::setIdentity(KF5.measurementMatrix);
-    cv::setIdentity(KF6.measurementMatrix);
-    cv::setIdentity(KF7.measurementMatrix);
-    cv::setIdentity(KF8.measurementMatrix);
-    cv::setIdentity(KF9.measurementMatrix);
-    cv::setIdentity(KF10.measurementMatrix);
-    cv::setIdentity(KF11.measurementMatrix);
-    cv::setIdentity(KF12.measurementMatrix);
-    cv::setIdentity(KF13.measurementMatrix);
-    cv::setIdentity(KF14.measurementMatrix);
-    cv::setIdentity(KF15.measurementMatrix);
-    cv::setIdentity(KF16.measurementMatrix);
-    cv::setIdentity(KF17.measurementMatrix);
-    cv::setIdentity(KF18.measurementMatrix);
-    cv::setIdentity(KF19.measurementMatrix);
-    cv::setIdentity(KF20.measurementMatrix);
+    // cv::setIdentity(KF6.measurementMatrix);
+    // cv::setIdentity(KF7.measurementMatrix);
+    // cv::setIdentity(KF8.measurementMatrix);
+    // cv::setIdentity(KF9.measurementMatrix);
+    // cv::setIdentity(KF10.measurementMatrix);
+    // cv::setIdentity(KF11.measurementMatrix);
+    // cv::setIdentity(KF12.measurementMatrix);
+    // cv::setIdentity(KF13.measurementMatrix);
+    // cv::setIdentity(KF14.measurementMatrix);
+    // cv::setIdentity(KF15.measurementMatrix);
+    // cv::setIdentity(KF16.measurementMatrix);
+    // cv::setIdentity(KF17.measurementMatrix);
+    // cv::setIdentity(KF18.measurementMatrix);
+    // cv::setIdentity(KF19.measurementMatrix);
+    // cv::setIdentity(KF20.measurementMatrix);
     // Process Noise Covariance Matrix Q
     // [ Ex 0  0    0 0    0 ]
     // [ 0  Ey 0    0 0    0 ]
@@ -348,21 +356,21 @@ void PclObjectDetection::initialize_kalman_filter()
     setIdentity(KF3.processNoiseCov, cv::Scalar::all(sigmaP));
     setIdentity(KF4.processNoiseCov, cv::Scalar::all(sigmaP));
     setIdentity(KF5.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF6.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF7.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF8.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF9.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF10.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF11.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF12.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF13.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF14.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF15.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF16.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF17.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF18.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF19.processNoiseCov, cv::Scalar::all(sigmaP));
-    setIdentity(KF20.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF6.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF7.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF8.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF9.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF10.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF11.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF12.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF13.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF14.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF15.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF16.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF17.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF18.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF19.processNoiseCov, cv::Scalar::all(sigmaP));
+    // setIdentity(KF20.processNoiseCov, cv::Scalar::all(sigmaP));
     // Meas noise cov matrix R
     cv::setIdentity(KF0.measurementNoiseCov, cv::Scalar(sigmaQ)); // 1e-1
     cv::setIdentity(KF1.measurementNoiseCov, cv::Scalar(sigmaQ));
@@ -370,21 +378,21 @@ void PclObjectDetection::initialize_kalman_filter()
     cv::setIdentity(KF3.measurementNoiseCov, cv::Scalar(sigmaQ));
     cv::setIdentity(KF4.measurementNoiseCov, cv::Scalar(sigmaQ));
     cv::setIdentity(KF5.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF6.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF7.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF8.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF9.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF10.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF11.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF12.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF13.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF14.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF15.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF16.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF17.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF18.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF19.measurementNoiseCov, cv::Scalar(sigmaQ));
-    cv::setIdentity(KF20.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF6.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF7.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF8.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF9.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF10.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF11.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF12.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF13.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF14.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF15.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF16.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF17.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF18.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF19.measurementNoiseCov, cv::Scalar(sigmaQ));
+    // cv::setIdentity(KF20.measurementNoiseCov, cv::Scalar(sigmaQ));
 }
 
 void PclObjectDetection::cloud_callback(const sensor_msgs::msg::PointCloud2::ConstPtr &input)
@@ -451,14 +459,14 @@ void PclObjectDetection::cloud_callback(const sensor_msgs::msg::PointCloud2::Con
         }
 
         // Ensure at least 6 clusters exist to publish (later clusters may be empty)
-        while (cluster_vec.size() < 21) {
+        while (cluster_vec.size() < 6) {
           pcl::PointCloud<pcl::PointXYZ>::Ptr empty_cluster(
               new pcl::PointCloud<pcl::PointXYZ>);
           empty_cluster->points.push_back(pcl::PointXYZ(0, 0, 0));
           cluster_vec.push_back(empty_cluster);
         }
 
-        while (cluster_centroids.size() < 21) {
+        while (cluster_centroids.size() < 6) {
           pcl::PointXYZ centroid;
           centroid.x = 0.0;
           centroid.y = 0.0;
@@ -503,94 +511,94 @@ void PclObjectDetection::cloud_callback(const sensor_msgs::msg::PointCloud2::Con
         KF5.statePre.at<float>(2) = 0; // initial v_x
         KF5.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF6.statePre.at<float>(0) = cluster_centroids.at(6).x;
-        KF6.statePre.at<float>(1) = cluster_centroids.at(6).y;
-        KF6.statePre.at<float>(2) = 0; // initial v_x
-        KF6.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF6.statePre.at<float>(0) = cluster_centroids.at(6).x;
+        // KF6.statePre.at<float>(1) = cluster_centroids.at(6).y;
+        // KF6.statePre.at<float>(2) = 0; // initial v_x
+        // KF6.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF7.statePre.at<float>(0) = cluster_centroids.at(7).x;
-        KF7.statePre.at<float>(1) = cluster_centroids.at(7).y;
-        KF7.statePre.at<float>(2) = 0; // initial v_x
-        KF7.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF7.statePre.at<float>(0) = cluster_centroids.at(7).x;
+        // KF7.statePre.at<float>(1) = cluster_centroids.at(7).y;
+        // KF7.statePre.at<float>(2) = 0; // initial v_x
+        // KF7.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF8.statePre.at<float>(0) = cluster_centroids.at(8).x;
-        KF8.statePre.at<float>(1) = cluster_centroids.at(8).y;
-        KF8.statePre.at<float>(2) = 0; // initial v_x
-        KF8.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF8.statePre.at<float>(0) = cluster_centroids.at(8).x;
+        // KF8.statePre.at<float>(1) = cluster_centroids.at(8).y;
+        // KF8.statePre.at<float>(2) = 0; // initial v_x
+        // KF8.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF9.statePre.at<float>(0) = cluster_centroids.at(9).x;
-        KF9.statePre.at<float>(1) = cluster_centroids.at(9).y;
-        KF9.statePre.at<float>(2) = 0; // initial v_x
-        KF9.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF9.statePre.at<float>(0) = cluster_centroids.at(9).x;
+        // KF9.statePre.at<float>(1) = cluster_centroids.at(9).y;
+        // KF9.statePre.at<float>(2) = 0; // initial v_x
+        // KF9.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF10.statePre.at<float>(0) = cluster_centroids.at(10).x;
-        KF10.statePre.at<float>(1) = cluster_centroids.at(10).y;
-        KF10.statePre.at<float>(2) = 0; // initial v_x
-        KF10.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF10.statePre.at<float>(0) = cluster_centroids.at(10).x;
+        // KF10.statePre.at<float>(1) = cluster_centroids.at(10).y;
+        // KF10.statePre.at<float>(2) = 0; // initial v_x
+        // KF10.statePre.at<float>(3) = 0; // initial v_y
 
-        KF11.statePre.at<float>(0) = cluster_centroids.at(1).x;
-        KF11.statePre.at<float>(1) = cluster_centroids.at(1).y;
-        KF11.statePre.at<float>(2) = 0; // initial v_x
-        KF11.statePre.at<float>(3) = 0; // initial v_y
+        // KF11.statePre.at<float>(0) = cluster_centroids.at(1).x;
+        // KF11.statePre.at<float>(1) = cluster_centroids.at(1).y;
+        // KF11.statePre.at<float>(2) = 0; // initial v_x
+        // KF11.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF12.statePre.at<float>(0) = cluster_centroids.at(2).x;
-        KF12.statePre.at<float>(1) = cluster_centroids.at(2).y;
-        KF12.statePre.at<float>(2) = 0; // initial v_x
-        KF12.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF12.statePre.at<float>(0) = cluster_centroids.at(2).x;
+        // KF12.statePre.at<float>(1) = cluster_centroids.at(2).y;
+        // KF12.statePre.at<float>(2) = 0; // initial v_x
+        // KF12.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF13.statePre.at<float>(0) = cluster_centroids.at(3).x;
-        KF13.statePre.at<float>(1) = cluster_centroids.at(3).y;
-        KF13.statePre.at<float>(2) = 0; // initial v_x
-        KF13.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF13.statePre.at<float>(0) = cluster_centroids.at(3).x;
+        // KF13.statePre.at<float>(1) = cluster_centroids.at(3).y;
+        // KF13.statePre.at<float>(2) = 0; // initial v_x
+        // KF13.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF14.statePre.at<float>(0) = cluster_centroids.at(4).x;
-        KF14.statePre.at<float>(1) = cluster_centroids.at(4).y;
-        KF14.statePre.at<float>(2) = 0; // initial v_x
-        KF14.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF14.statePre.at<float>(0) = cluster_centroids.at(4).x;
+        // KF14.statePre.at<float>(1) = cluster_centroids.at(4).y;
+        // KF14.statePre.at<float>(2) = 0; // initial v_x
+        // KF14.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF15.statePre.at<float>(0) = cluster_centroids.at(5).x;
-        KF15.statePre.at<float>(1) = cluster_centroids.at(5).y;
-        KF15.statePre.at<float>(2) = 0; // initial v_x
-        KF15.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF15.statePre.at<float>(0) = cluster_centroids.at(5).x;
+        // KF15.statePre.at<float>(1) = cluster_centroids.at(5).y;
+        // KF15.statePre.at<float>(2) = 0; // initial v_x
+        // KF15.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF16.statePre.at<float>(0) = cluster_centroids.at(6).x;
-        KF16.statePre.at<float>(1) = cluster_centroids.at(6).y;
-        KF16.statePre.at<float>(2) = 0; // initial v_x
-        KF16.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF16.statePre.at<float>(0) = cluster_centroids.at(6).x;
+        // KF16.statePre.at<float>(1) = cluster_centroids.at(6).y;
+        // KF16.statePre.at<float>(2) = 0; // initial v_x
+        // KF16.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF17.statePre.at<float>(0) = cluster_centroids.at(7).x;
-        KF17.statePre.at<float>(1) = cluster_centroids.at(7).y;
-        KF17.statePre.at<float>(2) = 0; // initial v_x
-        KF17.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF17.statePre.at<float>(0) = cluster_centroids.at(7).x;
+        // KF17.statePre.at<float>(1) = cluster_centroids.at(7).y;
+        // KF17.statePre.at<float>(2) = 0; // initial v_x
+        // KF17.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF18.statePre.at<float>(0) = cluster_centroids.at(8).x;
-        KF18.statePre.at<float>(1) = cluster_centroids.at(8).y;
-        KF18.statePre.at<float>(2) = 0; // initial v_x
-        KF18.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF18.statePre.at<float>(0) = cluster_centroids.at(8).x;
+        // KF18.statePre.at<float>(1) = cluster_centroids.at(8).y;
+        // KF18.statePre.at<float>(2) = 0; // initial v_x
+        // KF18.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF19.statePre.at<float>(0) = cluster_centroids.at(9).x;
-        KF19.statePre.at<float>(1) = cluster_centroids.at(9).y;
-        KF19.statePre.at<float>(2) = 0; // initial v_x
-        KF19.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF19.statePre.at<float>(0) = cluster_centroids.at(9).x;
+        // KF19.statePre.at<float>(1) = cluster_centroids.at(9).y;
+        // KF19.statePre.at<float>(2) = 0; // initial v_x
+        // KF19.statePre.at<float>(3) = 0; // initial v_y
 
-        // Set initial state
-        KF20.statePre.at<float>(0) = cluster_centroids.at(10).x;
-        KF20.statePre.at<float>(1) = cluster_centroids.at(10).y;
-        KF20.statePre.at<float>(2) = 0; // initial v_x
-        KF20.statePre.at<float>(3) = 0; // initial v_y
+        // // Set initial state
+        // KF20.statePre.at<float>(0) = cluster_centroids.at(10).x;
+        // KF20.statePre.at<float>(1) = cluster_centroids.at(10).y;
+        // KF20.statePre.at<float>(2) = 0; // initial v_x
+        // KF20.statePre.at<float>(3) = 0; // initial v_y
 
         first_frame = false;
 
@@ -651,6 +659,7 @@ void PclObjectDetection::cloud_callback(const sensor_msgs::msg::PointCloud2::Con
 
         /* Cluster centroids */
         std::vector<pcl::PointXYZ> cluster_centroids;
+        pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>);
 
         RCLCPP_INFO(this->get_logger(), "cluster_indices = %d %d %d", cluster_indices.end() - cluster_indices.begin(), cluster_indices.begin(), cluster_indices.end());
 
@@ -687,14 +696,14 @@ void PclObjectDetection::cloud_callback(const sensor_msgs::msg::PointCloud2::Con
         //RCLCPP_INFO(this->get_logger(), "cluster_vec got some clusters");
 
         // Ensure at least 6 clusters exist to publish (later clusters may be empty)
-        while (cluster_vec.size() < 21) {
+        while (cluster_vec.size() < 6) {
           pcl::PointCloud<pcl::PointXYZ>::Ptr empty_cluster(
               new pcl::PointCloud<pcl::PointXYZ>);
           empty_cluster->points.push_back(pcl::PointXYZ(0, 0, 0));
           cluster_vec.push_back(empty_cluster);
         }
 
-        while (cluster_centroids.size() < 21) {
+        while (cluster_centroids.size() < 6) {
           pcl::PointXYZ centroid;
           centroid.x = 0.0;
           centroid.y = 0.0;
@@ -704,7 +713,7 @@ void PclObjectDetection::cloud_callback(const sensor_msgs::msg::PointCloud2::Con
         }
 
         std_msgs::msg::Float32MultiArray cc;
-        for (int i = 0; i < 21; i++) {
+        for (int i = 0; i < 6; i++) {
           cc.data.push_back(cluster_centroids.at(i).x);
           cc.data.push_back(cluster_centroids.at(i).y);
           cc.data.push_back(cluster_centroids.at(i).z);
@@ -714,10 +723,28 @@ void PclObjectDetection::cloud_callback(const sensor_msgs::msg::PointCloud2::Con
         // cc_pos.publish(cc);// Publish cluster mid-points.
         kft(cc);
         int i = 0;
-        bool publishedCluster[21];
+        bool publishedCluster[6];
+        const float distance_threshold = 0.5; // Adjust as necessary
+
+        for (const auto& point : input_cloud->points) {
+            bool keep_point = true;
+            for (auto it = obj_ids.begin(); it != obj_ids.end(); it++) {
+                for (const auto& cluster_point : cluster_vec[*it]->points) {
+                    if (euclideanDistance(point, cluster_point) < distance_threshold) {
+                        keep_point = false;
+                        break;
+                    }
+                }
+                if (!keep_point) break;
+            }
+            if (keep_point) {
+                filtered_cloud->points.push_back(point);
+            }
+        }
+        publish_cloud(pub_filtered_clouds, filtered_cloud);
         for (auto it = obj_ids.begin(); it != obj_ids.end(); it++) {
              //RCLCPP_INFO(this->get_logger(), "Inside the for loop");
-
+          
           switch (i) {
              //RCLCPP_INFO(this->get_logger(), "Inside the switch case");
           case 0: {
@@ -763,114 +790,114 @@ void PclObjectDetection::cloud_callback(const sensor_msgs::msg::PointCloud2::Con
             i++;
             break;
           }
-          case 6: {
-            publish_cloud(pub_cluster6, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 7: {
-            publish_cloud(pub_cluster7, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 8: {
-            publish_cloud(pub_cluster8, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 9: {
-            publish_cloud(pub_cluster9, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
+          // case 6: {
+          //   publish_cloud(pub_cluster6, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 7: {
+          //   publish_cloud(pub_cluster7, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 8: {
+          //   publish_cloud(pub_cluster8, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 9: {
+          //   publish_cloud(pub_cluster9, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
 
-          case 10: {
-            publish_cloud(pub_cluster10, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 11: {
-            publish_cloud(pub_cluster11, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 12: {
-            publish_cloud(pub_cluster12, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 13: {
-            publish_cloud(pub_cluster13, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 14: {
-            publish_cloud(pub_cluster14, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
+          // case 10: {
+          //   publish_cloud(pub_cluster10, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 11: {
+          //   publish_cloud(pub_cluster11, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 12: {
+          //   publish_cloud(pub_cluster12, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 13: {
+          //   publish_cloud(pub_cluster13, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 14: {
+          //   publish_cloud(pub_cluster14, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
 
-          case 15: {
-            publish_cloud(pub_cluster15, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 16: {
-            publish_cloud(pub_cluster16, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 17: {
-            publish_cloud(pub_cluster17, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 18: {
-            publish_cloud(pub_cluster18, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
-          case 19: {
-            publish_cloud(pub_cluster19, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
+          // case 15: {
+          //   publish_cloud(pub_cluster15, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 16: {
+          //   publish_cloud(pub_cluster16, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 17: {
+          //   publish_cloud(pub_cluster17, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 18: {
+          //   publish_cloud(pub_cluster18, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
+          // case 19: {
+          //   publish_cloud(pub_cluster19, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
 
-          case 20: {
-            publish_cloud(pub_cluster20, cluster_vec[*it]);
-            publishedCluster[i] =
-                true; // Use this flag to publish only once for a given obj ID
-            i++;
-            break;
-          }
+          // case 20: {
+          //   publish_cloud(pub_cluster20, cluster_vec[*it]);
+          //   publishedCluster[i] =
+          //       true; // Use this flag to publish only once for a given obj ID
+          //   i++;
+          //   break;
+          // }
           default:
             break;
         }

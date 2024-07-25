@@ -101,6 +101,7 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
 
 
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_filtered_clouds;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster0;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster1;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_cluster2;

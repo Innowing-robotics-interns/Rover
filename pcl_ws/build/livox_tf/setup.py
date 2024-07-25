@@ -1,1 +1,0 @@
-/mnt/nova_ssd/workspaces/pcl_ws/src/livox_tf/setup.py
